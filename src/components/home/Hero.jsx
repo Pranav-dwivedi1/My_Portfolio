@@ -34,7 +34,7 @@ export default function Hero() {
           className="mt-6 text-lg sm:text-xl text-gray-300"
         >
           As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications.
-          Explore my latest projects and articles, showcasing my expertise in React.js and web development.
+          Explore my latest projects and articles, showcasing my expertise in React.js and web development
         </motion.p>
 
         <motion.div
