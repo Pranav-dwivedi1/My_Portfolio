@@ -54,7 +54,7 @@ export default function MySkills() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Tech Stack I Love 💻.</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">From frontend UI polish to backend APIs and deployment—I craft solutions with these tools daily.</p>
+          <p className="text-gray-400 max-w-2xl mx-auto">From frontend UI polish to backend APIs and deployment—I craft solutions with these tools daily</p>
         </motion.div>
 
         {/* Skills Grid */}
