@@ -1,16 +1,41 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { FaTwitter, FaGithub, FaLinkedin, FaPinterest, FaDribbble, FaCircle } from 'react-icons/fa';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [showHeader, setShowHeader] = useState(true);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+        // Scrolling down and scrolled more than 100px, hide header
+        setShowHeader(false);
+      } else {
+        // Scrolling up, show header
+        setShowHeader(true);
+      }
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="bg-[#1a1a1a] text-white px-6 py-4">
+    <header
+      className={`bg-[#1a1a1a] text-white px-6 py-2 fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
+        showHeader ? 'translate-y-0' : '-translate-y-full'
+      }`}
+    >
       <div className="max-w-7xl mx-auto grid grid-cols-3 items-center">
         {/* Left: Navigation */}
         <nav className="hidden md:flex space-x-8 justify-start">
-          {['Home', 'About', 'Projects', 'Articles', 'contact'].map((item, i) => (
+          {['Home', 'About', 'Projects', 'Articles', 'Contact'].map((item, i) => (
             <a
               key={i}
               href="#"
