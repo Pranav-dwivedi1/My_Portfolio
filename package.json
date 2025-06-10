@@ -9,13 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-icons/all-files": "^4.1.0",
     "antd": "^5.25.2",
-    "framer-motion": "^12.11.0",
+    "framer-motion": "^12.12.2",
     "lucide-react": "^0.511.0",
     "moment-timezone": "^0.5.48",
     "next": "15.3.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-floating-whatsapp": "^5.0.8",
     "react-icons": "^5.5.0",
     "react-turnstile": "^1.1.4",
     "swiper": "^11.2.6"

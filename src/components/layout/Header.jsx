@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
 import { FaTwitter, FaGithub, FaLinkedin, FaPinterest, FaDribbble, FaCircle } from 'react-icons/fa';
+import { motion } from 'framer-motion'; // Add this import
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,17 +13,14 @@ export default function Header() {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
-        // Scrolling down and scrolled more than 100px, hide header
         setShowHeader(false);
       } else {
-        // Scrolling up, show header
         setShowHeader(true);
       }
       lastScrollY.current = currentScrollY;
     };
 
     window.addEventListener('scroll', handleScroll);
-
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -46,11 +44,41 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Center: Logo */}
+        {/* Center: Animated Logo */}
         <div className="flex justify-center">
-          <div className="text-xl font-bold border border-white rounded-full w-20 h-20 flex items-center justify-center">
-            PD
-          </div>
+          <motion.div 
+            className="relative group"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <motion.div 
+              className="text-xl font-bold border-2 border-white rounded-full w-20 h-20 flex items-center justify-center bg-black z-10 relative"
+              animate={{
+                rotate: 360,
+                scale: [1, 1.05, 1]
+              }}
+              transition={{
+                rotate: {
+                  duration: 20,
+                  repeat: Infinity,
+                  ease: "linear"
+                },
+                scale: {
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }
+              }}
+            >
+              <span className="text-white font-bold text-2xl">PD</span>
+            </motion.div>
+            
+            {/* Glow effect */}
+            <motion.div 
+              className="absolute inset-0 bg-white rounded-full opacity-0 group-hover:opacity-20 blur-md -z-10"
+              transition={{ duration: 0.3 }}
+            />
+          </motion.div>
         </div>
 
         {/* Right: Social Icons */}

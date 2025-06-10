@@ -1,55 +1,68 @@
 import React from "react";
 import Link from "next/link";
-// import bg from "../../assets/blog/blogBackgroundPng.png";
+
 const BlogCard = ({ blog }) => {
   return (
-    <Link href={blog.link}>
-     <div
-      className="relative rounded-xl p-2 text-black shadow-[0_6px_3px_-2px_rgba(0,0,0,0.2)]"
-      style={{
-        // backgroundImage: `url(${bg.src})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        height: "450px",
-      }}
-    >
-      {/* Date */}
-      <div className="text-sm mb-4 text-center mt-8">{blog.date}</div>
-
-      {/* Title */}
-      <h2 className="text-xl md:text-lg font-bold mb-4">{blog.title}</h2>
-
-      {/* Tags */}
-      {blog.tags && (
-        <div className="flex gap-2 mb-4 flex-wrap">
-          {blog.tags.map((tag, index) => (
-            <span
-              key={index}
-              className="bg-[#794138] text-[#D7B58F] px-3 py-1 rounded-lg text-sm"
+    <div className="relative group overflow-hidden rounded-xl bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+      {/* Optional image placeholder - uncomment if you want to use images */}
+      {/* <div className="h-48 bg-gradient-to-r from-blue-500 to-purple-600 opacity-80"></div> */}
+      
+      <div className="p-6">
+        {/* Date */}
+        <div className="text-sm text-gray-500 dark:text-gray-400 mb-2 transition-colors duration-300 group-hover:text-blue-500">
+          {blog.date}
+        </div>
+        
+        {/* Title */}
+        <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-3 transition-colors duration-300 group-hover:text-blue-600 dark:group-hover:text-blue-400">
+          {blog.title}
+        </h3>
+        
+        {/* Tags */}
+        {blog.tags && (
+          <div className="flex flex-wrap gap-2 mb-4">
+            {blog.tags.map((tag, index) => (
+              <span 
+                key={index}
+                className="px-3 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 transition-all duration-300 hover:scale-105"
+              >
+                {tag.tagTitle}
+              </span>
+            ))}
+          </div>
+        )}
+        
+        {/* Description */}
+        <p className="text-gray-600 dark:text-gray-300 mb-5 line-clamp-3">
+          {blog.desc}
+        </p>
+        
+        {/* Read More Link */}
+        {blog.link && (
+          <div className="mt-auto">
+            <Link 
+              href={blog.link}
+              className="inline-flex items-center font-medium text-blue-600 dark:text-blue-400 group-hover:text-blue-800 dark:group-hover:text-blue-300 transition-colors duration-300"
             >
-              {tag.tagTitle}
-            </span>
-          ))}
-        </div>
-      )}
-
-      {/* Description */}
-      <p className="text-base md:text-sm mb-12">{blog.desc}</p>
-
-      {/* Read More Link */}
-      {blog.link && (
-        <div className="absolute bottom-2 left-6">
-          <p
-            href={blog.link}
-            className="text-sm font-medium flex items-center hover:text-[#794138] transition-colors duration-300"
-          >
-            Read More <span className="ml-2">→</span>
-          </p>
-        </div>
-      )}
+              Read More
+              <svg 
+                className="ml-1 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24" 
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </Link>
+          </div>
+        )}
+      </div>
+      
+      {/* Hover effect elements */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 to-purple-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
     </div>
-    </Link>
-   
   );
 };
 

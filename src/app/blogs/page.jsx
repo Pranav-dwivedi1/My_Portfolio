@@ -1,21 +1,16 @@
 import Link from "next/link";
 import BlogHeader from "../../components/blogsPage/BlogHeader";
-
-import { FaLinkedin } from "react-icons/fa6";
+import { FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
 import { ImFacebook2 } from "react-icons/im";
-import { FaInstagram } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa6";
+import { RiWhatsappFill } from "react-icons/ri";
 import BlogCard from "../../components/blogsPage/BlogCard";
 
-import { RiWhatsappFill } from "react-icons/ri";
 export const metadata = {
   title: "Business Blog Spot | Insights, News & Business Growth Tips",
-  description:
-    "Get expert insights, news, and guidance to grow your MSME into a successful brand. Stay updated with strategies, funding tips, and industry trends.",
+  description: "Get expert insights, news, and guidance to grow your MSME into a successful brand.",
   openGraph: {
     title: "Business Blog Spot | Insights, News & Business Growth Tips",
-    description:
-      "Get expert insights, news, and guidance to grow your MSME into a successful brand. Stay updated with strategies, funding tips, and industry trends.",
+    description: "Get expert insights, news, and guidance to grow your MSME into a successful brand.",
     url: "https://www.egniol.co.in/blogs",
     type: "website",
   },
@@ -25,84 +20,105 @@ export const metadata = {
 };
 
 export default function Blogs() {
-  const blogData = [
-   
-    {
-      title:
-        "Sensex Zomato: What’s Driving Zomato’s Performance on the BSE Sensex?",
-      desc: " Explore Zomato’s impact on the BSE Sensex today and learn how Egniol Services Private Limited helps businesses secure MSME loans, government funding, and equity-based investments, and create compelling pitch decks for growth.",
+ const blogData = [
+  {
+    title: "Sensex Zomato: What's Driving Zomato's Performance on the BSE Sensex?",
+    desc: "Explore Zomato's impact on the BSE Sensex today and learn how Egniol Services Private Limited helps businesses secure MSME loans, government funding, and equity-based investments, and create compelling pitch decks for growth.",
+    date: "December 25, 2024",
+    tags: [{ tagTitle: "News" }, { tagTitle: "Finance" }],
+    link: "/blogs/zomato-makes-history",
+  },
+  {
+    title: "How ChatGPT is Transforming Business in 2025",
+    desc: "Explore how ChatGPT and AI tools are revolutionizing MSMEs and startup operations in 2025 — from content creation to customer support and strategic planning.",
+    date: "May 25, 2025",
+    tags: [{ tagTitle: "AI" }, { tagTitle: "Business Growth" }],
+    link: "/blogs/chatgpt-business-2025",
+  },
+];
 
-      date: "December 25, 2024",
-      tags: [{ tagTitle: "News" }],
-      link: "/blogs/zomato-makes-history",
-    },
-    
-  ];
 
   return (
-    <>
-      <div className="flex flex-col justify-between items-center gap-4 md:pt-44 pt-28 gradient-header w-full">
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Header */}
+      <div className="relative w-full h-[50vh] min-h-[400px] bg-gradient-to-br from-blue-900 via-purple-900 to-gray-900">
         <BlogHeader />
       </div>
-      <div className="w-full flex justify-center bg-[#F7D89B]">
-        <div className="w-4/5  py-12">
-          <div className="flex gap-x-4 items-center order-2 md:order-3 mb-7 mt-5 lg:mt-0 lg:mb-0">
-            <Link
-              href="https://www.linkedin.com/company/egniol-group/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin className="text-3xl" />
-            </Link>
-            <Link
-              href="https://www.facebook.com/Egniol/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <ImFacebook2 className="text-2xl" />
-            </Link>
-            <Link
-              href="https://www.instagram.com/egniolgroup/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaInstagram className="text-3xl" />
-            </Link>
-            <Link
-              href="https://www.youtube.com/channel/UCJRUMTW8E13okgbFDAJ3E9Q"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaYoutube className="text-3xl" />
-            </Link>
-            <Link
-              href="https://bit.ly/msmesamvaad"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <RiWhatsappFill className="text-3xl" />
-            </Link>
-          </div>
-          <div className="flex justify-between border-b border-b-black  my-9 py-4">
-            <div>
-              <p className="font-semibold text-sm md:text-base">
-                BROWSE ALL POSTS
-              </p>
+
+      {/* Main Content */}
+      <div className="w-full py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Social Media & Filter Bar */}
+          <div className="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
+            <div className="flex items-center space-x-6">
+              <p className="text-sm font-medium text-gray-600">Share:</p>
+              <div className="flex space-x-4">
+                <SocialIcon href="https://www.linkedin.com/company/egniol-group/" icon={<FaLinkedin className="text-2xl text-blue-600 hover:text-blue-800 transition-colors" />} />
+                <SocialIcon href="https://www.facebook.com/Egniol/" icon={<ImFacebook2 className="text-2xl text-blue-700 hover:text-blue-900 transition-colors" />} />
+                <SocialIcon href="https://www.instagram.com/egniolgroup/" icon={<FaInstagram className="text-2xl text-pink-600 hover:text-pink-800 transition-colors" />} />
+                <SocialIcon href="https://www.youtube.com/channel/UCJRUMTW8E13okgbFDAJ3E9Q" icon={<FaYoutube className="text-2xl text-red-600 hover:text-red-800 transition-colors" />} />
+                <SocialIcon href="https://bit.ly/msmesamvaad" icon={<RiWhatsappFill className="text-2xl text-green-500 hover:text-green-700 transition-colors" />} />
+              </div>
             </div>
-            <div>
-              <p className="text-gray-500 text-sm md:text-base">
-                Browse by:{" "}
-                <span className="font-semibold text-black">Topic | Date</span>
-              </p>
+
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <div className="relative w-full sm:w-64">
+                <select className="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                  <option>Browse by Topic</option>
+                  <option>Finance</option>
+                  <option>Marketing</option>
+                  <option>News</option>
+                  <option>Strategy</option>
+                </select>
+              </div>
+              <div className="relative w-full sm:w-64">
+                <select className="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                  <option>Browse by Date</option>
+                  <option>Newest First</option>
+                  <option>Oldest First</option>
+                </select>
+              </div>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8">
-            {blogData.map((blog, index) => (
-              <BlogCard key={index} blog={blog} />
-            ))}
+
+          {/* Blog Posts Grid */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 pb-4 border-b border-gray-200">Latest Articles</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {blogData.map((blog, index) => (
+                <BlogCard key={index} blog={blog} />
+              ))}
+            </div>
+          </div>
+
+          {/* Newsletter Subscription */}
+          <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-8 md:p-10 shadow-inner">
+            <div className="max-w-3xl mx-auto text-center">
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">Stay Updated</h3>
+              <p className="text-gray-600 mb-6">Get the latest business insights and growth tips delivered to your inbox</p>
+              <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                <input 
+                  type="email" 
+                  placeholder="Your email address" 
+                  className="flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                />
+                <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-all duration-300 shadow-md hover:shadow-lg">
+                  Subscribe
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
+  );
+}
+
+// Social Icon Component for better reusability
+function SocialIcon({ href, icon }) {
+  return (
+    <Link href={href} target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+      {icon}
+    </Link>
   );
 }
