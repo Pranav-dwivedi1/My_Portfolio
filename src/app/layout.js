@@ -1,11 +1,7 @@
-
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
-
-
-
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,11 +14,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
+  metadataBase: new URL('http://localhost:3000'),
   title: "Pranav's Portfolio",
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' }
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180' }
+    ]
   },
   description: "A portfolio website showcasing my projects and skills.",
   keywords: "portfolio, web developer, projects, skills",
@@ -47,24 +47,23 @@ export const metadata = {
     title: "Pranav's Portfolio",
     description: "A portfolio website showcasing my projects and skills.",
     images: ["/og-image.png"],
-  },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-    minimumScale: 1,
-  },
-  
- 
+  }
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  minimumScale: 1,
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Header/>
+        <Header />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

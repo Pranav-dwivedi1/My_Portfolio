@@ -1,12 +1,29 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
 import { FaTwitter, FaGithub, FaLinkedin, FaPinterest, FaDribbble, FaCircle } from 'react-icons/fa';
-import { motion } from 'framer-motion'; // Add this import
+import { motion } from 'framer-motion';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [showHeader, setShowHeader] = useState(true);
   const lastScrollY = useRef(0);
+
+  const navItems = [
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Projects', path: '/projects' },
+    { name: 'Blogs', path: '/blogs' },
+    { name: 'Contact', path: '/contact' }
+  ];
+
+  const socialItems = [
+    { icon: <FaTwitter />, url: 'https://twitter.com/yourusername' },
+    { icon: <FaGithub />, url: 'https://github.com/yourusername' },
+    { icon: <FaLinkedin />, url: 'https://linkedin.com/in/yourusername' },
+    { icon: <FaPinterest />, url: 'https://pinterest.com/yourusername' },
+    { icon: <FaDribbble />, url: 'https://dribbble.com/yourusername' },
+    { icon: <FaCircle />, url: 'https://yourwebsite.com' }
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,13 +50,13 @@ export default function Header() {
       <div className="max-w-7xl mx-auto grid grid-cols-3 items-center">
         {/* Left: Navigation */}
         <nav className="hidden md:flex space-x-8 justify-start">
-          {['Home', 'About', 'Projects', 'Articles', 'Contact'].map((item, i) => (
+          {navItems.map((item, i) => (
             <a
               key={i}
-              href="#"
+              href={item.path}
               className="relative hover:text-white after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-white after:left-0 after:-bottom-1 after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform"
             >
-              {item}
+              {item.name}
             </a>
           ))}
         </nav>
@@ -83,12 +100,17 @@ export default function Header() {
 
         {/* Right: Social Icons */}
         <div className="hidden md:flex space-x-4 justify-end text-xl">
-          <FaTwitter className="hover:text-blue-400 cursor-pointer" />
-          <FaGithub className="hover:text-gray-300 cursor-pointer" />
-          <FaLinkedin className="hover:text-blue-600 cursor-pointer" />
-          <FaPinterest className="hover:text-red-500 cursor-pointer" />
-          <FaDribbble className="hover:text-pink-400 cursor-pointer" />
-          <FaCircle className="hover:text-white cursor-pointer" />
+          {socialItems.map((social, i) => (
+            <a 
+              key={i} 
+              href={social.url} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-gray-300 cursor-pointer"
+            >
+              {social.icon}
+            </a>
+          ))}
         </div>
 
         {/* Mobile Menu Button */}
@@ -104,18 +126,23 @@ export default function Header() {
       {/* Mobile Dropdown Menu */}
       {isOpen && (
         <div className="md:hidden mt-4 space-y-4 text-center">
-          {['Home', 'About', 'Projects', 'Articles'].map((item, i) => (
-            <a key={i} href="#" className="block hover:text-gray-300">
-              {item}
+          {navItems.map((item, i) => (
+            <a key={i} href={item.path} className="block hover:text-gray-300">
+              {item.name}
             </a>
           ))}
           <div className="flex justify-center space-x-4 text-xl pt-2">
-            <FaTwitter />
-            <FaGithub />
-            <FaLinkedin />
-            <FaPinterest />
-            <FaDribbble />
-            <FaCircle />
+            {socialItems.map((social, i) => (
+              <a 
+                key={i} 
+                href={social.url} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-gray-300"
+              >
+                {social.icon}
+              </a>
+            ))}
           </div>
         </div>
       )}

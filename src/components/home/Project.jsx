@@ -4,9 +4,9 @@ import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { motion } from 'framer-motion';
 
-import project1 from '../../assets/home/project_img1.avif';
-import project2 from '../../assets/home/project_img2.avif';
-import project3 from '../../assets/home/project_img3.avif';
+import project1 from '../../assets/home/project_img1.webp';
+import project2 from '../../assets/home/project_img2.webp';
+import project3 from '../../assets/home/project_img3.webp';
 
 import 'swiper/css';
 

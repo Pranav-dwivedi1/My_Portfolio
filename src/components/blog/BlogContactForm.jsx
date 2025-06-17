@@ -1,7 +1,6 @@
 'use client'
 import { Phone } from "lucide-react";
 import { useState } from "react";
-import { Table, Button, Modal, Input, message, Select, Spin } from "antd";
 import ContactProApi from "@/services/api/contactProApi";
 const BlogContactForm = ({ propsData }) => {
     const [formData, setFormData] = useState({
@@ -189,7 +188,7 @@ const BlogContactForm = ({ propsData }) => {
         }`}
         disabled={loading || errors.mobileNo || errors.email || !verified}
       >
-        {loading ? <Spin size="small" /> : "Submit"}
+        {loading ? "Loading..." : "Submit"}
       </button>
     </form>
   </div>

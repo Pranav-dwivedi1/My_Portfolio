@@ -16,7 +16,6 @@ export default function WhatsAppWidget() {
       phoneNumber="8770676950"
       accountName="Pranav Dwivedi"
       chatMessage="Hello! How can I assist you today?"
-    //   avatar={whatapp}
       statusMessage="Typically replies in a few minutes"
       placeholder="Type your message..."
       allowClickAway
