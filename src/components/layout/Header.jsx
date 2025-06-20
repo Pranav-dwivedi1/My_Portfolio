@@ -7,7 +7,6 @@ import Image from "next/image";
 import Hameburger from "../../assets/home/hameburger.png";
 import ButtonOrange from "@/components/comman/ui/ButtonOrange";
 
-
 function Dropdown({ label, labelHref, links, closeMenu }) {
   const [open, setOpen] = useState(false);
 
@@ -28,7 +27,9 @@ function Dropdown({ label, labelHref, links, closeMenu }) {
             aria-label={`Toggle ${label} menu`}
           >
             <svg
-              className={`w-4 h-4 transition-transform ${open ? "rotate-180" : ""}`}
+              className={`w-4 h-4 transition-transform ${
+                open ? "rotate-180" : ""
+              }`}
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
@@ -89,7 +90,8 @@ export default function Header() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (window.innerWidth >= 768) { // Only on desktop
+      if (window.innerWidth >= 768) {
+        // Only on desktop
         if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
           // Scrolling down
           setShowHeader(false);
@@ -109,7 +111,9 @@ export default function Header() {
     <header
       ref={headerRef}
       className={`sticky top-0 left-0 mx-auto px-4 py-4 md:px-0 md:py-6 w-full z-50 transition-all duration-300 ease-[cubic-bezier(0.4, 0, 0.2, 1)] transform ${
-        showHeader ? "translate-y-0 opacity-100 shadow-md" : "-translate-y-full opacity-0"
+        showHeader
+          ? "translate-y-0 opacity-100 shadow-md"
+          : "-translate-y-full opacity-0"
       } bg-[#160b07] backdrop-blur-md`}
     >
       <div className="max-w-7xl mx-auto px-3 md:py-0 flex justify-between items-center  rounded-full md:border-none">
@@ -124,42 +128,58 @@ export default function Header() {
               className="w-[120px] sm:w-[150px] md:w-[140px] h-auto cursor-pointer"
               priority
             /> */}
-  <h2 className="font-rowdies text-3xl text-amber-50 font-semibold">
-    Pranav  Dwivedi
-  </h2>
-
+            <h2 className="font-rowdies text-3xl text-amber-50 font-semibold">
+              Pranav Dwivedi
+            </h2>
           </Link>
         </div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center text-[#CACACA] px-6 lg:px-12 py-3 lg:py-4 space-x-6 lg:space-x-8">
-          <Link href="/" className="text-sm lg:text-base font-medium  hover:text-white">Home</Link>
-          <Link href="/services" className="text-sm lg:text-base font-medium  hover:text-white">Services</Link>
-          
+          <Link
+            href="/"
+            className="text-sm lg:text-base font-medium  hover:text-white"
+          >
+            Home
+          </Link>
+
           {/* Dropdowns */}
           {[
             {
-              label: "Services",
-              href: "/services",
+              label: "About",
+              href: "/about",
               links: [
                 // { label: "Diploma", href: "/diploma" },
-               
               ],
             },
             {
-              label: "Who we are",
-              href: "/who-we-are",
+              label: "Blogs",
+              href: "/blogs",
+              links: [
+                // { label: "Diploma", href: "/diploma" },
+              ],
+            },
+            {
+              label: "Projects",
+              href: "/projects",
               links: [],
             },
             {
-              label: "Reach Us",
-              href: "/reach us",
+              label: "Services",
+              href: "/services",
               links: [],
             },
-            
+            {
+              label: "Contact",
+              href: "/contact",
+              links: [],
+            },
           ].map((menu, index) => (
             <div key={index} className="relative group">
-              <Link href={menu.href} className="flex items-center text-sm lg:text-base font-medium  hover:text-[white]">
+              <Link
+                href={menu.href}
+                className="flex items-center text-sm lg:text-base font-medium  hover:text-[white]"
+              >
                 {menu.label}
                 {menu.links?.length > 0 && (
                   <svg
@@ -192,14 +212,13 @@ export default function Header() {
 
         {/* Desktop CTA */}
         <div className="hidden md:block">
-  <button
-    onClick={() => setIsModalOpen(true)}
-    className="flex flex-row justify-center items-center px-12 py-3 gap-2 w-[194px] h-[52px] bg-white/[0.1] border border-[#D8D8D666] shadow-[inset_0px_-8px_21.6px_#FFFFFF26] rounded-full text-[#CACACA] text-[18px] leading-[22px] font-medium"
-  >
-    Contact Us
-  </button>
-</div>
-
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="flex flex-row justify-center items-center px-12 py-3 gap-2 w-[194px] h-[52px] bg-white/[0.1] border border-[#D8D8D666] shadow-[inset_0px_-8px_21.6px_#FFFFFF26] rounded-full text-[#CACACA] text-[18px] leading-[22px] font-medium"
+          >
+            Contact Us
+          </button>
+        </div>
 
         {/* Mobile Hamburger */}
         <button
@@ -207,59 +226,75 @@ export default function Header() {
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle Menu"
         >
-          <Image src={Hameburger} alt="Menu" width={35} height={35} className="w-8 h-8" />
+          <Image
+            src={Hameburger}
+            alt="Menu"
+            width={35}
+            height={35}
+            className="w-8 h-8"
+          />
         </button>
       </div>
 
       {/* Mobile Menu */}
       {/* Mobile Menu */}
-{menuOpen && (
-  <div className="md:hidden absolute top-full left-0 w-full bg-white z-50 shadow-lg rounded-b-xl border-t border-gray-300 px-4 pb-4 pt-4 space-y-2">
-    <Link href="/" onClick={() => setMenuOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-blue-600">Home</Link>
-    <Link href="/about-us" onClick={() => setMenuOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-blue-600">About Us</Link>
+      {menuOpen && (
+        <div className="md:hidden absolute top-full left-0 w-full bg-white z-50 shadow-lg rounded-b-xl border-t border-gray-300 px-4 pb-4 pt-4 space-y-2">
+          <Link
+            href="/"
+            onClick={() => setMenuOpen(false)}
+            className="block text-sm font-medium text-gray-700 hover:text-blue-600"
+          >
+            Home
+          </Link>
 
-    <Dropdown
-      label="Services"
-      labelHref="/services"
-      closeMenu={() => setMenuOpen(false)}
-      links={[]}
-    />
+          <Dropdown
+            label="About"
+            labelHref="/about"
+            closeMenu={() => setMenuOpen(false)}
+            links={[]}
+          />
 
-    <Dropdown
-      label="Who we are"
-      labelHref="/who-we-are"
-      closeMenu={() => setMenuOpen(false)}
-      links={[]}
-    />
+          <Dropdown
+            label="Blogs"
+            labelHref="/blogs"
+            closeMenu={() => setMenuOpen(false)}
+            links={[]}
+          />
+          <Dropdown
+            label="Projects"
+            labelHref="/projects"
+            closeMenu={() => setMenuOpen(false)}
+            links={[]}
+          />
 
-    <Dropdown
-      label="reach-us"
-      labelHref="/reach-us"
-      closeMenu={() => setMenuOpen(false)}
-      links={[]}
-    />
+          <Dropdown
+            label="Services"
+            labelHref="/services"
+            closeMenu={() => setMenuOpen(false)}
+            links={[{ label: "IELTS", href: "/ielts" }]}
+          />
+          <Dropdown
+            label="Contact"
+            labelHref="/contact"
+            closeMenu={() => setMenuOpen(false)}
+            links={[]}
+          />
 
-    <Dropdown
-      label="Test Prep"
-      labelHref="/test-preparation"
-      closeMenu={() => setMenuOpen(false)}
-      links={[
-        { label: "IELTS", href: "/ielts" },
-      ]}
-    />
+          <Link
+            href="/blogs"
+            onClick={() => setMenuOpen(false)}
+            className="block text-sm font-medium text-gray-700 hover:text-blue-600"
+          >
+            Blogs
+          </Link>
 
-    <Link href="/blogs" onClick={() => setMenuOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-blue-600">Blogs</Link>
-
-    {/* Mobile Contact Us Button with Border and Gradient */}
-    <ButtonOrange
-      onClick={() => setIsModalOpen(true)}
-      // className="inline-block mt-2 bg-gradient-to-b from-[#1254FA] to-[#002B98] text-white px-5 py-2 rounded-xl font-medium text-sm hover:opacity-90 transition border-[1px] border-[#D8D8D866]"
-    >
-      Contact Us
-    </ButtonOrange>
-  </div>
-)}
-
+          {/* Mobile Contact Us Button with Border and Gradient */}
+          <ButtonOrange onClick={() => setIsModalOpen(true)}>
+            Contact Us
+          </ButtonOrange>
+        </div>
+      )}
 
       {/* <ContactForm isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} /> */}
     </header>

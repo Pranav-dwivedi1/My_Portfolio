@@ -83,14 +83,24 @@ const projects = [
 
 const ProjectCard = ({ project, index }) => {
   return (
-    <motion.div
-      key={project.id}
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      viewport={{ once: true }}
-      className="bg-gradient-to-bl from-[#67331a] via-[#301f17] to-[#67331a] rounded-xl bg-[#3c3938] md:bg-[#160A05] bg-dark-vignette  shadow-md p-5 h-full flex flex-col justify-between overflow-hidden"
+        <div
+      className={`relative rounded-[25px] p-[2px] transition-all duration-300 hover:scale-[1.01] ${
+        project.id === 1
+          ? "bg-gradient-to-b from-[#915b44] to-[#000000]"
+          : "bg-gradient-to-br from-[#81716a] via-[#221C19] to-[#81716a]"
+      }`}
     >
+     <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+        viewport={{ once: true }}
+        className={`flex flex-col h-full rounded-[24px] p-6 md:p-8 ${
+          index === 0
+            ? "bg-[#160A05] backdrop-blur-[22px]"
+            : "bg-gradient-to-tr from-[#45352d] via-[#2d221c] to-[#45352d]"
+        }`}
+      >
       <Image
         src={project.image}
         alt={project.name}
@@ -129,6 +139,7 @@ const ProjectCard = ({ project, index }) => {
         </a>
       </div>
     </motion.div>
+    </div>
   );
 };
 
