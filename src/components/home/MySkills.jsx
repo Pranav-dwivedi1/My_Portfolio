@@ -43,7 +43,11 @@ const skills = [
 
 export default function MySkills() {
   return (
-    <section className="bg-[#0d0d0d] text-white py-16 px-6 md:px-12">
+    <section className="relative py-16 text-white px-4 md:px-20 lg:px-28 bg-[#3c3938] md:bg-[#160A05] bg-dark-vignette">
+
+      <div className="absolute w-[608px] h-[502px] bottom-[-100px] left-[-150px] md:bg-[#692711ac] blur-[300px] mix-blend-screen rounded-full pointer-events-none z-0 overflow-hidden"  />
+        <div className="absolute w-[408px] h-[402px] top-[0px] right-[-200px] md:bg-[#993b1ce8] blur-[300px] mix-blend-screen rounded-full pointer-events-none z-0 overflow-hidden" />
+
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <motion.div

@@ -43,7 +43,7 @@ const blogs = [
 
 export default function Blogs() {
   return (
-    <section className="px-6 md:px-12 py-16 bg-[#0d0d0d] text-white">
+    <section className="px-6 md:px-12 py-16 bg-[#3c3938] md:bg-[#160A05] bg-dark-vignette text-white">
       {/* Section Heading */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}

@@ -18,17 +18,9 @@ export default function Cta() {
   ];
 
   return (
-    <section className="relative py-16 flex items-center justify-center overflow-hidden bg-gray-900">
+    <section className="bg-gradient-to-t from-[#160A05] to-[#160A05] relative py-16 flex items-center justify-center overflow-hidden ">
       {/* Background */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src={background}
-          alt="Background"
-          fill
-          className="object-cover"
-          priority
-        />
-      </div>
+      
 
       
       {/* Floating elements */}

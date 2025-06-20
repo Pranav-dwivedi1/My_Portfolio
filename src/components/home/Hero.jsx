@@ -1,77 +1,155 @@
-'use client';
-import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import Hero_image from '../../assets/home/hero.webp';
+import React from "react";
+import Image from "next/image";
+
+import { ArrowRight, Menu } from "lucide-react"; // Added Menu for hamburger icon
+import ButtonOrange from "@/components/comman/ui/ButtonOrange";
+import ButtonGray from "@/components/comman/ui/ButtonGray";
+import Tech from "../../assets/home/hero/tech.png";
+import Check from "../../assets/home/hero/check.png";
 
 export default function Hero() {
   return (
-    <section className="flex flex-col-reverse lg:flex-row-reverse items-center justify-between px-6 lg:px-20 bg-[#1a1a1a] text-white min-h-screen">
-      {/* Text Sectio */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-        viewport={{ once: true }}
-        className="w-full lg:w-1/2 text-center lg:text-left"
-      >
-        <motion.h1
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight"
-        >
-          Turning Vision Into <br />
-          <span className="px-2 text-white">Reality With Code</span> <br />
-          <span className="px-2 text-white">And Design.</span>
-        </motion.h1>
+    <section className="h-screen bg-gradient-to-b from-[#160b07] via-[#1e0801] to-[#2B0C02] text-white py-12 md:py-20 font-gilroy">
+      {/* Header (Logo and Hamburger Menu for Mobile) */}
 
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-6 text-lg sm:text-xl text-gray-300"
-        >
-          As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications.
-          Explore my latest projects and articles, showcasing my expertise in React.js and web development
-        </motion.p>
+      {/* New Feature Banner */}
+      <div className="relative w-full h-[42.58px] mb-8 flex justify-center">
+        <div className="w-[381px] h-[42.58px] bg-white/10 rounded-[109.169px] flex justify-center items-center relative">
+          <div className="absolute left-[5.46px] top-[calc(50%-32.65px/2+0.27px)] w-[121.75px] h-[32.65px] bg-[#D65A31] rounded-[68.2307px] flex items-center justify-center gap-[6.82px] px-[16.3754px] py-[6.82307px]">
+            <span className="text-white text-[15.28px] leading-[19px] font-medium">
+              New Feature
+            </span>
+          </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-        >
-          <a
-            href="/resume.pdf"
-            className="bg-white text-black font-semibold px-6 py-3 rounded shadow hover:bg-gray-200 transition duration-300"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Resume ↗
-          </a>
-          <Link href="#contact" className="text-white underline underline-offset-4 hover:text-blue-400 transition duration-300">
-            Contact
-          </Link>
-        </motion.div>
-      </motion.div>
+          <div className="absolute left-[125.54px] top-[10.92px] w-[237.99px] h-[24px] flex justify-center items-center text-[15.28px] text-center text-[#D2D2D2] font-medium">
+            <span className="w-[227.07px] h-[24px]">
+              Check out Team Dashboard
+            </span>
+            <div className="absolute top-[16.72%] right-0 w-[19.65px] h-[19.65px] bg-[#D2D2D2] flex justify-center items-center">
+              <ArrowRight className="w-full h-full text-gray-500" />
+            </div>
+          </div>
+        </div>
+      </div>
 
-      {/* Image Section */}
-      <motion.div
-        initial={{ opacity: 0, x: 60 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className="w-full lg:w-1/2 mb-10 lg:mb-0 flex justify-center"
-      >
-        <Image
-          src={Hero_image}
-          alt="Creative full-stack developer illustration"
-          className="w-96 sm:w-96 lg:w-[350px] h-auto object-cover"
-          priority
-        />
-      </motion.div>
+      {/* Main Content */}
+      <div className="max-w-screen-xl mx-auto px-4 text-center">
+        {/* Heading */}
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight mb-4">
+          Fueling <span className="text-[#D65A31]">Brands.</span> Powering{" "}
+          <span className="text-[#AD5031]">Growth.</span>
+        </h1>
+
+        {/* Subtext */}
+        <p className="max-w-2xl mx-auto text-[#9F9F9F] text-base sm:text-lg md:text-[20px] mb-8 font-medium leading-relaxed">
+          From high-converting websites to result-driven campaigns – Egniol
+          Digital builds what success looks like.
+        </p>
+
+        {/* Statistics */}
+        <div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-6 text-white">
+          {/* ITEM 1 */}
+          <div className="flex items-center gap-3">
+            <Image
+              src={Check}
+              width={20}
+              height={20}
+              alt="check"
+              className="mt-1"
+            />
+            <div>
+              <span className="text-white font-bold text-lg sm:text-xl">
+                25 Cr+
+              </span>
+              <span className="text-sm sm:text-base text-[#D2D2D2] ml-2">
+                client revenue
+              </span>
+            </div>
+          </div>
+
+          {/* ITEM 2 */}
+          <div className="flex items-center gap-3">
+            <Image
+              src={Check}
+              width={20}
+              height={20}
+              alt="check"
+              className="mt-1"
+            />
+            <div>
+              <span className="text-white font-bold text-lg sm:text-xl">
+                150+
+              </span>
+              <span className="text-sm sm:text-base text-[#D2D2D2] ml-2">
+                projects delivered
+              </span>
+            </div>
+          </div>
+
+          {/* ITEM 3 */}
+          <div className="flex items-start gap-3">
+            <Image
+              src={Check}
+              width={20}
+              height={20}
+              alt="check"
+              className="mt-1"
+            />
+            <div>
+              <span className="text-white font-bold text-lg sm:text-xl">
+                97%
+              </span>
+              <span className="text-sm sm:text-base text-[#D2D2D2] ml-2">
+                client retention
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* Buttons */}
+        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-2 justify-center w-full max-w-screen-sm mx-auto">
+          <ButtonOrange
+            text="Start Your Project"
+            link="/our-work"
+            className="w-full md:w-[262.13px]"
+          />
+          <ButtonGray
+            text="See Our Work"
+            link="/our-work"
+            className="w-full md:w-[262.13px]"
+          />
+        </div>
+
+        {/* Bottom decoration (Hidden on Mobile) */}
+        <div className="mt-16 md:flex flex-col justify-center items-center text-center">
+          {/* Animated Dots and Text Section */}
+          <div className="inline-flex items-center space-x-2 text-[#9F9F9F] justify-center mb-2">
+            <div className="flex space-x-1">
+              {[...Array(4)].map((_, i) => (
+                <div
+                  key={i}
+                  className="w-2 h-2 bg-[#D65A31] rounded-full animate-pulse"
+                  style={{ animationDelay: `${i * 0.2}s` }}
+                ></div>
+              ))}
+            </div>
+            <span className="font-gilroy text-[16px] sm:text-lg ml-2">
+              Trusted by 1000+ businesses
+            </span>
+          </div>
+
+          {/* Image */}
+          <div className="mt-2">
+            <Image
+              src={Tech}
+              alt="Description of the image"
+              width={500}
+              height={300}
+              priority
+            />
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

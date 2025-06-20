@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Rowdies } from 'next/font/google';
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 
@@ -7,6 +8,15 @@ const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
+
+
+
+const rowdies = Rowdies({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-rowdies',
+});
+
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -60,7 +70,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+     <body className={`${rowdies.variable} font-sans`}>
         <Header />
         {children}
         <Footer />
