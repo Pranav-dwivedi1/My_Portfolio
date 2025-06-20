@@ -8,7 +8,7 @@ import Hero_image from '../../assets/home/hero.webp';
 export default function Hero() {
   return (
     <section className="flex flex-col-reverse lg:flex-row-reverse items-center justify-between px-6 lg:px-20 bg-[#1a1a1a] text-white min-h-screen">
-      {/* Text Section */}
+      {/* Text Sectio */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
