@@ -245,27 +245,27 @@ const ContactForm = ({ propsData }) => {
     fetchIpAddress();
   }, []);
 
-  return (
+   return (
     <motion.div
       variants={staggerContainer}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-      className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl shadow-lg"
+      className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-gradient-to-b from-[#4f1707] to-[#2B0C02] shadow-lg border "
     >
       <div className="text-center mb-12">
         <motion.h2
           variants={staggerItem}
-          className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600"
+          className="text-4xl md:text-5xl font-bold text-white mb-4"
         >
-          {propsData === "rewards-and-recognition"
-            ? "Want To Partner With The Best?"
+          {propsData === "rewards-and-recognition" 
+            ? "Want To Partner With The Best?" 
             : "Connect With Us"}
+          <span className="block w-20 h-1 bg-orange-500 mx-auto mt-4 rounded-full"></span>
         </motion.h2>
         <motion.p
           variants={staggerItem}
-          className={`text-lg md:text-xl text-gray-600 max-w-2xl mx-auto ${propsData === "rewards-and-recognition" ? "" : ""
-            }`}
+          className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto"
         >
           {propsData === "rewards-and-recognition"
             ? "Fill in this form and we'll get back to you"
@@ -275,14 +275,14 @@ const ContactForm = ({ propsData }) => {
 
       <motion.div
         variants={staggerItem}
-        className="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-md"
+        className="max-w-2xl mx-auto bg-[#230c02] bg-opacity-60 backdrop-blur-sm p-8 rounded-xl border border-[#3a1809] shadow-lg"
       >
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
               <label
                 htmlFor="name"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-medium text-gray-300"
               >
                 Name
               </label>
@@ -291,7 +291,7 @@ const ContactForm = ({ propsData }) => {
                 id="name"
                 name="name"
                 placeholder="Your name"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200"
+                className="w-full px-4 py-3 bg-[#1a0a03] border border-[#3a1809] rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition duration-200 text-white placeholder-gray-500"
                 onChange={handleChange}
                 value={formData.name}
               />
@@ -300,7 +300,7 @@ const ContactForm = ({ propsData }) => {
             <div className="space-y-2">
               <label
                 htmlFor="mobileNo"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-medium text-gray-300"
               >
                 Mobile Number
               </label>
@@ -309,15 +309,14 @@ const ContactForm = ({ propsData }) => {
                 id="mobileNo"
                 name="mobileNo"
                 placeholder="Your phone number"
-                className={`w-full px-4 py-3 border ${errors.mobileNo ? "border-red-500" : "border-gray-300"
-                  } rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200`}
+                className={`w-full px-4 py-3 bg-[#1a0a03] border ${errors.mobileNo ? "border-red-500" : "border-[#3a1809]"} rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition duration-200 text-white placeholder-gray-500`}
                 onChange={handleChange}
                 onKeyPress={handleKeyPress}
                 value={formData.mobileNo}
                 maxLength={10}
               />
               {errors.mobileNo && (
-                <p className="text-red-500 text-sm mt-1">{errors.mobileNo}</p>
+                <p className="text-red-400 text-sm mt-1">{errors.mobileNo}</p>
               )}
             </div>
           </div>
@@ -326,7 +325,7 @@ const ContactForm = ({ propsData }) => {
             <div className="space-y-2">
               <label
                 htmlFor="company"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-medium text-gray-300"
               >
                 Company
               </label>
@@ -335,7 +334,7 @@ const ContactForm = ({ propsData }) => {
                 id="company"
                 name="company"
                 placeholder="Your company"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200"
+                className="w-full px-4 py-3 bg-[#1a0a03] border border-[#3a1809] rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition duration-200 text-white placeholder-gray-500"
                 onChange={handleChange}
                 value={formData.company}
               />
@@ -344,7 +343,7 @@ const ContactForm = ({ propsData }) => {
             <div className="space-y-2">
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-medium text-gray-300"
               >
                 Email
               </label>
@@ -353,13 +352,12 @@ const ContactForm = ({ propsData }) => {
                 id="email"
                 name="email"
                 placeholder="your.email@example.com"
-                className={`w-full px-4 py-3 border ${errors.email ? "border-red-500" : "border-gray-300"
-                  } rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200`}
+                className={`w-full px-4 py-3 bg-[#1a0a03] border ${errors.email ? "border-red-500" : "border-[#3a1809]"} rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition duration-200 text-white placeholder-gray-500`}
                 onChange={handleChange}
                 value={formData.email}
               />
               {errors.email && (
-                <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                <p className="text-red-400 text-sm mt-1">{errors.email}</p>
               )}
             </div>
           </div>
@@ -367,7 +365,7 @@ const ContactForm = ({ propsData }) => {
           <div className="space-y-2">
             <label
               htmlFor="message"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium text-gray-300"
             >
               Your Message
             </label>
@@ -376,7 +374,7 @@ const ContactForm = ({ propsData }) => {
               name="message"
               placeholder="How can we help you?"
               rows={4}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200"
+              className="w-full px-4 py-3 bg-[#1a0a03] border border-[#3a1809] rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition duration-200 text-white placeholder-gray-500"
               onChange={handleChange}
               value={formData.message}
             />
@@ -385,15 +383,15 @@ const ContactForm = ({ propsData }) => {
           <button
             type="submit"
             disabled={loading || errors.mobileNo || errors.email || !verified}
-            className={`w-full py-3 px-6 rounded-lg font-medium text-white transition duration-200 shadow-md ${loading || errors.mobileNo || errors.email || !verified
-              ? "bg-blue-400 cursor-not-allowed"
-              : "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 transform hover:-translate-y-1"
+            className={`w-full py-3 px-6 rounded-lg font-medium text-white transition duration-200 shadow-lg ${loading || errors.mobileNo || errors.email || !verified
+              ? "bg-orange-800 cursor-not-allowed"
+              : "bg-gradient-to-r from-orange-600 to-orange-800 hover:from-orange-700 hover:to-orange-900 transform hover:-translate-y-1 hover:shadow-orange-500/20"
               }`}
           >
             {loading ? (
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center space-x-2">
                 <svg
-                  className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                  className="animate-spin h-5 w-5 text-white"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -412,14 +410,37 @@ const ContactForm = ({ propsData }) => {
                     d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                   ></path>
                 </svg>
-                Processing...
+                <span>Processing...</span>
               </div>
             ) : (
-              "Send Message"
+              <span className="flex items-center justify-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
+                </svg>
+                <span>Send Message</span>
+              </span>
             )}
           </button>
         </form>
       </motion.div>
+
+      {/* Floating particles */}
+      <div className="absolute inset-0 overflow-hidden opacity-20 pointer-events-none">
+        {[...Array(15)].map((_, i) => (
+          <div 
+            key={i}
+            className="absolute rounded-full bg-orange-500"
+            style={{
+              width: `${Math.random() * 8 + 4}px`,
+              height: `${Math.random() * 8 + 4}px`,
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              animation: `float ${Math.random() * 15 + 10}s linear infinite`,
+              animationDelay: `${Math.random() * 5}s`
+            }}
+          />
+        ))}
+      </div>
     </motion.div>
   );
 };
