@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function BlogHeader() {
   return (
-    <header className="relative w-full h-[50vh] min-h-[400px] overflow-hidden bg-gradient-to-br from-blue-900 via-purple-900 to-gray-900">
+    <header className="relative w-full h-[50vh] pb-10 overflow-hidden  bg-gradient-to-b from-[#160b07] via-[#1e0801] to-[#2B0C02]">
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzRjMC0yLjIgMS44LTQgNC00czQgMS44IDQgNC0xLjggNC00IDQtNC0xLjgtNC00eiIvPjwvZz48L2c+PC9zdmc+')]"></div>
@@ -42,15 +42,13 @@ export default function BlogHeader() {
               priority
               className="drop-shadow-2xl"
             /> */}
-            <div className="absolute inset-0 bg-blue-800/20 rounded-tl-2xl border-t-2 border-l-2 border-blue-500/30 flex items-center justify-center">
+            <div className="absolute inset-0  bg-blue-800/20 rounded-2xl border-2  border-blue-500/30 flex items-center justify-center">
               <span className="text-white/50 text-lg">Blog Illustration</span>
             </div>
           </div>
         </div>
       </div>
       
-      {/* Animated bottom border */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-blue-400 to-transparent opacity-40 animate-pulse"></div>
       
       {/* Scrolling indicator */}
       <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce">

@@ -5,12 +5,9 @@ import { motion } from 'framer-motion';
 
 export default function page() {
   return (
-    <section className="relative overflow-hidden">
-      {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-600 via-purple-700 to-pink-600 opacity-90 animate-gradient-shift"></div>
+    <section className="relative bg-gradient-to-b from-[#160b07] via-[#1e0801] to-[#2B0C02] text-white font-gilroy overflow-hidden">
       
       {/* Grid pattern overlay */}
-      <div className="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4yIj48cGF0aCBkPSJNMzYgMzRjMC0yLjIgMS44LTQgNC00czQgMS44IDQgNC0xLjggNC00IDQtNC0xLjgtNC00eiIvPjwvZz48L2c+PC9zdmc+')]"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -69,30 +66,7 @@ export default function page() {
         </div>
       </div>
 
-      {/* Stats section */}
-      <div className="relative bg-white/10 backdrop-blur-sm border-t border-b border-white/20 py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            {[
-              { number: '50+', label: 'Projects Completed' },
-              { number: '100%', label: 'Client Satisfaction' },
-              { number: '15+', label: 'Team Members' },
-              { number: '5', label: 'Years Experience' }
-            ].map((stat, index) => (
-              <motion.div 
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 + 0.4 }}
-                className="p-4"
-              >
-                <p className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</p>
-                <p className="text-sm md:text-base text-blue-100 uppercase tracking-wider">{stat.label}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </div>
+     
 
       <style jsx>{`
         .animate-gradient-shift {
