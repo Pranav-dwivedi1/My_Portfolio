@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function BlogHeader() {
   return (
-    <header className="relative w-full h-[50vh] pb-10 overflow-hidden  bg-gradient-to-b from-[#160b07] via-[#1e0801] to-[#2B0C02]">
+    <header className="relative w-full h-[50vh] pb-10 overflow-hidden  bg-gradient-to-b from-[#160b07] via-[#1e0801] to-[#2B0C02] font-gilroy">
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzRjMC0yLjIgMS44LTQgNC00czQgMS44IDQgNC0xLjggNC00IDQtNC0xLjgtNC00eiIvPjwvZz48L2c+PC9zdmc+')]"></div>
@@ -16,7 +16,7 @@ export default function BlogHeader() {
             Our <span className="text-blue-300">Business</span> Blog
           </h1>
           
-          <p className="text-lg md:text-xl text-blue-100 opacity-90 max-w-2xl mx-auto md:mx-0">
+          <p className="text-lg md:text-xl text-blue-100 opacity-90 max-w-xl mx-auto md:mx-0 font-gilroy">
             Resourceful insight, news and guidance that will help you make your business a successful brand!
           </p>
           
