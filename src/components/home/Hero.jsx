@@ -42,7 +42,7 @@ export default function Hero() {
 
         {/* Subtext */}
         <p className="max-w-2xl mx-auto text-[#9F9F9F] text-base sm:text-lg md:text-[20px] mb-8 font-medium leading-relaxed">
-          From high-converting websites to result-driven campaigns – Egniol
+          From high-converting websites to result-driven campaigns – Yantra
           Digital builds what success looks like.
         </p>
 

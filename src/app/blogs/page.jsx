@@ -13,11 +13,11 @@ export const metadata = {
     title: "Business Blog Spot | Insights, News & Business Growth Tips",
     description:
       "Get expert insights, news, and guidance to grow your MSME into a successful brand.",
-    url: "https://www.egniol.co.in/blogs",
+    url: "https://www.Yantra.co.in/blogs",
     type: "website",
   },
   alternates: {
-    canonical: "https://www.egniol.co.in/blogs",
+    canonical: "https://www.Yantra.co.in/blogs",
   },
 };
 
@@ -26,7 +26,7 @@ export default function Blogs() {
     {
       title:
         "Sensex Zomato: What's Driving Zomato's Performance on the BSE Sensex?",
-      desc: "Explore Zomato's impact on the BSE Sensex today and learn how Egniol Services Private Limited helps businesses secure MSME loans, government funding, and equity-based investments, and create compelling pitch decks for growth.",
+      desc: "Explore Zomato's impact on the BSE Sensex today and learn how Yantra Services Private Limited helps businesses secure MSME loans, government funding, and equity-based investments, and create compelling pitch decks for growth.",
       date: "December 25, 2024",
       tags: [{ tagTitle: "News" }, { tagTitle: "Finance" }],
       link: "/blogs/zomato-makes-history",
@@ -57,19 +57,19 @@ export default function Blogs() {
                 <p className="text-sm font-medium text-gray-100">Share:</p>
                 <div className="flex space-x-4">
                   <SocialIcon
-                    href="https://www.linkedin.com/company/egniol-group/"
+                    href="https://www.linkedin.com/company/Yantra-group/"
                     icon={
                       <FaLinkedin className="text-2xl text-blue-600 hover:text-blue-800 transition-colors" />
                     }
                   />
                   <SocialIcon
-                    href="https://www.facebook.com/Egniol/"
+                    href="https://www.facebook.com/Yantra/"
                     icon={
                       <ImFacebook2 className="text-2xl text-blue-700 hover:text-blue-900 transition-colors" />
                     }
                   />
                   <SocialIcon
-                    href="https://www.instagram.com/egniolgroup/"
+                    href="https://www.instagram.com/Yantragroup/"
                     icon={
                       <FaInstagram className="text-2xl text-pink-600 hover:text-pink-800 transition-colors" />
                     }

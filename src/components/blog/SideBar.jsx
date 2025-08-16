@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Link from "next/link";
 import { Phone } from "lucide-react";
 // import ContactForm from "../ContactForm";
@@ -7,92 +7,92 @@ import { useState } from "react";
 import JoinWorkshop from "./JoinWorkshop";
 import FundingOpportunityMsme from "./FundingOpportunityMsme";
 
-export default function SideBar({propsData}) {
+export default function SideBar({ propsData }) {
   const businessSetup = [
     {
       title: "Private Limited Company Registration",
-      url: "https://www.egniol.co.in/private-limited-company-registration",
+      url: "https://www.Yantra.co.in/private-limited-company-registration",
     },
     {
       title: "Limited Liability Partnership Registration",
-      url: "https://www.egniol.co.in/limited-liability-partnership-registration",
+      url: "https://www.Yantra.co.in/limited-liability-partnership-registration",
     },
     {
       title: "Govt e-Marketplace (GeM) Registration",
-      url: "https://www.egniol.co.in/gem-registration",
+      url: "https://www.Yantra.co.in/gem-registration",
     },
     {
       title: "MSME Certification",
-      url: "https://www.egniol.co.in/msme-certification",
+      url: "https://www.Yantra.co.in/msme-certification",
     },
     {
       title: "Start up India Certification",
-      url: "https://www.egniol.co.in/msme-certification",
+      url: "https://www.Yantra.co.in/msme-certification",
     },
     {
       title: "Tax Exemption Certification",
-      url: "https://www.egniol.co.in/msme-certification",
+      url: "https://www.Yantra.co.in/msme-certification",
     },
   ];
 
   const businessGrowth = [
     {
       title: "Government Grants",
-      url: "https://www.egniol.co.in/government-grants",
+      url: "https://www.Yantra.co.in/government-grants",
     },
     {
       title: "Government Loans",
-      url: "https://www.egniol.co.in/government-business-loans",
+      url: "https://www.Yantra.co.in/government-business-loans",
     },
     {
       title: "NBFC Loans",
-      url: "https://www.egniol.co.in/nbfc-loan",
+      url: "https://www.Yantra.co.in/nbfc-loan",
     },
     {
       title: "Equity Based Funding",
-      url: "https://www.egniol.co.in/equity-based-funding",
+      url: "https://www.Yantra.co.in/equity-based-funding",
     },
     {
       title: "1:1 Mentorship",
-      url: "https://www.egniol.co.in/contact-us",
+      url: "https://www.Yantra.co.in/contact-us",
     },
     {
       title: "Pitch Deck",
-      url: "https://www.egniol.co.in/pitch-deck-consultation",
+      url: "https://www.Yantra.co.in/pitch-deck-consultation",
     },
   ];
 
   const businessExpansion = [
     {
       title: "Website Development",
-      url: "https://egnioldigital.com/services",
+      url: "https://Yantradigital.com/services",
     },
     {
       title: "Digital Marketing",
-      url: "https://egnioldigital.com/services",
+      url: "https://Yantradigital.com/services",
     },
     {
       title: "Search Engine Optimization",
-      url: "https://egnioldigital.com/services/",
+      url: "https://Yantradigital.com/services/",
     },
     {
       title: "Social Media Marketing",
-      url: "https://egnioldigital.com/services/",
+      url: "https://Yantradigital.com/services/",
     },
     {
       title: "Performance Marketing",
-      url: "https://egnioldigital.com/services/",
+      url: "https://Yantradigital.com/services/",
     },
     {
       title: "Whatsapp Marketing",
-      url: "https://egnioldigital.com/services/",
+      url: "https://Yantradigital.com/services/",
     },
   ];
 
   const businessProtection = [
     {
       title: "Legal & Compliances",
-      url: "https://www.egniol.co.in/legal-and-compliances",
+      url: "https://www.Yantra.co.in/legal-and-compliances",
     },
   ];
 
@@ -108,7 +108,7 @@ export default function SideBar({propsData}) {
         <ul className="divide-y divide-gray-100">
           {items.map((item, index) => (
             <li key={index} className="group">
-              <Link 
+              <Link
                 href={item.url}
                 className="flex items-center p-3 hover:bg-gray-50 transition-all duration-200"
               >
@@ -123,13 +123,13 @@ export default function SideBar({propsData}) {
       </div>
     </div>
   );
- 
+
   return (
     <div className="p-6 bg-gray-50 h-full">
-        <div className="mb-8 top-20">
-          <FundingOpportunityMsme/>
-      <JoinWorkshop/>
-     </div>
+      <div className="mb-8 top-20">
+        <FundingOpportunityMsme />
+        <JoinWorkshop />
+      </div>
       {renderSection(
         "Business Setup",
         businessSetup,
@@ -154,10 +154,7 @@ export default function SideBar({propsData}) {
         "bg-gradient-to-r from-purple-500 to-indigo-500",
         "text-xl"
       )}
-     <div className="mb-8 sticky top-20">
-      {/* <BlogContactForm/> */}
-     </div>
-
+      <div className="mb-8 sticky top-20">{/* <BlogContactForm/> */}</div>
     </div>
   );
 }
