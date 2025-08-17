@@ -41,7 +41,7 @@ export default function Blogs() {
   ];
 
   return (
-    <section className=" bg-gradient-to-b from-[#160b07] via-[#1e0801] to-[#2B0C02] text-white py-12 md:py-20 font-gilroy">
+    <section className=" bg-gradient-to-b from-[#160b07] via-[#1e0801] to-[#2B0C02] text-white py-12 font-gilroy">
       <div className="min-h-screen">
         {/* Hero Header */}
         <div className="relative w-full h-[50vh] min-h-[400px] bg-gradient-to-br from-blue-900 via-purple-900 to-gray-900">
@@ -50,7 +50,7 @@ export default function Blogs() {
 
         {/* Main Content */}
         <div className="w-full py-16 ">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4">
             {/* Social Media & Filter Bar */}
             <div className="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
               <div className="flex items-center space-x-6">
@@ -110,7 +110,7 @@ export default function Blogs() {
             </div>
 
             {/* Blog Posts Grid */}
-            <div className="mb-16">
+            <div className="">
               <h2 className="text-3xl font-bold text-gray-100 mb-8 pb-4 border-b border-gray-200">
                 Latest Articles
               </h2>
@@ -121,28 +121,7 @@ export default function Blogs() {
               </div>
             </div>
 
-            {/* Newsletter Subscription */}
-            <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-8 md:p-10 shadow-inner">
-              <div className="max-w-3xl mx-auto text-center">
-                <h3 className="text-2xl font-bold text-gray-100 mb-3">
-                  Stay Updated
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  Get the latest business insights and growth tips delivered to
-                  your inbox
-                </p>
-                <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                  <input
-                    type="email"
-                    placeholder="Your email address"
-                    className="flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  />
-                  <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-all duration-300 shadow-md hover:shadow-lg">
-                    Subscribe
-                  </button>
-                </div>
-              </div>
-            </div>
+           
           </div>
         </div>
       </div>

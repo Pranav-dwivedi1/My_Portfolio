@@ -1,6 +1,9 @@
 import React from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 import { motion } from 'framer-motion';
+import ButtonOrange from "@/components/comman/ui/ButtonOrange";
+import ButtonGray from "@/components/comman/ui/ButtonGray";
+
 
 export default function ProjectHero() {
   return (
@@ -11,7 +14,7 @@ export default function ProjectHero() {
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4yIj48cGF0aCBkPSJNMzYgMzRjMC0yLjIgMS44LTQgNC00czQgMS44IDQgNC0xLjggNC00IDQtNC0xLjgtNC00eiIvPjwvZz48L2c+PC9zdmc+')]"></div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-28 lg:py-32">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <motion.div 
@@ -29,19 +32,27 @@ export default function ProjectHero() {
             <p className="text-lg md:text-xl text-blue-100 mb-8 max-w-lg">
               A deep dive into our innovative approach that delivered exceptional results for our client through cutting-edge technology and creative solutions.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="flex items-center px-6 py-3 bg-white text-blue-600 font-medium rounded-lg shadow-lg hover:shadow-xl transition-all"
-              >
-                View Case Study
-                <FiArrowRight className="ml-2" />
-              </motion.button>
-              <button className="px-6 py-3 border-2 border-white/40 text-white font-medium rounded-lg hover:bg-white/10 transition-all">
-                Live Preview
-              </button>
-            </div>
+            <div className="flex flex-col md:flex-row items-start gap-4 md:gap-4 justify-start w-full max-w-screen-sm mx-auto">
+            <ButtonOrange
+              link="/our-work"
+              className="w-full md:w-[280px] px-8 py-4 flex items-center justify-center text-lg text-white"
+              text={
+                <>
+                  View Case Study
+                </>
+              }
+            />
+
+            <ButtonGray
+              link="/our-work"
+              className="w-full md:w-[280px] px-8 py-4 flex items-center justify-center text-lg text-white"
+              text={
+                <>
+                  Live Preview
+                </>
+              }
+            />
+          </div>
           </motion.div>
 
           {/* Project mockup */}

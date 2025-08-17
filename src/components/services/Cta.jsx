@@ -106,10 +106,11 @@ export default function CTASection() {
               className="transform hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/20"
             />
             <ButtonGray
-              text="Schedule a Consultation"
-              link="/contact"
-              className="transform hover:scale-105 transition-all duration-300"
-            />
+  text="Call Now"
+  link="tel:+918770676950"
+  className="transform hover:scale-105 transition-all duration-300"
+/>
+
           </div>
 
           {/* Trust indicators */}

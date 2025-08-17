@@ -51,8 +51,8 @@ const ContactInfoSection = () => {
         </svg>
       ),
       title: "Email Us",
-      info: "contact@yourcompany.com",
-      action: "mailto:contact@yourcompany.com",
+      info: "pranav01dev@gmail.com",
+      action: "mailto:pranav01dev@gmail.com",
       accent: "text-orange-400"
     },
     {
@@ -62,8 +62,8 @@ const ContactInfoSection = () => {
         </svg>
       ),
       title: "Call Us",
-      info: "+1 (555) 123-4567",
-      action: "tel:+15551234567",
+      info: "+91 8770676950",
+      action: "tel:+918770676950",
       accent: "text-orange-400"
     },
     {
