@@ -145,9 +145,9 @@ const ProjectCard = ({ project, index }) => {
 
 export default function Project() {
   return (
-    <section className="relative py-16 text-white px-4 md:px-20 lg:px-28 bg-[#3c3938] md:bg-[#160A05] bg-dark-vignette">
-      <div className="absolute w-[408px] h-[402px] top-[0px] right-[-200px] md:bg-[#993b1ce8] blur-[300px] mix-blend-screen rounded-full pointer-events-none z-0 overflow-hidden" />
-      <div className="absolute w-[608px] h-[502px] bottom-[-100px] left-[-150px] md:bg-[#692711ac] blur-[300px] mix-blend-screen rounded-full pointer-events-none z-0 overflow-hidden"  />
+    <section className="relative py-16 text-white px-4 md:px-20 lg:px-28 bg-[#160A05] bg-dark-vignette">
+      <div className="absolute w-[408px] h-[402px] top-[0px] right-[-200px] bg-[#993b1ce8] blur-[300px] mix-blend-screen rounded-full pointer-events-none z-0 overflow-hidden" />
+      <div className="absolute w-[608px] h-[502px] bottom-[-100px] left-[-150px] bg-[#692711ac] blur-[300px] mix-blend-screen rounded-full pointer-events-none z-0 overflow-hidden"  />
 
       {/* Heading */}
       <div className="flex items-center justify-center gap-4 my-6">
@@ -160,21 +160,23 @@ export default function Project() {
 
       {/* Mobile View - Swiper */}
       <div className="md:hidden">
-        <Swiper
-          modules={[Navigation, Pagination]}
-          navigation
-          pagination={{ clickable: true }}
-          spaceBetween={20}
-          slidesPerView={1}
-          grabCursor={true}
-        >
-          {projects.map((project, index) => (
-            <SwiperSlide key={project.id}>
-              <ProjectCard project={project} index={index} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+  <Swiper
+    modules={[Navigation, Pagination]}
+    navigation
+    pagination={{ clickable: true, el: '.swiper-pagination' }} 
+    spaceBetween={20}
+    slidesPerView={1}
+    grabCursor={true}
+  >
+    {projects.map((project, index) => (
+      <SwiperSlide key={project.id}>
+        <ProjectCard project={project} index={index} />
+      </SwiperSlide>
+    ))}
+  </Swiper>
+  {/* Add the pagination container below the Swiper */}
+  <div className="swiper-pagination mt-2"></div>  {/* This will position the dots below the cards */}
+</div>
 
       {/* Desktop View - Grid */}
       <div className="hidden md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

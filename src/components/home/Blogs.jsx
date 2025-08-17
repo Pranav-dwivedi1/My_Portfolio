@@ -6,6 +6,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import BlogImg from '../../assets/home/blog.png';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import ButtonOrange from "@/components/comman/ui/ButtonOrange";
+
 
 // import blogImg1 from '../../assets/home/blog1.avif';
 // import blogImg2 from '../../assets/home/blog2.avif';
@@ -43,7 +45,8 @@ const blogs = [
 
 export default function Blogs() {
   return (
-    <section className="px-6 md:px-12 py-16 bg-[#3c3938] md:bg-[#160A05] bg-dark-vignette text-white">
+    <section className="px-6 md:px-12 py-16 bg-gradient-to-br bg-[#160A05] bg-dark-vignette text-white">
+
       {/* Section Heading */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}

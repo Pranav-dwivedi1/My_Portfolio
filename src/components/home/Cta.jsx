@@ -90,18 +90,20 @@ export default function Cta() {
               Create something amazing. No code needed <br /> just vision and action.
             </p>
             <div className="pt-4">
-              <button className="
-                group relative inline-flex items-center justify-center
-                px-8 py-4 text-lg font-semibold text-white
-                bg-gradient-to-r from-blue-500 to-purple-600
-                rounded-full transition-all duration-300 ease-out
-                hover:scale-105 hover:-translate-y-1
-                hover:shadow-xl hover:shadow-blue-500/25
-                active:scale-95 active:translate-y-0
-              ">
-                <span className="relative z-10">Start now</span>
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-xl" />
-              </button>
+           <button className="
+  group relative inline-flex items-center justify-center
+  px-12 py-4 text-lg font-semibold text-white
+  bg-gradient-to-r from-[#D65A31] to-[#e46848]
+  rounded-full transition-all duration-300 ease-out
+  hover:scale-105 hover:-translate-y-1
+  hover:shadow-xl hover:shadow-orange-100/25
+  active:scale-95 active:translate-y-0
+">
+  <span className="relative z-10">Contact Us</span>
+  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#ed6a49] to-[#D65A31] opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-xl" />
+</button>
+
+
             </div>
           </div>
 

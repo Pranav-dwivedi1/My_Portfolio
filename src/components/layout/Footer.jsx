@@ -63,9 +63,10 @@ export default function Footer() {
                 placeholder="Enter your email"
                 className="flex-grow rounded-full px-5 py-3 text-white border border-gray-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 transition"
               />
-              <button className="bg-purple-600 hover:bg-purple-700 transition text-white font-semibold px-6 py-3 rounded-full whitespace-nowrap">
-                Subscribe
-              </button>
+             <button className="bg-[#D65A31] hover:bg-[#D65A31]/90 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105">
+  Subscribe
+</button>
+
             </div>
           </div>
         </motion.div>

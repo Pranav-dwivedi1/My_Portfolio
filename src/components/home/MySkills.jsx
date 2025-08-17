@@ -43,10 +43,10 @@ const skills = [
 
 export default function MySkills() {
   return (
-    <section className="relative py-16 text-white px-4 md:px-20 lg:px-28 bg-[#3c3938] md:bg-[#160A05] bg-dark-vignette">
+    <section className="relative py-16 text-white px-4 md:px-20 lg:px-28 bg-[#160A05] bg-dark-vignette">
 
-      <div className="absolute w-[608px] h-[502px] bottom-[-100px] left-[-150px] md:bg-[#692711ac] blur-[300px] mix-blend-screen rounded-full pointer-events-none z-0 overflow-hidden"  />
-        <div className="absolute w-[408px] h-[402px] top-[0px] right-[-200px] md:bg-[#993b1ce8] blur-[300px] mix-blend-screen rounded-full pointer-events-none z-0 overflow-hidden" />
+      <div className="absolute w-[608px] h-[502px] bottom-[-100px] left-[-150px] bg-[#692711ac] blur-[300px] mix-blend-screen rounded-full pointer-events-none z-0 overflow-hidden"  />
+        <div className="absolute w-[408px] h-[402px] top-[0px] right-[-200px] bg-[#993b1ce8] blur-[300px] mix-blend-screen rounded-full pointer-events-none z-0 overflow-hidden" />
 
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
@@ -62,7 +62,7 @@ export default function MySkills() {
         </motion.div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {skills.map((skill, index) => (
             <motion.div
               key={index}
