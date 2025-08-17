@@ -13,7 +13,7 @@ export default function page () {
   return (
    <>
    <Hero/>
-    <Projects/>
+   <Projects/>
     <Skill/>
     <Blogs/>
     <Cta/>

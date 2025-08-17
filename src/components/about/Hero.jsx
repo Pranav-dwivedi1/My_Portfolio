@@ -2,6 +2,8 @@
 import React from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 import { motion } from 'framer-motion';
+import ButtonOrange from "@/components/comman/ui/ButtonOrange";
+import ButtonGray from "@/components/comman/ui/ButtonGray";
 
 export default function page() {
   return (
@@ -27,19 +29,25 @@ export default function page() {
             <p className="text-lg md:text-xl text-blue-100 mb-8 max-w-lg">
               We're a passionate team of innovators, designers, and problem-solvers dedicated to creating digital experiences that make an impact.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="flex items-center px-6 py-3 bg-white text-indigo-600 font-medium rounded-lg shadow-lg hover:shadow-xl transition-all"
-              >
-                Meet Our Team
-                <FiArrowRight className="ml-2" />
-              </motion.button>
-              <button className="px-6 py-3 border-2 border-white/40 text-white font-medium rounded-lg hover:bg-white/10 transition-all">
-                Our Values
-              </button>
-            </div>
+        <div className="flex flex-col md:flex-row items-start gap-4 md:gap-4 justify-items-start w-full max-w-screen-sm mx-auto">
+  <ButtonOrange
+    text="Meet Our Team"
+    link="/prject"
+    className="w-full md:w-[262.13px] flex items-center justify-center"
+  >
+    <span className="mr-2">Meet Our Team</span>
+    <FiArrowRight className="ml-2" />
+  </ButtonOrange>
+  
+  <ButtonGray
+    text="Our Values"
+    link="/service"
+    className=""
+  />
+</div>
+
+
+
           </motion.div>
 
           {/* Team illustration */}

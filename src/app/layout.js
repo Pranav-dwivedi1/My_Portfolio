@@ -71,11 +71,12 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-     <body className={`${rowdies.variable} font-sans`}>
-        <Header />
-        {children}
-        <Footer />
-      </body>
+   <body className={`${rowdies.variable} font-sans bg-[#160A05]`}>
+  <Header />
+  {children}
+  <Footer />
+</body>
+
     </html>
   );
 }
