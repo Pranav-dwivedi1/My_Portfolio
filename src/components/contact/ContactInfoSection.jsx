@@ -74,8 +74,8 @@ const ContactInfoSection = () => {
         </svg>
       ),
       title: "Visit Us",
-      info: "123 Business Ave, Suite 456\nTech City, TC 10001",
-      action: "https://maps.google.com",
+      info: "65 Kalpana Nagar Bhopal Madhya Pradesh India",
+      action: "https://www.google.com/maps/place/65,+Kalpana+Nagar,+Bhopal,+Madhya+Pradesh+462022/@23.2502221,77.4759541,17z/data=!3m1!4b1!4m6!3m5!1s0x397c41fbd61a2063:0x12c1ebc1bf76724e!8m2!3d23.2502221!4d77.4759541!16s%2Fg%2F11fs1_w4d5?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D",
       accent: "text-orange-400"
     }
   ];
