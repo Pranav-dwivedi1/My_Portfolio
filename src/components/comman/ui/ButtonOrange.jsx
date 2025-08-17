@@ -4,29 +4,27 @@ import Link from "next/link";
 const ButtonOrange = ({ text, link, fullWidth = false, className = "" }) => {
   const buttonContent = (
     <button
-      className={`bg-gradient-to-r from-[#D65A31] to-[#AD5031]
-        text-white py-[18.26px] px-[49.06px]
-        rounded-[114.1px] text-lg font-medium
-        hover:opacity-90 transition-all duration-300
-        shadow-[inset_0px_-8px_12.6px_0px_#EF754D]
-        flex items-center justify-center text-center leading-tight
-        h-[61.51px]
-        ${fullWidth ? "!w-full max-w-full" : "w-[262.13px]"}
+      className={`bg-[#D65A31] border border-[#D8D8D666] shadow-[inset_0px_-8px_21.6px_#FFFFFF26]
+        py-[18.26px] px-[49.06px] rounded-[114.1px] 
+        text-lg hover:bg-[#E56A3D] hover:scale-105 transition-all duration-300 
+        font-medium flex items-center justify-center w-full h-[61px] md:w-[262.36px]
         ${className}`}
     >
-      <span className="block leading-tight text-[16px] font-gilroy text-center w-full">
-        {text}
-      </span>
+      <span className="text-center">{text}</span>
     </button>
   );
 
-  return link ? (
-    <Link href={link} passHref className={`block ${fullWidth ? "!w-full max-w-full" : "w-auto"}`}>
-      {buttonContent}
-    </Link>
-  ) : (
-    buttonContent
-  );
+  // If a link is provided, wrap the button in a Link component
+  if (link) {
+    return (
+      <Link href={link} passHref className="w-full md:w-auto">
+        {buttonContent}
+      </Link>
+    );
+  }
+
+  // Otherwise, return just the button element
+  return buttonContent;
 };
 
 export default ButtonOrange;

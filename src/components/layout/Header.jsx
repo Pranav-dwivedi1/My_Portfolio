@@ -49,7 +49,7 @@ function Dropdown({ label, labelHref, links, closeMenu }) {
               href={href}
               onClick={closeMenu}
               className="block text-sm text-gray-600 hover:text-blue-500"
-            >
+            >f
               {label}
             </Link>
           ))}
@@ -236,7 +236,7 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+    
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white z-50 shadow-lg rounded-b-xl border-t border-gray-300 px-4 pb-4 pt-4 space-y-2">

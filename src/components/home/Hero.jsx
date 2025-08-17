@@ -107,18 +107,19 @@ export default function Hero() {
         </div>
 
         {/* Buttons */}
-        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-2 justify-center w-full max-w-screen-sm mx-auto">
+        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-4 justify-center w-full max-w-screen-sm mx-auto">
           <ButtonOrange
             text="Start Your Project"
             link="/our-work"
-            className="w-full md:w-[262.13px]"
+            className="w-full  md:w-[262.13px]"
           />
           <ButtonGray
             text="See Our Work"
             link="/our-work"
-            className="w-full md:w-[262.13px]"
+            className=""
           />
         </div>
+      
 
         {/* Bottom decoration (Hidden on Mobile) */}
         <div className="mt-16 md:flex flex-col justify-center items-center text-center">
