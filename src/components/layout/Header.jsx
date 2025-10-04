@@ -5,6 +5,7 @@ import Image from "next/image";
 
 // import Logo from "../../assets/whatapplogo/logowhatapp.png";
 import Hameburger from "../../assets/home/hameburger.png";
+import cross from "../../assets/header/cross.png";
 import ButtonOrange from "@/components/comman/ui/ButtonOrange";
 
 function Dropdown({ label, labelHref, links, closeMenu }) {
@@ -49,8 +50,8 @@ function Dropdown({ label, labelHref, links, closeMenu }) {
               href={href}
               onClick={closeMenu}
               className="block text-sm text-gray-600 hover:text-blue-500"
-            >f
-              {label}
+            >
+              f{label}
             </Link>
           ))}
         </div>
@@ -220,23 +221,32 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Hamburger */}
+        {/* Mobile Hamburger / Cross */}
         <button
           className="md:hidden p-2"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle Menu"
         >
-          <Image
-            src={Hameburger}
-            alt="Menu"
-            width={35}
-            height={35}
-            className="w-8 h-8"
-          />
+          {menuOpen ? (
+            <Image
+              src={cross}
+              alt="Close"
+              width={35}
+              height={35}
+              className="w-8 h-8"
+            />
+          ) : (
+            <Image
+              src={Hameburger}
+              alt="Menu"
+              width={35}
+              height={35}
+              className="w-8 h-8"
+            />
+          )}
         </button>
       </div>
 
-    
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white z-50 shadow-lg rounded-b-xl border-t border-gray-300 px-4 pb-4 pt-4 space-y-2">
@@ -290,9 +300,10 @@ export default function Header() {
           </Link>
 
           {/* Mobile Contact Us Button with Border and Gradient */}
-          <ButtonOrange onClick={() => setIsModalOpen(true)}>
-            Contact Us
-          </ButtonOrange>
+          <ButtonOrange
+            text="Contact Us"
+            onClick={() => setIsModalOpen(true)}
+          />
         </div>
       )}
 

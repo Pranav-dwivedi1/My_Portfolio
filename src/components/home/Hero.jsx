@@ -6,6 +6,7 @@ import ButtonOrange from "@/components/comman/ui/ButtonOrange";
 import ButtonGray from "@/components/comman/ui/ButtonGray";
 import Tech from "../../assets/home/hero/tech.png";
 import Check from "../../assets/home/hero/check.png";
+import RightArrow from "../../assets/home/hero/right.svg";
 
 export default function Hero() {
   return (
@@ -13,21 +14,23 @@ export default function Hero() {
       {/* Header (Logo and Hamburger Menu for Mobile) */}
 
       {/* New Feature Banner */}
-      <div className="relative w-full h-[42.58px] mb-8 flex justify-center">
-        <div className="w-[381px] h-[42.58px] bg-white/10 rounded-[109.169px] flex justify-center items-center relative">
-          <div className="absolute left-[5.46px] top-[calc(50%-32.65px/2+0.27px)] w-[121.75px] h-[32.65px] bg-[#D65A31] rounded-[68.2307px] flex items-center justify-center gap-[6.82px] px-[16.3754px] py-[6.82307px]">
+      <div className="relative w-full h-[42.58px] mb-8 flex justify-center items-center">
+        <div className="w-[381px] h-[42.58px] bg-white/10 rounded-[109.169px] flex justify-betweenc:\Users\Admin\Downloads\icons8-cross-30.png items-center relative px-3">
+          {/* Orange Label */}
+          <div className="w-[121.75px] h-[32.65px] bg-[#D65A31] rounded-[68.2307px] flex items-center justify-center gap-[6.82px] px-[16.3754px] py-[6.82307px]">
             <span className="text-white text-[15.28px] leading-[19px] font-medium">
               New Feature
             </span>
           </div>
 
-          <div className="absolute left-[125.54px] top-[10.92px] w-[237.99px] h-[24px] flex justify-center items-center text-[15.28px] text-center text-[#D2D2D2] font-medium">
-            <span className="w-[227.07px] h-[24px]">
-              Check out Team Dashboard
-            </span>
-            <div className="absolute top-[16.72%] right-0 w-[19.65px] h-[19.65px] bg-[#D2D2D2] flex justify-center items-center">
-              <ArrowRight className="w-full h-full text-gray-500" />
-            </div>
+          {/* Center Text */}
+          <span className="text-[15.28px] text-center text-[#D2D2D2] font-medium">
+            Check out Team Dashboard
+          </span>
+
+          {/* Arrow Icon */}
+          <div className="w-[24px] h-[24px] bg-[#D2D2D2] flex justify-center items-center rounded-full">
+            <ArrowRight className="w-4 h-4 text-gray-700" />
           </div>
         </div>
       </div>
@@ -113,13 +116,8 @@ export default function Hero() {
             link="/our-work"
             className="w-full  md:w-[262.13px]"
           />
-          <ButtonGray
-            text="See Our Work"
-            link="/our-work"
-            className=""
-          />
+          <ButtonGray text="See Our Work" link="/our-work" className="" />
         </div>
-      
 
         {/* Bottom decoration (Hidden on Mobile) */}
         <div className="mt-16 md:flex flex-col justify-center items-center text-center">

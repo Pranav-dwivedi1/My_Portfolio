@@ -10,7 +10,7 @@ const ButtonOrange = ({ text, link, fullWidth = false, className = "" }) => {
         font-medium flex items-center justify-center w-full h-[61px] md:w-[262.36px]
         ${className}`}
     >
-      <span className="text-center">{text}</span>
+      <span className="text-center text-white">{text}</span>{" "}
     </button>
   );
 
