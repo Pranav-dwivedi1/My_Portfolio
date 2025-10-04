@@ -5,7 +5,7 @@ import Image from "next/image";
 
 // import Logo from "../../assets/whatapplogo/logowhatapp.png";
 import Hameburger from "../../assets/home/hameburger.png";
-import cross from "../../assets/header/cross.png";
+import cross from "../../assets/header/cross.svg";
 import ButtonOrange from "@/components/comman/ui/ButtonOrange";
 
 function Dropdown({ label, labelHref, links, closeMenu }) {
@@ -233,7 +233,7 @@ export default function Header() {
               alt="Close"
               width={35}
               height={35}
-              className="w-8 h-8"
+              className="w-10 h-10"
             />
           ) : (
             <Image
@@ -241,7 +241,7 @@ export default function Header() {
               alt="Menu"
               width={35}
               height={35}
-              className="w-8 h-8"
+              className="w-9 h-9"
             />
           )}
         </button>

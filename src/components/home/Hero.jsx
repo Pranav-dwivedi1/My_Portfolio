@@ -15,7 +15,7 @@ export default function Hero() {
 
       {/* New Feature Banner */}
       <div className="relative w-full h-[42.58px] mb-8 flex justify-center items-center">
-        <div className="w-[381px] h-[42.58px] bg-white/10 rounded-[109.169px] flex justify-betweenc:\Users\Admin\Downloads\icons8-cross-30.png items-center relative px-3">
+        <div className="w-[381px] h-[42.58px] bg-white/10 rounded-[109.169px] flex justify-between items-center relative px-2">
           {/* Orange Label */}
           <div className="w-[121.75px] h-[32.65px] bg-[#D65A31] rounded-[68.2307px] flex items-center justify-center gap-[6.82px] px-[16.3754px] py-[6.82307px]">
             <span className="text-white text-[15.28px] leading-[19px] font-medium">
