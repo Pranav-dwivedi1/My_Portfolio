@@ -62,7 +62,7 @@ export default function Hero() {
             />
             <div>
               <span className="text-white font-bold text-lg sm:text-xl">
-                25 Cr+
+                30 Lakh+
               </span>
               <span className="text-sm sm:text-base text-[#D2D2D2] ml-2">
                 client revenue
@@ -81,7 +81,7 @@ export default function Hero() {
             />
             <div>
               <span className="text-white font-bold text-lg sm:text-xl">
-                150+
+                30+
               </span>
               <span className="text-sm sm:text-base text-[#D2D2D2] ml-2">
                 projects delivered
@@ -100,10 +100,10 @@ export default function Hero() {
             />
             <div>
               <span className="text-white font-bold text-lg sm:text-xl">
-                97%
+                100%
               </span>
               <span className="text-sm sm:text-base text-[#D2D2D2] ml-2">
-                client retention
+                Accuracy
               </span>
             </div>
           </div>

@@ -1,7 +1,17 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaJsSquare, FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaGitAlt, FaDatabase } from 'react-icons/fa';
+import {
+  FaJsSquare,
+  FaReact,
+  FaNodeJs,
+  FaHtml5,
+  FaCss3Alt,
+  FaGitAlt,
+  FaDatabase
+} from "react-icons/fa";
+import { SiWordpress } from "react-icons/si";
+import { SiNextdotjs } from "react-icons/si";
 
 const skills = [
   {
@@ -10,9 +20,14 @@ const skills = [
     desc: 'Core language I use for everything frontend and backend.'
   },
   {
-    name: 'React',
+    name: 'React JS',
     icon: <FaReact className="text-blue-400 text-5xl" />,
     desc: 'My go-to library for building UIs, SPAs & interactive apps.'
+  },
+  {
+  name: 'Next js',
+  icon: <SiNextdotjs className="text-black text-5xl" />,
+  desc: 'A powerful React framework for building fast, SEO-friendly and full-stack web applications.'
   },
   {
     name: 'Node.js',
@@ -38,7 +53,14 @@ const skills = [
     name: 'MongoDB / SQL',
     icon: <FaDatabase className="text-purple-500 text-5xl" />,
     desc: 'Document or relational, I work with both data models.'
+  },
+  {
+  name: "WordPress",
+  icon: <SiWordpress className="text-blue-500 text-5xl" />,
+  desc: "A popular CMS for building blogs, business websites, and fully customizable content-driven platforms."
   }
+
+  
 ];
 
 export default function MySkills() {
