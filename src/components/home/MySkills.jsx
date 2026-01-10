@@ -10,8 +10,9 @@ import {
   FaGitAlt,
   FaDatabase
 } from "react-icons/fa";
-import { SiWordpress } from "react-icons/si";
-import { SiNextdotjs } from "react-icons/si";
+
+import { SiNextdotjs, SiWordpress } from "react-icons/si";
+
 
 const skills = [
   {
