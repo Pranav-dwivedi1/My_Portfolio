@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import ContactProApi from "../../services/api/contactApi";
 import { motion } from "framer-motion";
 import toast from 'react-hot-toast';
 import { duration } from "moment-timezone";
@@ -11,10 +10,8 @@ const ContactForm = ({ propsData }) => {
   const [formData, setFormData] = useState({
     name: "",
     company: "",
-    services: "",
     mobileNo: "",
     email: "",
-    subservices: "",
     message: "",
     fromPage: propsData || "default-page", // Add fallback
     ipAddress: null,
@@ -82,61 +79,11 @@ const ContactForm = ({ propsData }) => {
     }));
   };
 
-  const apiServiceType = [
-    "Registration",
-    "Certification",
-    "Funding",
-    "Digital Marketing",
-    "More Services",
-  ];
+  
 
-  const handleSelectChange = (event) => {
-    const value = event.target.value;
-    setFormData((prevState) => ({
-      ...prevState,
-      services: value,
-    }));
+  
 
-    if (value == "Registration") {
-      setApiSubService([]);
-      setApiSubService([
-        "GeM Registration",
-
-      ]);
-    } else if (value == "Certification") {
-      setApiSubService([]);
-      setApiSubService([
-        "IEC Certification",
-        "ISO Certification",
-
-      ]);
-    } else if (value == "Funding") {
-      setApiSubService([]);
-      setApiSubService([
-        "Global Impact Grant",
-        "MSME Loans",
-        "Nidhi Pryas Yojna",
-
-      ]);
-    } else if (value == "Digital Marketing") {
-      setApiSubService([]);
-      setApiSubService([
-        "Content Writing",
-        "Email Marketing",
-
-      ]);
-    } else if (value == "More Services") {
-      setApiSubService([]);
-      setApiSubService(["Legal & Compliances", "Pitch Deck"]);
-    }
-  };
-
-  const handleSubServicesChange = (event) => {
-    setFormData((prevState) => ({
-      ...prevState,
-      subservices: event.target.value,
-    }));
-  };
+ 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -162,13 +109,13 @@ const ContactForm = ({ propsData }) => {
       const data = {
         name: formData.name.trim(),
         company: formData.company.trim(),
-        services: formData.services || null,
         mobileNo: formData.mobileNo,
         email: formData.email.trim(),
-        subservices: formData.subservices || null,
         message: formData.message?.trim() || null,
         ipAddress: formData.ipAddress,
         fromSource: formData.fromSource,
+        fromPage: formData.fromPage,
+
       };
 
       const response = await fetch("/api/contact/create", {
@@ -186,10 +133,8 @@ const ContactForm = ({ propsData }) => {
         setFormData({
           name: "",
           company: "",
-          services: "",
           mobileNo: "",
           email: "",
-          subservices: "",
           message: "",
           fromPage: propsData,
           ipAddress: null,
