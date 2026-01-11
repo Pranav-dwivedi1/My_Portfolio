@@ -13,7 +13,6 @@ import Projects from "@/components/portfolio/Projects";
 
 export default function Portfolio() {
   const [active, setActive] = useState("intro");
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const sectionRefs = useRef({});
 
   useEffect(() => {
@@ -25,7 +24,7 @@ export default function Portfolio() {
           }
         });
       },
-      { threshold: 0.3, rootMargin: "-100px 0px -100px 0px" }
+      { threshold: 0.3 }
     );
 
     Object.values(sectionRefs.current).forEach((el) => {
@@ -37,24 +36,19 @@ export default function Portfolio() {
   const scrollToSection = (sectionId) => {
     const section = sectionRefs.current[sectionId];
     if (section) {
-      const offset = 80;
-      const sectionTop = section.offsetTop - offset;
-      
-      window.scrollTo({
-        top: sectionTop,
-        behavior: "smooth"
+      section.scrollIntoView({ 
+        behavior: "smooth",
+        block: "start"
       });
-      
       setActive(sectionId);
-      setIsMobileMenuOpen(false);
     }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0a0a0f] via-[#0f0f1a] to-[#0a0a0f] text-gray-300 relative">
+    <div className="min-h-screen bg-gradient-to-br from-[#0a0a0f] via-[#0f0f1a] to-[#0a0a0f] text-gray-300">
       <MouseLight />
       
-      {/* Sidebar for Desktop */}
+      {/* Sidebar for Desktop - FIXED POSITION */}
       <div className="hidden lg:block">
         <Sidebar 
           active={active} 
@@ -62,62 +56,62 @@ export default function Portfolio() {
         />
       </div>
 
-      {/* Mobile Header */}
-      
-
       {/* Main Content */}
-      <main className="lg:ml-[320px] min-h-screen pt-16 lg:pt-0">
-        <div className="px-4 md:px-8 lg:px-12 xl:px-16 py-8 lg:py-12 space-y-16 md:space-y-20 lg:space-y-24">
-          {/* Introduction Section */}
-          <section
-            id="intro"
-            ref={(el) => (sectionRefs.current["intro"] = el)}
-            className="min-h-[60vh] lg:min-h-[70vh] scroll-mt-20 lg:scroll-mt-0"
-          >
+      <main className="lg:ml-[320px]">
+        {/* Introduction Section - NO GAP */}
+        <section
+          id="intro"
+          ref={(el) => (sectionRefs.current["intro"] = el)}
+          className="w-full min-h-screen flex items-center"
+        >
+          <div className="w-full">
             <Introduction />
-          </section>
+          </div>
+        </section>
 
-          {/* Skills Section */}
-          <section
-            id="skills"
-            ref={(el) => (sectionRefs.current["skills"] = el)}
-            className="min-h-[60vh] lg:min-h-[70vh] scroll-mt-20 lg:scroll-mt-0"
-          >
+        {/* Skills Section */}
+        <section
+          id="skills"
+          ref={(el) => (sectionRefs.current["skills"] = el)}
+          className="min-h-screen flex items-center py-12"
+        >
+          <div className="w-full px-4 md:px-8 lg:px-12 xl:px-16">
             <Skills />
-          </section>
+          </div>
+        </section>
 
-          {/* Education Section */}
-          <section
-            id="study"
-            ref={(el) => (sectionRefs.current["study"] = el)}
-            className="min-h-[60vh] lg:min-h-[70vh] scroll-mt-20 lg:scroll-mt-0"
-          >
+        {/* Education Section */}
+        <section
+          id="study"
+          ref={(el) => (sectionRefs.current["study"] = el)}
+          className="min-h-screen flex items-center py-12"
+        >
+          <div className="w-full px-4 md:px-8 lg:px-12 xl:px-16">
             <Education />
-          </section>
+          </div>
+        </section>
 
-          {/* Experience Section */}
-          <section
-            id="experience"
-            ref={(el) => (sectionRefs.current["experience"] = el)}
-            className="min-h-[60vh] lg:min-h-[70vh] scroll-mt-20 lg:scroll-mt-0"
-          >
+        {/* Experience Section */}
+        <section
+          id="experience"
+          ref={(el) => (sectionRefs.current["experience"] = el)}
+          className="min-h-screen flex items-center py-12"
+        >
+          <div className="w-full px-4 md:px-8 lg:px-12 xl:px-16">
             <Experience />
-          </section>
+          </div>
+        </section>
 
-          {/* Projects Section */}
-          <section
-            id="projects"
-            ref={(el) => (sectionRefs.current["projects"] = el)}
-            className="min-h-[60vh] lg:min-h-[70vh] scroll-mt-20 lg:scroll-mt-0"
-          >
+        {/* Projects Section */}
+        <section
+          id="projects"
+          ref={(el) => (sectionRefs.current["projects"] = el)}
+          className="min-h-screen flex items-center py-12"
+        >
+          <div className="w-full px-4 md:px-8 lg:px-12 xl:px-16">
             <Projects />
-          </section>
-
-         
-        </div>
-
-        {/* Mobile Footer */}
-       
+          </div>
+        </section>
       </main>
 
       <BackToTop />

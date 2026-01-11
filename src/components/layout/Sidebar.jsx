@@ -2,25 +2,19 @@
 
 import { motion } from "framer-motion";
 import { sections } from "@/data/portfolioData";
-import {
-  Github,
-  Linkedin,
-  Mail,
-  Twitter,
-} from "lucide-react";
+import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 
 const Sidebar = ({ active, scrollToSection }) => {
   return (
-    <div className="flex flex-col sticky top-[80px] h-[calc(100vh-80px)] w-[320px] border-r border-[#1e293b]/50 bg-[#0f172a]/90 backdrop-blur-lg">
-
+    <div className="flex flex-col fixed left-0 top-0 h-screen w-[320px] border-r border-[#1e293b]/50 bg-amber-900 backdrop-blur-lg z-40">
       {/* ===== Profile Section ===== */}
-      <div className="p-8">
+      <div className="p-8 pt-12">
         <div className="flex flex-col items-center text-center">
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ type: "spring", stiffness: 200 }}
-            className="w-32 h-32 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center mb-3"
+            className="w-32 h-32 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center mb-6"
           >
             <span className="text-4xl font-bold text-white">PD</span>
           </motion.div>
@@ -29,15 +23,19 @@ const Sidebar = ({ active, scrollToSection }) => {
             Pranav Dwivedi
           </h1>
 
-          <p className="text-cyan-400 text-lg mt-1">
+          <p className="text-cyan-400 text-lg mt-2">
             Full Stack Developer
+          </p>
+          
+          <p className="text-sm text-gray-300 mt-4 leading-relaxed">
+            Building the future of web applications with modern technologies and clean architecture.
           </p>
         </div>
       </div>
 
-      {/* ===== Navigation (NO SCROLL HERE) ===== */}
+      {/* ===== Navigation ===== */}
       <div className="flex-1 px-6">
-        <div className="space-y-6">
+        <div className="space-y-2">
           {sections.map((s) => (
             <motion.button
               key={s.id}
@@ -48,7 +46,7 @@ const Sidebar = ({ active, scrollToSection }) => {
                 ${
                   active === s.id
                     ? "text-white bg-gradient-to-r from-blue-900/30 to-cyan-900/20 border-l-4 border-cyan-400"
-                    : "text-gray-500 hover:text-gray-300 hover:bg-gray-800/30"
+                    : "text-gray-300 hover:text-white hover:bg-gray-800/30"
                 }`}
             >
               <span className="text-xl">{s.icon}</span>
@@ -60,12 +58,12 @@ const Sidebar = ({ active, scrollToSection }) => {
 
       {/* ===== Sidebar Footer ===== */}
       <div className="p-6 border-t border-[#1e293b]/50">
-        <div className="flex justify-center gap-4">
+        <div className="flex justify-center gap-4 mb-4">
           <motion.a
             href="https://github.com/Pranav-dwivedi1"
             target="_blank"
             whileHover={{ y: -4, scale: 1.1 }}
-            className="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-800"
+            className="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center text-gray-300 hover:text-white hover:bg-gray-800 transition-colors"
           >
             <Github size={20} />
           </motion.a>
@@ -74,7 +72,7 @@ const Sidebar = ({ active, scrollToSection }) => {
             href="https://linkedin.com"
             target="_blank"
             whileHover={{ y: -4, scale: 1.1 }}
-            className="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-800"
+            className="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center text-gray-300 hover:text-white hover:bg-gray-800 transition-colors"
           >
             <Linkedin size={20} />
           </motion.a>
@@ -82,7 +80,7 @@ const Sidebar = ({ active, scrollToSection }) => {
           <motion.a
             href="mailto:pranav@example.com"
             whileHover={{ y: -4, scale: 1.1 }}
-            className="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-800"
+            className="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center text-gray-300 hover:text-white hover:bg-gray-800 transition-colors"
           >
             <Mail size={20} />
           </motion.a>
@@ -91,13 +89,16 @@ const Sidebar = ({ active, scrollToSection }) => {
             href="https://twitter.com"
             target="_blank"
             whileHover={{ y: -4, scale: 1.1 }}
-            className="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-800"
+            className="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center text-gray-300 hover:text-white hover:bg-gray-800 transition-colors"
           >
             <Twitter size={20} />
           </motion.a>
         </div>
+        
+        <p className="text-gray-400 text-sm text-center">
+          © {new Date().getFullYear()} Pranav Dwivedi
+        </p>
       </div>
-
     </div>
   );
 };

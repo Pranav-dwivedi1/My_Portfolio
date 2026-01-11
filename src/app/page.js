@@ -14,12 +14,10 @@ export default function page () {
    <>
    <Hero/>
    <Projects/>
-    <Skill/>
-    <Blogs/>
-    <Cta/>
-    <WhatsAppWidget />
-
-    
+   <Skill/>
+   <Blogs/>
+   <Cta/>
+   <WhatsAppWidget />
    </>
   )
 }
