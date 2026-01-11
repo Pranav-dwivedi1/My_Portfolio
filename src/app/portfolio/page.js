@@ -2,8 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { sections } from "@/data/portfolioData";
-import Sidebar from "@/components/Layout/Sidebar";
-import Footer from "@/components/Layout/Footer";
+import Sidebar from "@/components/layout/Sidebar";
 import MouseLight from "@/components/shared/MouseLight";
 import BackToTop from "@/components/shared/BackToTop";
 import Introduction from "@/components/portfolio/Introduction";
