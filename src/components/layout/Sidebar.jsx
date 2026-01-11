@@ -1,0 +1,105 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { sections } from "@/data/portfolioData";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  Twitter,
+} from "lucide-react";
+
+const Sidebar = ({ active, scrollToSection }) => {
+  return (
+    <div className="flex flex-col sticky top-[80px] h-[calc(100vh-80px)] w-[320px] border-r border-[#1e293b]/50 bg-[#0f172a]/90 backdrop-blur-lg">
+
+      {/* ===== Profile Section ===== */}
+      <div className="p-8">
+        <div className="flex flex-col items-center text-center">
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ type: "spring", stiffness: 200 }}
+            className="w-32 h-32 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center mb-3"
+          >
+            <span className="text-4xl font-bold text-white">PD</span>
+          </motion.div>
+
+          <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+            Pranav Dwivedi
+          </h1>
+
+          <p className="text-cyan-400 text-lg mt-1">
+            Full Stack Developer
+          </p>
+        </div>
+      </div>
+
+      {/* ===== Navigation (NO SCROLL HERE) ===== */}
+      <div className="flex-1 px-6">
+        <div className="space-y-6">
+          {sections.map((s) => (
+            <motion.button
+              key={s.id}
+              whileHover={{ x: 6 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={() => scrollToSection(s.id)}
+              className={`w-full text-left uppercase tracking-widest text-sm flex items-center gap-4 py-3 px-4 rounded-lg transition-all duration-300
+                ${
+                  active === s.id
+                    ? "text-white bg-gradient-to-r from-blue-900/30 to-cyan-900/20 border-l-4 border-cyan-400"
+                    : "text-gray-500 hover:text-gray-300 hover:bg-gray-800/30"
+                }`}
+            >
+              <span className="text-xl">{s.icon}</span>
+              <span className="font-medium">{s.label}</span>
+            </motion.button>
+          ))}
+        </div>
+      </div>
+
+      {/* ===== Sidebar Footer ===== */}
+      <div className="p-6 border-t border-[#1e293b]/50">
+        <div className="flex justify-center gap-4">
+          <motion.a
+            href="https://github.com/Pranav-dwivedi1"
+            target="_blank"
+            whileHover={{ y: -4, scale: 1.1 }}
+            className="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-800"
+          >
+            <Github size={20} />
+          </motion.a>
+
+          <motion.a
+            href="https://linkedin.com"
+            target="_blank"
+            whileHover={{ y: -4, scale: 1.1 }}
+            className="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-800"
+          >
+            <Linkedin size={20} />
+          </motion.a>
+
+          <motion.a
+            href="mailto:pranav@example.com"
+            whileHover={{ y: -4, scale: 1.1 }}
+            className="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-800"
+          >
+            <Mail size={20} />
+          </motion.a>
+
+          <motion.a
+            href="https://twitter.com"
+            target="_blank"
+            whileHover={{ y: -4, scale: 1.1 }}
+            className="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-800"
+          >
+            <Twitter size={20} />
+          </motion.a>
+        </div>
+      </div>
+
+    </div>
+  );
+};
+
+export default Sidebar;

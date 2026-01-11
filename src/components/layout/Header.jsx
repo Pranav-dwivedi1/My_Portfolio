@@ -161,8 +161,8 @@ export default function Header() {
               ],
             },
             {
-              label: "Projects",
-              href: "/projects",
+              label: "Portfolio",
+              href: "/portfolio",
               links: [],
             },
             {
@@ -272,8 +272,8 @@ export default function Header() {
             links={[]}
           />
           <Dropdown
-            label="Projects"
-            labelHref="/projects"
+            label="Portfolio"
+            labelHref="/portfolio"
             closeMenu={() => setMenuOpen(false)}
             links={[]}
           />
