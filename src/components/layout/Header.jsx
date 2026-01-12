@@ -115,7 +115,7 @@ export default function Header() {
         showHeader
           ? "translate-y-0 opacity-100 shadow-md"
           : "-translate-y-full opacity-0"
-      } bg-[#160b07] backdrop-blur-md`}
+      }  backdrop-blur-md`}
     >
       <div className="max-w-7xl mx-auto px-3 md:py-0 flex justify-between items-center  rounded-full md:border-none">
         <div className="flex items-center gap-2">

@@ -10,7 +10,7 @@ import RightArrow from "../../assets/home/hero/right.svg";
 
 export default function Hero() {
   return (
-    <section className="h-screen bg-gradient-to-b from-[#160b07] via-[#1e0801] to-[#2B0C02] text-white py-12 md:py-20 font-gilroy">
+    <section className="h-screen  text-white py-12 md:py-20 font-gilroy">
       {/* Header (Logo and Hamburger Menu for Mobile) */}
 
       {/* New Feature Banner */}

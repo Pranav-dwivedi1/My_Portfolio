@@ -45,11 +45,31 @@ Open to freelance projects and collaborations, helping brands and individuals cr
   experience: {
     title: "Work Experience",
     items: [
-      { role: "Full Stack Developer", company: "Egniol Services Private Limited", duration: "2024-Present", details: ["Built and maintained multiple production-ready web applications using React, Next.js, and Node.js for real clients.", "Converted 30+ Figma designs into responsive, pixel-perfect user interfaces using Tailwind CSS.", "Implemented features like authentication, payments, dashboards, and dynamic content, improving overall user experience and performance.","Worked closely with designers and backend teams, handling testing, bug fixes, and code optimization to deliver stable and high-quality applications."] },
+      { role: "Full Stack Developer", company: "Egniol Services Private Limited", duration: "2024-Present", details: ["Built and maintained multiple production-ready web applications using React, Next.js, and Node.js for real clients.", "Converted 30+ Figma designs into responsive, pixel-perfect user interfaces using Tailwind CSS.", "Implemented features like authentication, payments, dashboards, and dynamic content, improving overall user experience and performance.","Worked closely with designers and backend teams, handling testing, bug fixes, and code optimization to deliver stable and high-quality applications."], technologies: [
+  "React js",
+  "Next.js",
+  "Node.js",
+  "Express.js",
+  "JavaScript (ES6+)",
+  "Tailwind CSS",
+  "MongoDB",
+  "MySQL",
+  "JWT Authentication",
+  "Razorpay",
+  "REST APIs",
+  "Git",
+  "GitHub",
+  "Postman",
+  "Figma"
+] },
 
       { role: "Internship website Developer", company: "HKRP Ahmedabad", duration: "08/2023-12/2023", details: ["Worked as a Web Development Intern, gaining hands-on experience in full stack web development and modern web technologies.", "Learned and built projects using HTML, CSS, JavaScript, React, and Node.js, understanding how front-end and back-end systems work together.", "Developed responsive web pages and basic web applications, focusing on clean UI, functionality, and performance.","Gained practical exposure to real-world development workflows, debugging, testing, and improving application features."] },
 
-      { role: "Internship Frontend Developer", company: "Next-Innovation Technology Bhopal", duration: "02/2023-06/2023", details: ["Started my journey in web development as a Front-End Development Intern, learning how modern websites are built.", "Gained hands-on experience with HTML, CSS, and JavaScript to create responsive and interactive web pages.", "Implemented real UI layouts and learned how to convert designs into functional front-end interfaces.", "Understood the development workflow, including writing clean code, testing layouts, and improving user experience."] }
+      { role: "Internship Frontend Developer", company: "Next-Innovation Technology Bhopal", duration: "02/2023-06/2023", details: ["Started my journey in web development as a Front-End Development Intern, learning how modern websites are built.", "Gained hands-on experience with HTML, CSS, and JavaScript to create responsive and interactive web pages.", "Implemented real UI layouts and learned how to convert designs into functional front-end interfaces.", "Understood the development workflow, including writing clean code, testing layouts, and improving user experience."],
+        technologies: [
+          "C#", ".NET Core", "Azure", "React", 
+          "SQL Server", "Docker", "Kubernetes"
+        ] }
     ]
   },
   projects: {

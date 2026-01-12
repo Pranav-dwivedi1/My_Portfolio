@@ -59,7 +59,7 @@ export default function CTASection() {
   return (
     <section
       ref={ctaRef}
-      className="relative py-20 bg-gradient-to-b from-[#2B0C02] via-[#1e0801] to-[#160b07] text-white font-gilroy overflow-hidden"
+      className="relative py-20  text-white font-gilroy overflow-hidden"
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden opacity-20">

@@ -45,7 +45,7 @@ const blogs = [
 
 export default function Blogs() {
   return (
-    <section className="px-6 md:px-12 py-16 bg-gradient-to-br bg-[#160A05] bg-dark-vignette text-white">
+    <section className="px-6 md:px-12 py-16 text-white">
 
       {/* Section Heading */}
       <motion.div

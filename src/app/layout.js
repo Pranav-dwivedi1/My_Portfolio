@@ -4,6 +4,8 @@ import "./globals.css";
 import { Rowdies } from 'next/font/google';
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
+import MouseLight from "@/components/shared/MouseLight";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -70,9 +72,11 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
+    
     <html lang="en">
-   <body className={`${rowdies.variable} font-sans bg-[#160A05]`}>
+   <body className={`${rowdies.variable} font-sans bg-gradient-to-br from-[#0a0a0f] via-[#0f172a] to-[#020617]`}>
   <Header />
+  <MouseLight />
   {children}
   <Footer />
 </body>

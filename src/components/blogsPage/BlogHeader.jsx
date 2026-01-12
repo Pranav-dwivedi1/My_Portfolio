@@ -6,10 +6,10 @@ import { FiArrowRight } from 'react-icons/fi';  // Import the icon
 
 export default function BlogHeader() {
   return (
-    <header className="relative w-full h-[50vh] pb-10 overflow-hidden bg-gradient-to-b from-[#160b07] via-[#1e0801] to-[#2B0C02] font-gilroy">
+    <header className="relative w-full h-[50vh] pb-10 overflow-hidden font-gilroy">
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzRjMC0yLjIgMS44LTQgNC00czQgMS44IDQgNC0xLjggNC00IDQtNC0xLjgtNC00IDQtNC0xLjgtNC00IDQtNC0xLjgtNC00eiIvPjwvZz48L2c+PC9zdmc+')]"></div>
+        <div className="absolute inset-0 "></div>
       </div>
 
       {/* Content container */}

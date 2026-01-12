@@ -145,9 +145,9 @@ const ProjectCard = ({ project, index }) => {
 
 export default function Project() {
   return (
-    <section className="relative py-16 text-white px-4 md:px-20 lg:px-28 bg-[#160A05] bg-dark-vignette">
-      <div className="absolute w-[408px] h-[402px] top-[0px] right-[-200px] bg-[#993b1ce8] blur-[300px] mix-blend-screen rounded-full pointer-events-none z-0 overflow-hidden" />
-      <div className="absolute w-[608px] h-[502px] bottom-[-100px] left-[-150px] bg-[#692711ac] blur-[300px] mix-blend-screen rounded-full pointer-events-none z-0 overflow-hidden"  />
+    <section className="relative py-16 text-white px-4 md:px-20 lg:px-28  bg-dark-vignette">
+      <div className="absolute w-[408px] h-[402px] top-[0px] right-[-200px]  blur-[300px] mix-blend-screen rounded-full pointer-events-none z-0 overflow-hidden" />
+      <div className="absolute w-[608px] h-[502px] bottom-[-100px] left-[-150px] blur-[300px] mix-blend-screen rounded-full pointer-events-none z-0 overflow-hidden"  />
 
       {/* Heading */}
       <div className="flex items-center justify-center gap-4 my-6">

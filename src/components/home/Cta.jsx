@@ -18,7 +18,7 @@ export default function Cta() {
   ];
 
   return (
-    <section className="bg-gradient-to-t from-[#160A05] to-[#160A05] relative py-16 flex items-center justify-center overflow-hidden ">
+    <section className=" relative py-16 flex items-center justify-center overflow-hidden ">
       {/* Background */}
       
 

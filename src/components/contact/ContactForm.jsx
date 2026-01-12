@@ -196,7 +196,7 @@ const ContactForm = ({ propsData }) => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-      className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-gradient-to-b from-[#4f1707] to-[#2B0C02] shadow-lg border "
+      className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-16 "
     >
       <div className="text-center mb-12">
         <motion.h2
@@ -220,7 +220,7 @@ const ContactForm = ({ propsData }) => {
 
       <motion.div
         variants={staggerItem}
-        className="max-w-2xl mx-auto bg-[#230c02] bg-opacity-60 backdrop-blur-sm p-8 rounded-xl border border-[#3a1809] shadow-lg"
+        className="max-w-2xl mx-auto backdrop-blur-sm p-8 rounded-xl border border-[#bedcf6] shadow-lg"
       >
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -236,7 +236,7 @@ const ContactForm = ({ propsData }) => {
                 id="name"
                 name="name"
                 placeholder="Your name"
-                className="w-full px-4 py-3 bg-[#1a0a03] border border-[#3a1809] rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition duration-200 text-white placeholder-gray-500"
+                className="w-full px-4 py-3 border border-[#bedcf6] rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition duration-200 text-white placeholder-gray-500"
                 onChange={handleChange}
                 value={formData.name}
               />
@@ -254,7 +254,7 @@ const ContactForm = ({ propsData }) => {
                 id="mobileNo"
                 name="mobileNo"
                 placeholder="Your phone number"
-                className={`w-full px-4 py-3 bg-[#1a0a03] border ${errors.mobileNo ? "border-red-500" : "border-[#3a1809]"} rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition duration-200 text-white placeholder-gray-500`}
+                className={`w-full px-4 py-3 border ${errors.mobileNo ? "border-red-500" : "border-[#bedcf6]"} rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition duration-200 text-white placeholder-gray-500`}
                 onChange={handleChange}
                 onKeyPress={handleKeyPress}
                 value={formData.mobileNo}
@@ -279,7 +279,7 @@ const ContactForm = ({ propsData }) => {
                 id="company"
                 name="company"
                 placeholder="Your company"
-                className="w-full px-4 py-3 bg-[#1a0a03] border border-[#3a1809] rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition duration-200 text-white placeholder-gray-500"
+                className="w-full px-4 py-3 border border-[#bedcf6] rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition duration-200 text-white placeholder-gray-500"
                 onChange={handleChange}
                 value={formData.company}
               />
@@ -297,7 +297,7 @@ const ContactForm = ({ propsData }) => {
                 id="email"
                 name="email"
                 placeholder="your.email@example.com"
-                className={`w-full px-4 py-3 bg-[#1a0a03] border ${errors.email ? "border-red-500" : "border-[#3a1809]"} rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition duration-200 text-white placeholder-gray-500`}
+                className={`w-full px-4 py-3 border ${errors.email ? "border-red-500" : "border-[#bedcf6]"} rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition duration-200 text-white placeholder-gray-500`}
                 onChange={handleChange}
                 value={formData.email}
               />
@@ -319,7 +319,7 @@ const ContactForm = ({ propsData }) => {
               name="message"
               placeholder="How can we help you?"
               rows={4}
-              className="w-full px-4 py-3 bg-[#1a0a03] border border-[#3a1809] rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition duration-200 text-white placeholder-gray-500"
+              className="w-full px-4 py-3 border border-[#bedcf6] rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition duration-200 text-white placeholder-gray-500"
               onChange={handleChange}
               value={formData.message}
             />
@@ -330,7 +330,7 @@ const ContactForm = ({ propsData }) => {
             disabled={loading || errors.mobileNo || errors.email || !verified}
             className={`w-full py-3 px-6 rounded-lg font-medium text-white transition duration-200 shadow-lg ${loading || errors.mobileNo || errors.email || !verified
               ? "bg-orange-800 cursor-not-allowed"
-              : "bg-gradient-to-r from-orange-600 to-orange-800 hover:from-orange-700 hover:to-orange-900 transform hover:-translate-y-1 hover:shadow-orange-500/20"
+              : "bg-gradient-to-br from-[#2222a0] via-[#3e64ba] to-[#0d1e6a] transform hover:-translate-y-1 hover:shadow-orange-500/20"
               }`}
           >
             {loading ? (

@@ -7,7 +7,7 @@ import ButtonGray from "@/components/comman/ui/ButtonGray";
 
 export default function page() {
   return (
-    <section className="relative bg-gradient-to-b from-[#160b07] via-[#1e0801] to-[#2B0C02] text-white font-gilroy overflow-hidden">
+    <section className="relative  text-white font-gilroy overflow-hidden">
       
       {/* Grid pattern overlay */}
 

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const BlogCard = ({ blog }) => {
   return (
-    <section className="relative rounded-[25px] p-[2px] transition-all duration-300 hover:scale-[1.01] bg-gradient-to-br from-[#81716a] via-[#221C19] to-[#81716a]">
+    <section className="relative rounded-[25px] p-[2px] transition-all duration-300 hover:scale-[1.01] bg-gradient-to-br from-[#1c3261] via-[#051e25] to-[#143e65]">
       <div className="relative group overflow-hidden rounded-[25px] shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform  h-[450px] flex flex-col">
         {/* Image or banner */}
         <div className="h-48 bg-gradient-to-r from-blue-500 to-purple-600 opacity-80"></div>
@@ -67,7 +67,7 @@ const BlogCard = ({ blog }) => {
         </div>
 
         {/* Bottom Hover Element (Optional) */}
-        <span className="absolute bottom-0 left-0 h-[3px] w-0 group-hover:w-full transition-[width] duration-500 ease-out bg-gradient-to-r from-[#d65a31] to-[#783119]" />
+        <span className="absolute bottom-0 left-0 h-[3px] w-0 group-hover:w-full transition-[width] duration-500 ease-out " />
       </div>
     </section>
   );

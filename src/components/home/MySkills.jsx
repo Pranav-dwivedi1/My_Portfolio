@@ -66,10 +66,10 @@ const skills = [
 
 export default function MySkills() {
   return (
-    <section className="relative py-16 text-white px-4 md:px-20 lg:px-28 bg-[#160A05] bg-dark-vignette">
+    <section className="relative py-16 text-white px-4 md:px-20 lg:px-28 ">
 
-      <div className="absolute w-[608px] h-[502px] bottom-[-100px] left-[-150px] bg-[#692711ac] blur-[300px] mix-blend-screen rounded-full pointer-events-none z-0 overflow-hidden"  />
-        <div className="absolute w-[408px] h-[402px] top-[0px] right-[-200px] bg-[#993b1ce8] blur-[300px] mix-blend-screen rounded-full pointer-events-none z-0 overflow-hidden" />
+      <div className="absolute w-[608px] h-[502px] bottom-[-100px] left-[-150px] blur-[300px] mix-blend-screen rounded-full pointer-events-none z-0 overflow-hidden"  />
+        <div className="absolute w-[408px] h-[402px] top-[0px] right-[-200px]  blur-[300px] mix-blend-screen rounded-full pointer-events-none z-0 overflow-hidden" />
 
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
@@ -93,10 +93,10 @@ export default function MySkills() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-[#1a1a1a] p-6 rounded-2xl shadow-lg hover:shadow-purple-600/20 transition-shadow"
+              className="bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 duration-300 p-6 rounded-2xl shadow-lg hover:shadow-purple-600/20 transition-shadow"
             >
               <div className="mb-4">{skill.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">{skill.name}</h3>
+              <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-400">{skill.name}</h3>
               <p className="text-sm text-gray-400">{skill.desc}</p>
             </motion.div>
           ))}

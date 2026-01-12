@@ -171,37 +171,37 @@ const Experience = () => {
                       ))}
                     </ul>
                     
-                    {/* Full tech stack when expanded */}
-                    {activeCard === index && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2 }}
-                        className="mt-10 pt-8 border-t border-gray-800/30"
-                      >
-                        <h4 className="text-sm font-semibold text-gray-400 mb-4 flex items-center gap-2">
-                          <div className="w-2 h-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500" />
-                          Technologies & Skills
-                        </h4>
-                        <div className="flex flex-wrap gap-2">
-                          {["JavaScript", "TypeScript", "React", "Next.js", "Node.js", 
-                            "Express", "MongoDB", "PostgreSQL", "AWS", "Docker", "Git", 
-                            "Tailwind CSS"].map((tech, i) => (
-                            <motion.span
-                              key={i}
-                              initial={{ opacity: 0, scale: 0.8 }}
-                              animate={{ opacity: 1, scale: 1 }}
-                              transition={{ delay: i * 0.03 }}
-                              whileHover={{ scale: 1.05 }}
-                              className="px-4 py-2 bg-gray-800/50 text-gray-300 text-sm rounded-lg 
-                                hover:bg-gray-800 transition-all duration-200"
-                            >
-                              {tech}
-                            </motion.span>
-                          ))}
-                        </div>
-                      </motion.div>
-                    )}
+                  {/* Full tech stack when expanded - DYNAMIC */}
+{activeCard === index && exp.technologies && (
+  <motion.div
+    initial={{ opacity: 0, y: 10 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.2 }}
+    className="mt-10 pt-8 border-t border-gray-800/30"
+  >
+    <h4 className="text-sm font-semibold text-gray-400 mb-4 flex items-center gap-2">
+      <div className="w-2 h-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500" />
+      Technologies & Stack Used
+    </h4>
+    <div className="flex flex-wrap gap-2">
+      {/* 🔥 Yahan dynamic technologies render hongi */}
+      {exp.technologies.map((tech, techIndex) => (
+        <motion.span
+          key={techIndex}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: techIndex * 0.03 }}
+          whileHover={{ scale: 1.05 }}
+          className="px-4 py-2 bg-gray-800/50 text-gray-300 text-sm rounded-lg 
+            hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 
+            hover:text-white transition-all duration-200 border border-gray-700/30"
+        >
+          {tech}
+        </motion.span>
+      ))}
+    </div>
+  </motion.div>
+)}
                   </div>
                 </motion.div>
 
@@ -259,8 +259,8 @@ const Experience = () => {
     {[
       { label: "Positions Held", value: data.items.length, icon: "👤" },
       { label: "Years Experience", value: "4+", icon: "📅" },
-      { label: "Projects Delivered", value: "50+", icon: "📁" },
-      { label: "Technologies Used", value: "25+", icon: "🛠️" }
+      { label: "Projects Delivered", value: "40+", icon: "📁" },
+      { label: "Technologies Used", value: "22+", icon: "🛠️" }
     ].map((stat, index) => (
       <div
         key={index}

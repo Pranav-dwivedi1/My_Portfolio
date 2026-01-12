@@ -70,7 +70,7 @@ export default function Hero() {
   return (
     <section
       ref={heroRef}
-      className="relative h-[90vh] bg-gradient-to-b from-[#160b07] via-[#1e0801] to-[#2B0C02] text-white py-12 md:py-6 font-gilroy overflow-hidden"
+      className="relative h-[90vh]  text-white py-12 md:py-6 font-gilroy overflow-hidden"
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -78,7 +78,7 @@ export default function Hero() {
           {[...Array(20)].map((_, i) => (
             <div
               key={i}
-              className="absolute rounded-full bg-orange-500"
+              className="absolute rounded-full bg-blue-500"
               style={{
                 width: `${Math.random() * 10 + 5}px`,
                 height: `${Math.random() * 10 + 5}px`,

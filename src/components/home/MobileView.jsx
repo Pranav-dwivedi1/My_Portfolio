@@ -24,7 +24,7 @@ const projects = [
 
 export default function MobileView() {
   return (
-    <section className="px-4 py-10 bg-[#0d0d0d] text-white">
+    <section className="px-4 py-10 bg-gradient-to-br from-[#0a0a0f] via-[#0f172a] to-[#020617] text-white">
       <Swiper
         effect={'cards'}
         grabCursor={true}
@@ -32,7 +32,7 @@ export default function MobileView() {
         className="mySwiper"
       >
         {projects.map((project) => (
-          <SwiperSlide key={project.id} className="bg-[#1a1a1a] p-6 rounded-xl shadow-lg">
+          <SwiperSlide key={project.id} className="bg-gradient-to-br from-[#0a0a0f] via-[#0f172a] to-[#020617] p-6 rounded-xl shadow-lg">
             <div className="flex flex-col items-center text-center">
               <Image
                 src={project.image}

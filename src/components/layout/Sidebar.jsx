@@ -8,7 +8,7 @@ import profilePic from "../../assets/portfolio/profile.png";
 
 const Sidebar = ({ active, scrollToSection }) => {
   return (
-    <div className="flex flex-col fixed left-0 top-0 h-screen w-[320px] border-r border-[#1e293b]/50 bg-amber-900 backdrop-blur-lg z-40">
+    <div className="flex flex-col fixed left-0 top-0 h-screen w-[320px] border-r border-[#1e293b]/50 bg-gradient-to-br from-[#0a0a0f] via-[#0f172a] to-[#020617] backdrop-blur-lg z-40">
       {/* ===== Profile Section ===== */}
       <div className="p-8 pt-12">
         <div className="flex flex-col items-center text-center">

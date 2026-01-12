@@ -4,6 +4,8 @@ import { FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
 import { ImFacebook2 } from "react-icons/im";
 import { RiWhatsappFill } from "react-icons/ri";
 import BlogCard from "../../components/blogsPage/BlogCard";
+import MouseLight from "@/components/shared/MouseLight";
+
 
 export const metadata = {
   title: "Business Blog Spot | Insights, News & Business Growth Tips",
@@ -41,11 +43,12 @@ export default function Blogs() {
   ];
 
   return (
-    <section className=" bg-gradient-to-b from-[#160b07] via-[#1e0801] to-[#2B0C02] text-white py-12 font-gilroy">
+    <section className="  text-white py-12 font-gilroy">
       <div className="min-h-screen">
         {/* Hero Header */}
         <div className="relative w-full h-[50vh] min-h-[400px] bg-gradient-to-br from-blue-900 via-purple-900 to-gray-900">
           <BlogHeader />
+          <MouseLight />
         </div>
 
         {/* Main Content */}

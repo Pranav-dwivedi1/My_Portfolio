@@ -18,7 +18,7 @@ export default function Status() {
   return (
     <div
       ref={ref}
-      className="relative bg-[#2B0C02] border-t border-b border-white/20 py-8"
+      className="relative bg-[#030d23de] border-t border-b border-white/20 py-8"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">

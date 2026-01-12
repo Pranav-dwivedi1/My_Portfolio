@@ -83,7 +83,7 @@ const ContactInfoSection = () => {
   return (
     <section 
       ref={sectionRef}
-      className="relative px-4 sm:px-8 md:px-24 lg:px-28 py-16 bg-gradient-to-b from-[#2B0C02]  via-[#160b07] to-[#4f1707] text-white font-gilroy overflow-hidden"
+      className="relative px-4 sm:px-8 md:px-24 lg:px-28 py-16  text-white font-gilroy overflow-hidden"
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
@@ -120,14 +120,14 @@ const ContactInfoSection = () => {
             <div 
               key={index}
               ref={el => itemsRef.current[index] = el}
-              className="group relative bg-[#1a0a03] bg-opacity-60 backdrop-blur-sm rounded-xl p-8 border border-[#3a1809] hover:border-orange-400 transition-all duration-300 hover:shadow-lg hover:shadow-orange-400/10 overflow-hidden"
+              className="group relative  backdrop-blur-sm rounded-xl p-8 border hover:border-orange-400 transition-all duration-300 hover:shadow-lg hover:shadow-orange-400/10 overflow-hidden"
             >
               {/* Hover effect background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0  opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               
               {/* Contact method content */}
               <div className="relative z-10 h-full flex flex-col items-center text-center">
-                <div className={`mb-6 p-4 rounded-full bg-[#2e1206] ${method.accent} group-hover:bg-orange-500 group-hover:text-white transition-colors duration-300`}>
+                <div className={`mb-6 p-4 rounded-full  ${method.accent} group-hover:bg-orange-500 group-hover:text-white transition-colors duration-300`}>
                   {method.icon}
                 </div>
                 
@@ -158,7 +158,7 @@ const ContactInfoSection = () => {
           <h3 className="text-2xl font-bold mb-6">
             Business <span className="text-orange-400">Hours</span>
           </h3>
-          <div className="max-w-md mx-auto bg-[#1a0a03] bg-opacity-60 backdrop-blur-sm rounded-lg p-6 border border-[#3a1809]">
+          <div className="max-w-md mx-auto  backdrop-blur-sm rounded-lg p-6 border border-[#3a1809]">
             <ul className="space-y-3">
               {[
                 "Monday - Friday: 9:00 AM - 6:00 PM",

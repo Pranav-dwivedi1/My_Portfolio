@@ -128,14 +128,14 @@ export default function ServicesSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-20 bg-gradient-to-b from-[#1e0801] via-[#160b07] to-[#2B0C02] text-white font-gilroy overflow-hidden"
+      className="relative py-20  text-white font-gilroy overflow-hidden"
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
         {[...Array(30)].map((_, i) => (
           <div
             key={i}
-            className="absolute rounded-full bg-orange-500"
+            className="absolute rounded-full bg-blue-500"
             style={{
               width: `${Math.random() * 8 + 3}px`,
               height: `${Math.random() * 8 + 3}px`,
@@ -167,7 +167,7 @@ export default function ServicesSection() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="service-card group relative bg-[#1a0a03] bg-opacity-60 backdrop-blur-sm rounded-xl p-6 border border-[#2e1206] hover:border-orange-400 transition-all duration-300 hover:shadow-lg hover:shadow-orange-400/10 overflow-hidden"
+              className="service-card group relative bg-[#09183fe3] bg-opacity-60 backdrop-blur-sm rounded-xl p-6 border border-[#0f5282] hover:border-blue-200 transition-all duration-300 hover:shadow-lg hover:shadow-orange-400/10 overflow-hidden"
             >
               {/* Hover effect background */}
               <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -175,7 +175,7 @@ export default function ServicesSection() {
               {/* Service content */}
               <div className="relative z-10">
                 <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-bold mb-2 group-hover:text-orange-400 transition-colors duration-300">
+                <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors duration-300">
                   {service.title}
                 </h3>
                 <p className="text-gray-300 text-sm md:text-base">

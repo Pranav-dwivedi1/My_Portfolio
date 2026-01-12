@@ -18,7 +18,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="relative bg-gradient-to-t from-[#602911] to-[#160A05]  text-white px-4 sm:px-6 py-12 md:px-8 lg:px-20 overflow-hidden z-50">
+    <footer className="relative text-white px-4 sm:px-6 py-12 md:px-8 lg:px-20 overflow-hidden z-50">
       {/* Background Image */}
 
       {/* Left Side Image - Inside Container */}
