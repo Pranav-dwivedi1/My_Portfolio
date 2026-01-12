@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import { MapPin, Briefcase, Download, Mail } from "lucide-react";
 import { dummyData } from "@/data/portfolioData";
 import Link from "next/link";
-
+import Image from "next/image";
+import profilePhoto from "../../assets/portfolio/profilePhoto.png";
 const Introduction = () => {
   const data = dummyData.intro;
 
@@ -19,7 +20,7 @@ const Introduction = () => {
   };
 
   return (
-    <div className="w-full min-h-screen flex items-center justify-center px-4 md:px-6 lg:px-6 ">
+    <div className="w-full min-h-screen flex items-center justify-center px-4 md:px-6 lg:px-6 pb-0 sm:pb-6 md:pb-12 lg:pb-24">   
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -47,7 +48,7 @@ const Introduction = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed mb-6 md:mb-8 max-w-3xl"
+              className="text-base md:text-lg lg:text-lg text-gray-300 leading-relaxed mb-6 md:mb-8 max-w-3xl"
             >
               {data.description}
             </motion.p>
@@ -166,15 +167,20 @@ const Introduction = () => {
                 whileHover={{ scale: 1.05, rotate: 5 }}
                 className="relative w-full h-full rounded-full overflow-hidden border-4 border-gray-800/50 bg-gradient-to-br from-gray-900/50 to-gray-900/20 backdrop-blur-sm"
               >
-                <div className="w-full h-full flex items-center justify-center">
-                  <motion.span
-                    animate={{ y: [0, -8, 0] }}
-                    transition={{ duration: 4, repeat: Infinity }}
-                    className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl"
-                  >
-                    👨‍💻
-                  </motion.span>
-                </div>
+                <motion.div
+                  animate={{ y: [0, -8, 0] }}
+                  transition={{ duration: 4, repeat: Infinity }}
+                  className="relative w-full h-full rounded-full overflow-hidden"
+              >
+                  <Image
+                  src={profilePhoto}
+                  alt="Pranav Dwivedi"
+                  fill
+                  className="object-cover"
+                  priority
+                 />
+</motion.div>
+
                 
                 {/* Floating Badge */}
                 <motion.div

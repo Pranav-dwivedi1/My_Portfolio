@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { sections } from "@/data/portfolioData";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import Image from "next/image";
+import profilePic from "../../assets/portfolio/profile.png";
 
 const Sidebar = ({ active, scrollToSection }) => {
   return (
@@ -10,27 +12,35 @@ const Sidebar = ({ active, scrollToSection }) => {
       {/* ===== Profile Section ===== */}
       <div className="p-8 pt-12">
         <div className="flex flex-col items-center text-center">
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ type: "spring", stiffness: 200 }}
-            className="w-32 h-32 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center mb-6"
-          >
-            <span className="text-4xl font-bold text-white">PD</span>
-          </motion.div>
+  <motion.div
+    initial={{ scale: 0 }}
+    animate={{ scale: 1 }}
+    transition={{ type: "spring", stiffness: 200 }}
+    className="relative w-40 h-40 rounded-full "
+  >
+    <div className="relative w-full h-full rounded-full overflow-hidden">
+      <Image
+        src={profilePic}
+        alt="Pranav Dwivedi"
+        fill
+        className="object-cover rounded-full"
+        priority
+      />
+    </div>
+  </motion.div>
 
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
-            Pranav Dwivedi
-          </h1>
+  <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+    Pranav Dwivedi
+  </h1>
 
-          <p className="text-cyan-400 text-lg mt-2">
-            Full Stack Developer
-          </p>
-          
-          <p className="text-sm text-gray-300 mt-4 leading-relaxed">
-            Building the future of web applications with modern technologies and clean architecture.
-          </p>
-        </div>
+  <p className="text-cyan-400 text-lg mt-2">Full Stack Developer</p>
+
+  <p className="text-sm text-gray-300 mt-4 leading-relaxed text-center">
+    Building the future of web applications with modern technologies and
+    clean architecture.
+  </p>
+</div>
+
       </div>
 
       {/* ===== Navigation ===== */}
@@ -94,7 +104,7 @@ const Sidebar = ({ active, scrollToSection }) => {
             <Twitter size={20} />
           </motion.a>
         </div>
-        
+
         <p className="text-gray-400 text-sm text-center">
           © {new Date().getFullYear()} Pranav Dwivedi
         </p>
