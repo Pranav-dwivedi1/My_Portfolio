@@ -63,23 +63,66 @@ Open to freelance projects and collaborations, helping brands and individuals cr
   "Figma"
 ] },
 
-      { role: "Internship website Developer", company: "HKRP Ahmedabad", duration: "08/2023-12/2023", details: ["Worked as a Web Development Intern, gaining hands-on experience in full stack web development and modern web technologies.", "Learned and built projects using HTML, CSS, JavaScript, React, and Node.js, understanding how front-end and back-end systems work together.", "Developed responsive web pages and basic web applications, focusing on clean UI, functionality, and performance.","Gained practical exposure to real-world development workflows, debugging, testing, and improving application features."] },
+      { role: "Internship website Developer", company: "HKRP Ahmedabad", duration: "08/2023-12/2023", details: ["Worked as a Web Development Intern, gaining hands-on experience in full stack web development and modern web technologies.", "Learned and built projects using HTML, CSS, JavaScript, React, and Node.js, understanding how front-end and back-end systems work together.", "Developed responsive web pages and basic web applications, focusing on clean UI, functionality, and performance.","Gained practical exposure to real-world development workflows, debugging, testing, and improving application features."], technologies: [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "React.js",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "REST APIs",
+    "Bootstrap",
+    "Git",
+    "GitHub"
+  ] },
 
       { role: "Internship Frontend Developer", company: "Next-Innovation Technology Bhopal", duration: "02/2023-06/2023", details: ["Started my journey in web development as a Front-End Development Intern, learning how modern websites are built.", "Gained hands-on experience with HTML, CSS, and JavaScript to create responsive and interactive web pages.", "Implemented real UI layouts and learned how to convert designs into functional front-end interfaces.", "Understood the development workflow, including writing clean code, testing layouts, and improving user experience."],
         technologies: [
           "C#", ".NET Core", "Azure", "React", 
           "SQL Server", "Docker", "Kubernetes"
-        ] }
+        ], technologies: [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "Responsive Design",
+    "Flexbox",
+    "CSS Grid",
+    "Bootstrap",
+    "UI Design",
+    "Browser Developer Tools"
+  ] }
     ]
   },
   projects: {
-    title: "Featured Projects",
-    items: [
-      { name: "E-commerce Platform", tech: ["Next.js", "Stripe", "MongoDB"], description: "Full-featured online store with admin dashboard", link: "#" },
-      { name: "Task Management App", tech: ["React", "Node.js", "Socket.io"], description: "Real-time collaborative task manager", link: "#" },
-      { name: "Portfolio Generator", tech: ["Next.js", "Tailwind", "Framer Motion"], description: "AI-powered portfolio website builder", link: "#" },
-      { name: "Analytics Dashboard", tech: ["React", "D3.js", "Express"], description: "Data visualization dashboard for business metrics", link: "#" }
-    ]
-  },
+  title: "Featured Projects",
+  items: [
+    {
+      name: "Egniol Corporate Website",
+      tech: ["Next.js", "Tailwind CSS", "Framer Motion", "SEO"],
+      description: "Designed and developed the official corporate website for Egniol with responsive layout, SEO optimization, and modern UI based on Figma designs.",
+      link: "https://egniol.com"
+    },
+    {
+      name: "Client Business Websites",
+      tech: ["Next.js", "React", "Tailwind CSS", "SSR"],
+      description: "Built multiple SEO-optimized and responsive websites for business clients, including company profiles, service pages, and lead generation forms.",
+      link: "#"
+    },
+    {
+      name: "Employee Management System",
+      tech: ["React", "Node.js", "Express", "MongoDB", "JWT"],
+      description: "Developed a secure admin dashboard with employee CRUD, role-based access, authentication, pagination, and search filters.",
+      link: "#"
+    },
+    {
+      name: "Payment Integration System",
+      tech: ["Node.js", "Razorpay", "REST API", "MongoDB"],
+      description: "Integrated Razorpay payment gateway into client projects with secure transaction handling, order management, and payment verification.",
+      link: "#"
+    }
+  ]
+}
+
   
 };

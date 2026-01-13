@@ -86,8 +86,8 @@ const ProjectCard = ({ project, index }) => {
         <div
       className={`relative rounded-[25px] p-[2px] transition-all duration-300 hover:scale-[1.01] ${
         project.id === 1
-          ? "bg-gradient-to-b from-[#235ba5] to-[#242424]"
-          : "bg-gradient-to-br from-[#235ba5] via-[#242424] to-[#235ba5]"
+          ? "bg-gradient-to-b from-[#235ba5] to-[#6b8293]"
+          : "bg-gradient-to-br from-blue-500/20"
       }`}
     >
      <motion.div
@@ -98,7 +98,7 @@ const ProjectCard = ({ project, index }) => {
         className={`flex flex-col h-full rounded-[24px] p-6 md:p-8 ${
           index === 0
             ? "bg-[#0c2445] backdrop-blur-[22px]"
-            : "bbg-gradient-to-br from-[#2222a0] via-[#3e64ba] to-[#0d1e6a]"
+            : "bg-gradient-to-br from-blue-500/10 to-transparent backdrop-blur-sm"
         }`}
       >
       <Image

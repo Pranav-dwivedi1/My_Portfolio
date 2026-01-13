@@ -9,15 +9,16 @@ import profilePhoto from "../../assets/portfolio/profilePhoto.png";
 const Introduction = () => {
   const data = dummyData.intro;
 
-  const handleDownloadResume = () => {
-    const resumeUrl = "/resume.pdf";
-    const link = document.createElement("a");
-    link.href = resumeUrl;
-    link.download = "YourName_Resume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+ const handleDownloadResume = () => {
+  const link = document.createElement("a");
+  link.href = "/Pranav_Dwivedi_CV.pdf";
+  link.download = "Pranav_Dwivedi_CV.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
+
 
   return (
     <div className="w-full min-h-screen flex items-center justify-center px-4 md:px-6 lg:px-6 pb-0 sm:pb-6 md:pb-12 lg:pb-24">   
