@@ -79,14 +79,22 @@ export default function Blogs() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-[#1a1a1a] rounded-xl overflow-hidden shadow-lg flex flex-col h-full"
+className="
+  bg-gradient-to-br from-blue-500/20 to-transparent
+  opacity-0 group-hover:opacity-100
+  p-6 rounded-2xl
+  shadow-lg hover:shadow-purple-600/20
+  transition-all duration-300
+  overflow-hidden
+  flex flex-col h-full
+"
             >
               <Image
                 src={blog.image}
                 alt={blog.title}
                 className="w-full h-[200px] object-cover"
               />
-              <div className="p-6 flex flex-col justify-between h-full">
+              <div className="py-6 px-2 flex flex-col justify-between h-full">
                 <div>
                   <p className="text-sm text-gray-400">{blog.date}</p>
                   <h3 className="text-xl font-bold mt-2">{blog.title}</h3>
@@ -115,7 +123,7 @@ export default function Blogs() {
       >
         <a
           href="/blogs"
-          className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full font-semibold transition"
+          className="inline-block bg-gradient-to-br from-[#2222a0] via-[#3e64ba] to-[#0d1e6a] text-white px-6 py-3 rounded-full font-semibold transition"
         >
           View All Blogs →
         </a>

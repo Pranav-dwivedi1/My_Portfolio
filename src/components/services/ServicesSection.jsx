@@ -169,11 +169,14 @@ export default function ServicesSection() {
               key={index}
               className="service-card group relative bg-[#09183fe3] bg-opacity-60 backdrop-blur-sm rounded-xl p-6 border border-[#0f5282] hover:border-blue-200 transition-all duration-300 hover:shadow-lg hover:shadow-orange-400/10 overflow-hidden"
             >
+
               {/* Hover effect background */}
               <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
               {/* Service content */}
               <div className="relative z-10">
+
+                
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors duration-300">
                   {service.title}

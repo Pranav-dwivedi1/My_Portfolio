@@ -86,8 +86,8 @@ const ProjectCard = ({ project, index }) => {
         <div
       className={`relative rounded-[25px] p-[2px] transition-all duration-300 hover:scale-[1.01] ${
         project.id === 1
-          ? "bg-gradient-to-b from-[#915b44] to-[#000000]"
-          : "bg-gradient-to-br from-[#81716a] via-[#221C19] to-[#81716a]"
+          ? "bg-gradient-to-b from-[#235ba5] to-[#242424]"
+          : "bg-gradient-to-br from-[#235ba5] via-[#242424] to-[#235ba5]"
       }`}
     >
      <motion.div
@@ -97,8 +97,8 @@ const ProjectCard = ({ project, index }) => {
         viewport={{ once: true }}
         className={`flex flex-col h-full rounded-[24px] p-6 md:p-8 ${
           index === 0
-            ? "bg-[#160A05] backdrop-blur-[22px]"
-            : "bg-gradient-to-tr from-[#45352d] via-[#2d221c] to-[#45352d]"
+            ? "bg-[#0c2445] backdrop-blur-[22px]"
+            : "bbg-gradient-to-br from-[#2222a0] via-[#3e64ba] to-[#0d1e6a]"
         }`}
       >
       <Image
@@ -115,7 +115,7 @@ const ProjectCard = ({ project, index }) => {
       <div className="mt-4 flex gap-3 flex-wrap">
         <a
           href={project.liveLink}
-          className="bg-blue-600 px-4 py-2 rounded hover:bg-blue-700 transition"
+          className="bg-gradient-to-br from-[#2222a0] via-[#3e64ba] to-[#0d1e6a] px-4 py-2 rounded hover:bg-blue-700 transition"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -123,7 +123,7 @@ const ProjectCard = ({ project, index }) => {
         </a>
         <a
           href={project.github}
-          className="bg-gray-700 px-4 py-2 rounded hover:bg-gray-800 transition"
+          className="bg-gradient-to-br from-[#2222a0] via-[#3e64ba] to-[#0d1e6a] px-4 py-2 rounded hover:bg-gray-800 transition"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -131,7 +131,7 @@ const ProjectCard = ({ project, index }) => {
         </a>
         <a
           href={project.linkedin}
-          className="bg-blue-500 px-4 py-2 rounded hover:bg-blue-600 transition"
+          className="bg-gradient-to-br from-[#2222a0] via-[#3e64ba] to-[#0d1e6a] px-4 py-2 rounded hover:bg-blue-600 transition"
           target="_blank"
           rel="noopener noreferrer"
         >

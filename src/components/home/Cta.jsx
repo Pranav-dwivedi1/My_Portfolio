@@ -93,14 +93,14 @@ export default function Cta() {
            <button className="
   group relative inline-flex items-center justify-center
   px-12 py-4 text-lg font-semibold text-white
-  bg-gradient-to-r from-[#D65A31] to-[#e46848]
+  bg-gradient-to-br from-[#2222a0] via-[#3e64ba] to-[#0d1e6a]
   rounded-full transition-all duration-300 ease-out
   hover:scale-105 hover:-translate-y-1
   hover:shadow-xl hover:shadow-orange-100/25
   active:scale-95 active:translate-y-0
 ">
   <span className="relative z-10">Contact Us</span>
-  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#ed6a49] to-[#D65A31] opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-xl" />
+  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#2222a0] via-[#3e64ba] to-[#0d1e6a] opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-xl" />
 </button>
 
 
