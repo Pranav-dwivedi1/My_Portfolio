@@ -12,7 +12,7 @@ const teamMembers = [
     text: "Java developer with 2 years of experience in building high-performance backend services.",
     image: "/teams/amber.jpeg",
     linkedin: "linkedin.com/in/amber-gautam-7b0898234",
-    github: "https://github.com/ambergautam",
+    github: "https://github.com/Gautamamber14/ShoppingApp_A003",
     email: "gautamamber3@gmail.com",
   },
   {
