@@ -32,7 +32,7 @@ const teamMembers = [
     text: "Flutter developer with 2 years of experience building cross-platform mobile apps",
     image: "/teams/ashutosh.jpeg",
     linkedin: "https://www.linkedin.com/in/ashutosh-vishwakarma-412333231?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BEwruMKiSQ1GNM%2B1P79jNlg%3D%3D",
-    github: "https://github.com/ashutosh",
+    github: "https://github.com/vishwakarmaashutosh1",
     email: "vishwakarmaashutosh1@gmail.com",
   },
   {
