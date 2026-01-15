@@ -17,7 +17,7 @@ export default function Hero() {
       <div className="relative w-full h-[42.58px] mb-8 flex justify-center items-center">
         <div className="w-[381px] h-[42.58px] bg-white/10 rounded-[109.169px] flex justify-between items-center relative px-2">
           {/* Orange Label */}
-          <div className="w-[121.75px] h-[32.65px] bg-[#D65A31] rounded-[68.2307px] flex items-center justify-center gap-[6.82px] px-[16.3754px] py-[6.82307px]">
+          <div className="w-[121.75px] h-[32.65px] bg-gradient-to-br from-[#2222a0] via-[#3e64ba] to-[#0d1e6a] rounded-[68.2307px] flex items-center justify-center gap-[6.82px] px-[16.3754px] py-[6.82307px]">
             <span className="text-white text-[15.28px] leading-[19px] font-medium">
               New Feature
             </span>
@@ -39,12 +39,20 @@ export default function Hero() {
       <div className="max-w-screen-xl mx-auto px-4 text-center">
         {/* Heading */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight mb-4">
-          Fueling <span className="text-[#D65A31]">Brands.</span> Powering{" "}
-          <span className="text-[#AD5031]">Growth.</span>
-        </h1>
+  Fueling{" "}
+  <span className="bg-gradient-to-br from-[#2a2ac1] via-[#4e77d5] to-[#152e9d] bg-clip-text text-transparent">
+    Brands.
+  </span>{" "}
+  Powering{" "}
+  <span className="bg-gradient-to-br from-[#2a2ac1] via-[#4e77d5] to-[#152e9d] bg-clip-text text-transparent">
+    Growth.
+  </span>
+</h1>
+
+
 
         {/* Subtext */}
-        <p className="max-w-2xl mx-auto text-[#9F9F9F] text-base sm:text-lg md:text-[20px] mb-8 font-medium leading-relaxed">
+        <p className="max-w-2xl mx-auto text-[#d7d7d7] text-base sm:text-lg md:text-[20px] mb-8 font-medium leading-relaxed">
           From high-converting websites to result-driven campaigns – Yantra
           Digital builds what success looks like.
         </p>
@@ -127,7 +135,7 @@ export default function Hero() {
               {[...Array(4)].map((_, i) => (
                 <div
                   key={i}
-                  className="w-2 h-2 bg-[#D65A31] rounded-full animate-pulse"
+                  className="w-2 h-2 bg-gradient-to-br from-[#2222a0] via-[#3e64ba] to-[#0d1e6a] rounded-full animate-pulse"
                   style={{ animationDelay: `${i * 0.2}s` }}
                 ></div>
               ))}

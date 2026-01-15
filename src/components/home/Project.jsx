@@ -150,12 +150,13 @@ export default function Project() {
       <div className="absolute w-[608px] h-[502px] bottom-[-100px] left-[-150px] blur-[300px] mix-blend-screen rounded-full pointer-events-none z-0 overflow-hidden"  />
 
       {/* Heading */}
-      <div className="flex items-center justify-center gap-4 my-6">
-        <div className="w-16 h-[2.2px] bg-[#D65A31]"></div>
-        <p className="text-[#D65A31] text-[22px] md:text-[30px] font-semibold">
+      <div className="text-center gap-4 my-6">
+       
+        <p className="text-3xl md:text-4xl font-bold mb-4 ">
           My Projects
         </p>
-        <div className="w-16 h-[2.2px] bg-[#D65A31]"></div>
+         <p className="text-gray-400 max-w-2xl mx-auto">A selection of real-world projects I’ve built for clients and companies using modern web technologies.
+Each project focuses on performance, clean design, and solving real business problems.</p>
       </div>
 
       {/* Mobile View - Swiper */}

@@ -80,8 +80,10 @@ export default function MySkills() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Tech Stack I Love 💻.</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">From frontend UI polish to backend APIs and deployment—I craft solutions with these tools daily</p>
+          
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">Technologies I Work With</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">From crafting polished user interfaces to building reliable backend systems, these are the technologies I use every day.
+They help me deliver fast, scalable, and high-quality web solutions for real-world projects.</p>
         </motion.div>
 
         {/* Skills Grid */}

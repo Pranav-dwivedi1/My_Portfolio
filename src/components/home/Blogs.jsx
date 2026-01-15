@@ -55,9 +55,10 @@ export default function Blogs() {
         viewport={{ once: true }}
         className="text-center mb-12"
       >
-        <h2 className="text-4xl font-bold mb-2">Latest Blog Posts 📝</h2>
+        <h2 className="text-4xl font-bold mb-2">Tech Insights & Articles</h2>
         <p className="text-gray-400 max-w-xl mx-auto">
-          Insights, tutorials, and learnings from my coding journey.
+          Insights, tutorials, and real-world experiences from my journey as a full stack web developer.
+Sharing practical knowledge, coding tips, and best practices to help developers and businesses build better digital products.
         </p>
       </motion.div>
 
