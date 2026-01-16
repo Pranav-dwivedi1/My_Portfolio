@@ -172,7 +172,7 @@ export default function OurTeam() {
     <section id="team" className=" px-4 overflow-hidden flex flex-col justify-center min-h-[700px] md:min-h-[800px] lg:min-h-[850px] py-8 md:py-12">
       {/* Header */}
       <div className="text-center">
-        <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
           Meet Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">Team</span>
         </h2>
         <p className="text-xl text-orange-200 max-w-2xl mx-auto leading-relaxed">
