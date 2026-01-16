@@ -169,7 +169,7 @@ export default function OurTeam() {
   };
 
   return (
-    <section className=" px-4 overflow-hidden flex flex-col justify-center min-h-[700px] md:min-h-[800px] lg:min-h-[850px] py-8 md:py-12">
+    <section id="team" className=" px-4 overflow-hidden flex flex-col justify-center min-h-[700px] md:min-h-[800px] lg:min-h-[850px] py-8 md:py-12">
       {/* Header */}
       <div className="text-center">
         <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">

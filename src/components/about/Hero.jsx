@@ -66,7 +66,7 @@ export default function Page() {
   };
 
   return (
-    <section className="relative text-white font-gilroy py-6 overflow-hidden min-h-[calc(90vh-80px)]">
+    <section className="relative text-white font-gilroy py-6 md:px-12 overflow-hidden min-h-[calc(90vh-80px)]">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0f] via-[#0f172a] to-[#020617]" />
 
@@ -76,7 +76,7 @@ export default function Page() {
       <div className="relative max-w-8xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-6 md:py-8 lg:py-10">
         {/* Mobile: stacked → text first, then images */}
         {/* Desktop: side-by-side → text left, images right */}
-        <div className="flex flex-col lg:flex-row lg:items-start gap-8 lg:gap-12">
+        <div className="flex flex-col lg:flex-row lg:items-start gap-8 lg:gap-10">
           {/* LEFT / TOP → Content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -133,13 +133,21 @@ export default function Page() {
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <ButtonOrange
-                text="Meet Our Team"
-                link="/team"
-                className="group flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-lg hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300"
-              >
-                <span>Meet Our Team</span>
-                <FiArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-              </ButtonOrange>
+  text="Meet Our Team"
+  onClick={() => {
+    const teamSection = document.getElementById("team");
+    if (teamSection) {
+      teamSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }}
+  className="group flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-lg hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300"
+>
+  <span>Meet Our Team</span>
+</ButtonOrange>
+
 
               <ButtonGray
                 text="Contact Us"
