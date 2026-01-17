@@ -60,7 +60,7 @@ export default function ChatGPTBusinessBlog() {
           </h1>
         </header>
 
-        <div className="flex flex-col lg:flex-row max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 gap-8">
+        <div className="flex flex-col lg:flex-row max-w-8xl mx-auto py-12 px-4 sm:px-6 lg:px-8 gap-6">
           <nav className="w-full lg:w-1/4 space-y-4 sticky top-24 self-start">
             <div className="bg-white rounded-xl p-6 shadow-md border border-gray-100">
               <h2 className="text-xl font-bold text-indigo-800 mb-4">

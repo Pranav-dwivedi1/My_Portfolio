@@ -31,6 +31,13 @@ export default function Blogs() {
       tags: [{ tagTitle: "AI" }, { tagTitle: "Business Growth" }],
       link: "/blogs/chatgpt-business-2025",
     },
+     {
+    title: "How to Become a Prompt Engineer in AI (2026 Guide)",
+    desc: "Learn how to become a Prompt Engineer in AI in 2026. Discover required skills, tools, learning roadmap, real-world use cases, and career opportunities.",
+    date: "June 10, 2026",
+    tags: [{ tagTitle: "AI" }, { tagTitle: "Career" }, { tagTitle: "Prompt Engineering" }],
+    link: "/blogs/prompt-engineering-guide",
+  },
     // Add more blog posts as needed
   ];
 
@@ -47,7 +54,7 @@ export default function Blogs() {
         <div className="w-full pt-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4">
             {/* Social Media & Filter Bar */}
-            <div className="flex flex-col md:flex-row justify-between items-center mb-12   gap-6">
+            <div className="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
               <div className="flex items-center space-x-6">
                 <p className="text-sm font-medium text-gray-100">Share:</p>
                 <div className="flex space-x-4">

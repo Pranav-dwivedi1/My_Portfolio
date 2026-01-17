@@ -5,7 +5,7 @@ const ButtonOrange = ({
   text,
   link,
   onClick,
-  fullWidth = false,
+  fullWidth = true,
   className = "",
   children,
 }) => {

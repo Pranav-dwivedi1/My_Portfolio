@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
-
-import { ArrowRight, Menu } from "lucide-react"; // Added Menu for hamburger icon
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { Menu } from "lucide-react"; // Added Menu for hamburger icon
 import ButtonOrange from "@/components/comman/ui/ButtonOrange";
 import ButtonGray from "@/components/comman/ui/ButtonGray";
 import Tech from "../../assets/home/hero/tech.png";
@@ -10,29 +11,37 @@ import RightArrow from "../../assets/home/hero/right.svg";
 
 export default function Hero() {
   return (
-    <section className="h-screen  text-white py-12 md:py-20 font-gilroy">
+    <section className="h-screen  text-white py-6 md:py-12 font-gilroy">
       {/* Header (Logo and Hamburger Menu for Mobile) */}
 
       {/* New Feature Banner */}
       <div className="relative w-full h-[42.58px] mb-8 flex justify-center items-center">
-        <div className="w-[381px] h-[42.58px] bg-white/10 rounded-[109.169px] flex justify-between items-center relative px-2">
-          {/* Orange Label */}
-          <div className="w-[121.75px] h-[32.65px] bg-gradient-to-br from-[#2222a0] via-[#3e64ba] to-[#0d1e6a] rounded-[68.2307px] flex items-center justify-center gap-[6.82px] px-[16.3754px] py-[6.82307px]">
-            <span className="text-white text-[15.28px] leading-[19px] font-medium">
-              New Feature
-            </span>
-          </div>
+        <div className="w-[361px] h-[42.58px] bg-white/10 rounded-[109.169px] flex justify-between items-center relative px-2">
 
-          {/* Center Text */}
-          <span className="text-[15.28px] text-center text-[#D2D2D2] font-medium">
-            Check out Team Dashboard
-          </span>
+  {/* Hire Me Button */}
+  <Link
+    href="/portfolio"
+    className="w-[121.75px] h-[32.65px] bg-gradient-to-br from-[#2222a0] via-[#3e64ba] to-[#0d1e6a] rounded-[68.2307px] flex items-center justify-center gap-[6.82px] px-[16.3754px] py-[6.82307px] hover:opacity-90 transition"
+  >
+    <span className="text-white text-[15.28px] leading-[19px] font-medium">
+      Hire Me
+    </span>
+  </Link>
 
-          {/* Arrow Icon */}
-          <div className="w-[24px] h-[24px] bg-[#D2D2D2] flex justify-center items-center rounded-full">
-            <ArrowRight className="w-4 h-4 text-gray-700" />
-          </div>
-        </div>
+  {/* Center Text */}
+  <span className="text-[15.28px] text-center text-[#D2D2D2] font-medium">
+    View • Work • Portfolio
+  </span>
+
+  {/* Arrow Icon Button (optional click to contact) */}
+  <Link
+    href="/portfolio"
+    className="w-[24px] h-[24px] bg-[#D2D2D2] flex justify-center items-center rounded-full hover:bg-white transition"
+  >
+    <ArrowRight className="w-4 h-4 text-gray-700" />
+  </Link>
+
+</div>
       </div>
 
       {/* Main Content */}
@@ -53,79 +62,69 @@ export default function Hero() {
 
         {/* Subtext */}
         <p className="max-w-2xl mx-auto text-[#d7d7d7] text-base sm:text-lg md:text-[20px] mb-8 font-medium leading-relaxed">
-          From high-converting websites to result-driven campaigns – Yantra
-          Digital builds what success looks like.
+          We design, build, and scale high-performance websites, AI-driven platforms,
+and growth-focused digital solutions for modern businesses.
         </p>
 
-        {/* Statistics */}
-        <div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-6 text-white">
-          {/* ITEM 1 */}
-          <div className="flex items-center gap-3">
-            <Image
-              src={Check}
-              width={20}
-              height={20}
-              alt="check"
-              className="mt-1"
-            />
-            <div>
-              <span className="text-white font-bold text-lg sm:text-xl">
-                30 Lakh+
-              </span>
-              <span className="text-sm sm:text-base text-[#D2D2D2] ml-2">
-                client revenue
-              </span>
-            </div>
-          </div>
+ {/* Statistics */}
+<div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-6 text-white">
 
-          {/* ITEM 2 */}
-          <div className="flex items-center gap-3">
-            <Image
-              src={Check}
-              width={20}
-              height={20}
-              alt="check"
-              className="mt-1"
-            />
-            <div>
-              <span className="text-white font-bold text-lg sm:text-xl">
-                30+
-              </span>
-              <span className="text-sm sm:text-base text-[#D2D2D2] ml-2">
-                projects delivered
-              </span>
-            </div>
-          </div>
+  {/* Wrapper to align all items from same start point */}
+  <div className="flex flex-col md:flex-row gap-4 text-left">
 
-          {/* ITEM 3 */}
-          <div className="flex items-start gap-3">
-            <Image
-              src={Check}
-              width={20}
-              height={20}
-              alt="check"
-              className="mt-1"
-            />
-            <div>
-              <span className="text-white font-bold text-lg sm:text-xl">
-                100%
-              </span>
-              <span className="text-sm sm:text-base text-[#D2D2D2] ml-2">
-                Accuracy
-              </span>
-            </div>
-          </div>
-        </div>
+    {/* ITEM 1 */}
+    <div className="flex items-center gap-3">
+      <Image src={Check} width={20} height={20} alt="check" className="mt-1" />
+      <div>
+        <span className="text-white font-bold text-lg sm:text-xl">50+</span>
+        <span className="text-sm sm:text-base text-[#D2D2D2] ml-2">
+          successful launches
+        </span>
+      </div>
+    </div>
+
+    {/* ITEM 2 */}
+    <div className="flex items-center gap-3">
+      <Image src={Check} width={20} height={20} alt="check" className="mt-1" />
+      <div>
+        <span className="text-white font-bold text-lg sm:text-xl">25+</span>
+        <span className="text-sm sm:text-base text-[#D2D2D2] ml-2">
+          long-term clients
+        </span>
+      </div>
+    </div>
+
+    {/* ITEM 3 */}
+    <div className="flex items-center gap-3">
+      <Image src={Check} width={20} height={20} alt="check" className="mt-1" />
+      <div>
+        <span className="text-white font-bold text-lg sm:text-xl">100%</span>
+        <span className="text-sm sm:text-base text-[#D2D2D2] ml-2">
+          delivery commitment
+        </span>
+      </div>
+    </div>
+
+  </div>
+</div>
 
         {/* Buttons */}
-        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-4 justify-center w-full max-w-screen-sm mx-auto">
-          <ButtonOrange
-            text="Start Your Project"
-            link="/our-work"
-            className="w-full  md:w-[262.13px]"
-          />
-          <ButtonGray text="See Our Work" link="/our-work" className="" />
-        </div>
+       <div className="flex flex-col md:flex-row items-center gap-4 justify-center w-full max-w-screen-sm mx-auto">
+
+  <ButtonOrange
+    text="About Us"
+    link="/about"
+    className="w-full md:w-[262.13px]"
+  />
+
+  <ButtonGray
+    text="Contact Us"
+    link="/contact"
+    className="w-full md:w-[262.13px]"
+  />
+
+</div>
+
 
         {/* Bottom decoration (Hidden on Mobile) */}
         <div className="mt-16 md:flex flex-col justify-center items-center text-center">

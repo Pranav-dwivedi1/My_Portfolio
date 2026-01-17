@@ -24,7 +24,7 @@ const projects = [
 
 export default function MobileView() {
   return (
-    <section className="px-4 py-10 bg-gradient-to-br from-[#0a0a0f] via-[#0f172a] to-[#020617] text-white">
+    <section className="px-4 pb-10 bg-gradient-to-br from-[#0a0a0f] via-[#0f172a] to-[#020617] text-white">
       <Swiper
         effect={'cards'}
         grabCursor={true}

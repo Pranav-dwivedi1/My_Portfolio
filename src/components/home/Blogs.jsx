@@ -1,17 +1,12 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
+import Link from "next/link";
 import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import BlogImg from '../../assets/home/blog.png';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import ButtonOrange from "@/components/comman/ui/ButtonOrange";
-
-
-// import blogImg1 from '../../assets/home/blog1.avif';
-// import blogImg2 from '../../assets/home/blog2.avif';
-// import blogImg3 from '../../assets/home/blog3.avif';
 
 const blogs = [
   {
@@ -41,6 +36,15 @@ const blogs = [
     image: BlogImg,
     link: '/blogs/fullstack-deployment',
   },
+  {
+    id: 4,
+    title: 'How to Become a Prompt Engineer in AI (2025 Guide)',
+    date: 'June 10, 2025',
+    description:
+      'A complete guide to becoming a Prompt Engineer in AI, covering essential skills, tools, learning roadmap, and career opportunities.',
+    image: BlogImg,
+    link: '/blogs/prompt-engineering-guide',
+  },
 ];
 
 export default function Blogs() {
@@ -58,14 +62,14 @@ export default function Blogs() {
         <h2 className="text-4xl font-bold mb-2">Tech Insights & Articles</h2>
         <p className="text-gray-400 max-w-xl mx-auto">
           Insights, tutorials, and real-world experiences from my journey as a full stack web developer.
-Sharing practical knowledge, coding tips, and best practices to help developers and businesses build better digital products.
+          Sharing practical knowledge, coding tips, and best practices to help developers and businesses build better digital products.
         </p>
       </motion.div>
 
       {/* Blog Carousel */}
       <Swiper
         spaceBetween={20}
-        grabCursor={true}
+        grabCursor
         breakpoints={{
           0: { slidesPerView: 1 },
           640: { slidesPerView: 1 },
@@ -75,42 +79,31 @@ Sharing practical knowledge, coding tips, and best practices to help developers 
       >
         {blogs.map((blog, index) => (
           <SwiperSlide key={blog.id}>
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-className="
-  bg-gradient-to-br from-blue-500/20 to-transparent
-  opacity-0 group-hover:opacity-100
-  p-6 rounded-2xl
-  shadow-lg hover:shadow-purple-600/20
-  transition-all duration-300
-  overflow-hidden
-  flex flex-col h-full
-"
-            >
-              <Image
-                src={blog.image}
-                alt={blog.title}
-                className="w-full h-[200px] object-cover"
-              />
-              <div className="py-6 px-2 flex flex-col justify-between h-full">
-                <div>
-                  <p className="text-sm text-gray-400">{blog.date}</p>
-                  <h3 className="text-xl font-bold mt-2">{blog.title}</h3>
-                  <p className="mt-3 text-gray-300 text-sm">{blog.description}</p>
+            <Link href={blog.link} className="block h-full">
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-br from-blue-500/20 to-transparent p-6 rounded-2xl shadow-lg hover:shadow-purple-600/20 transition-all duration-300 overflow-hidden flex flex-col h-full"
+              >
+                <Image
+                  src={blog.image}
+                  alt={blog.title}
+                  className="w-full h-[200px] object-cover"
+                />
+
+                <div className="py-6 px-2 flex flex-col justify-between h-full">
+                  <div>
+                    <p className="text-sm text-gray-400">{blog.date}</p>
+                    <h3 className="text-xl font-bold mt-2">{blog.title}</h3>
+                    <p className="mt-3 text-gray-300 text-sm">
+                      {blog.description}
+                    </p>
+                  </div>
                 </div>
-                <div className="mt-6">
-                  <a
-                    href={blog.link}
-                    className="text-purple-400 hover:text-purple-300 underline underline-offset-4 font-medium transition"
-                  >
-                    Read more →
-                  </a>
-                </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>
@@ -122,15 +115,14 @@ className="
         transition={{ duration: 0.6, delay: 0.4 }}
         className="mt-14 text-center"
       >
-        <a
+        <Link
           href="/blogs"
           className="inline-block bg-gradient-to-br from-[#2222a0] via-[#3e64ba] to-[#0d1e6a] text-white px-6 py-3 rounded-full font-semibold transition"
         >
           View All Blogs →
-        </a>
+        </Link>
       </motion.div>
+
     </section>
   );
 }
-// npm install swiper
-

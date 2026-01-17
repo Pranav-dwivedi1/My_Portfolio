@@ -145,17 +145,17 @@ const ProjectCard = ({ project, index }) => {
 
 export default function Project() {
   return (
-    <section className="relative py-16 text-white px-4 md:px-20 lg:px-28  bg-dark-vignette">
+    <section className="relative pb-12 text-white px-4 md:px-20 lg:px-28  bg-dark-vignette">
       <div className="absolute w-[408px] h-[402px] top-[0px] right-[-200px]  blur-[300px] mix-blend-screen rounded-full pointer-events-none z-0 overflow-hidden" />
       <div className="absolute w-[608px] h-[502px] bottom-[-100px] left-[-150px] blur-[300px] mix-blend-screen rounded-full pointer-events-none z-0 overflow-hidden"  />
 
       {/* Heading */}
-      <div className="text-center gap-4 my-6">
+      <div className="text-center gap-4 ">
        
         <p className="text-3xl md:text-4xl font-bold mb-4 ">
           My Projects
         </p>
-         <p className="text-gray-400 max-w-2xl mx-auto">A selection of real-world projects I’ve built for clients and companies using modern web technologies.
+         <p className="text-gray-400 max-w-2xl pb-6 mx-auto">A selection of real-world projects I’ve built for clients and companies using modern web technologies.
 Each project focuses on performance, clean design, and solving real business problems.</p>
       </div>
 
