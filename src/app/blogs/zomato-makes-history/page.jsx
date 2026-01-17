@@ -100,7 +100,7 @@ const ZomatoSensex = () => {
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
         <header className="gradient-header text-white relative">
           <div className="absolute inset-0  opacity-10"></div>
-          <div className="container mx-auto pt-32 pb-8 lg:pt-44 md:pt-44 md:py-24 lg:py-20 relative">
+          <div className="container mx-auto bg-gradient-to-r from-indigo-900 to-purple-900 shadow-md  md:py-24 lg:py-20 relative">
             <div className="w-full">
               <h1 className="py-2 text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-100 to-white w-[90%] mx-auto">
                 Sensex Zomato: What&apos;s Driving Zomato&apos;s Performance on
