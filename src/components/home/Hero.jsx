@@ -11,7 +11,7 @@ import RightArrow from "../../assets/home/hero/right.svg";
 
 export default function Hero() {
   return (
-    <section className="h-screen  text-white py-6 md:py-12 font-gilroy">
+    <section className="h-screen text-white py-6 md:py-12 font-gilroy">
       {/* Header (Logo and Hamburger Menu for Mobile) */}
 
       {/* New Feature Banner */}
@@ -108,22 +108,22 @@ and growth-focused digital solutions for modern businesses.
   </div>
 </div>
 
-        {/* Buttons */}
-       <div className="flex flex-col md:flex-row items-center gap-4 justify-center w-full max-w-screen-sm mx-auto">
-
+<div className="flex flex-col md:flex-row items-center justify-center gap-6">
   <ButtonOrange
     text="About Us"
     link="/about"
-    className="w-full md:w-[262.13px]"
+    className="px-10"
   />
-
   <ButtonGray
     text="Contact Us"
     link="/contact"
-    className="w-full md:w-[262.13px]"
+    className="px-10"
   />
-
 </div>
+
+
+
+
 
 
         {/* Bottom decoration (Hidden on Mobile) */}
@@ -140,12 +140,12 @@ and growth-focused digital solutions for modern businesses.
               ))}
             </div>
             <span className="font-gilroy text-[16px] sm:text-lg ml-2">
-              Trusted by 1000+ businesses
+              Trusted by 100+ clients
             </span>
           </div>
 
           {/* Image */}
-          <div className="mt-2">
+          <div className="mb-2">
             <Image
               src={Tech}
               alt="Description of the image"
