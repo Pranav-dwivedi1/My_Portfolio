@@ -17,7 +17,7 @@ function Dropdown({ label, labelHref, links, closeMenu }) {
         <Link
           href={labelHref}
           onClick={closeMenu}
-          className="text-sm font-medium text-gray-700 hover:text-blue-600"
+          className="text-lg font-medium text-gray-700 hover:text-blue-600"
         >
           {label}
         </Link>
@@ -49,9 +49,9 @@ function Dropdown({ label, labelHref, links, closeMenu }) {
               key={idx}
               href={href}
               onClick={closeMenu}
-              className="block text-sm text-gray-600 hover:text-blue-500"
+              className="block text-lg text-gray-600 hover:text-blue-500"
             >
-              f{label}
+              {label}
             </Link>
           ))}
         </div>
@@ -249,11 +249,11 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white z-50 shadow-lg rounded-b-xl border-t border-gray-300 px-4 pb-4 pt-4 space-y-2">
+        <div className="md:hidden text-lg absolute top-full left-0 w-full bg-white z-50 shadow-lg rounded-b-xl border-t border-gray-300 px-4 pb-4 pt-4 space-y-2">
           <Link
             href="/"
             onClick={() => setMenuOpen(false)}
-            className="block text-sm font-medium text-gray-700 hover:text-blue-600"
+            className="block text-2xl font-medium text-gray-700 hover:text-blue-600"
           >
             Home
           </Link>
@@ -282,7 +282,7 @@ export default function Header() {
             label="Services"
             labelHref="/services"
             closeMenu={() => setMenuOpen(false)}
-            links={[{ label: "IELTS", href: "/ielts" }]}
+            links={[{ label: "Website Development", href: "/WebsiteDevelopment" }]}
           />
           <Dropdown
             label="Contact"
@@ -291,13 +291,13 @@ export default function Header() {
             links={[]}
           />
 
-          <Link
+          {/* <Link
             href="/blogs"
             onClick={() => setMenuOpen(false)}
             className="block text-sm font-medium text-gray-700 hover:text-blue-600"
           >
             Blogs
-          </Link>
+          </Link> */}
 
           {/* Mobile Contact Us Button with Border and Gradient */}
           <ButtonOrange
