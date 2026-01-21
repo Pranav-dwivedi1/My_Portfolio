@@ -8,7 +8,7 @@ const ButtonGray = ({ text, link, className = "" }) => {
         flex justify-center items-center
         bg-white/[0.1] border border-[#D8D8D666]
         shadow-[inset_0px_-8px_21.6px_#FFFFFF26]
-        py-[18.26px] px-[95.06px]
+        py-[18.26px] px-[115px]
         rounded-[114.1px]
         text-lg font-medium
         hover:scale-105 hover:opacity-90 transition-all duration-300
