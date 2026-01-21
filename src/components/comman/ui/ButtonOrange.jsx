@@ -15,7 +15,7 @@ const ButtonOrange = ({ text, link, onClick, className = "", children }) => {
         text-lg font-medium
         flex items-center justify-center gap-2
         hover:scale-105 transition-all duration-300
-        h-[61px] w-[310px]
+        h-[61px] w-[320px]
         ${className}
       `}
     >

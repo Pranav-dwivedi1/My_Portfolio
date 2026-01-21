@@ -12,7 +12,7 @@ const ButtonGray = ({ text, link, className = "" }) => {
         rounded-[114.1px]
         text-lg font-medium
         hover:scale-105 hover:opacity-90 transition-all duration-300
-        h-[61px] w-[310px]
+        h-[61px] w-[320px]
         ${className}
       `}
     >

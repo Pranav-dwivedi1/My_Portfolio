@@ -145,7 +145,7 @@ const ProjectCard = ({ project, index }) => {
 
 export default function Project() {
   return (
-    <section className="relative py-24 md:py-0 mb-8 text-white px-4 md:px-20 lg:px-28  bg-dark-vignette">
+    <section className="relative py-0  mb-8 text-white px-4 md:px-20 lg:px-28  bg-dark-vignette">
       <div className="absolute w-[408px] h-[402px] top-[0px] right-[-200px]  blur-[300px] mix-blend-screen rounded-full pointer-events-none z-0 overflow-hidden" />
       <div className="absolute w-[608px] h-[502px] bottom-[-100px] left-[-150px] blur-[300px] mix-blend-screen rounded-full pointer-events-none z-0 overflow-hidden"  />
 
