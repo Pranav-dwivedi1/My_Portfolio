@@ -9,7 +9,7 @@ import Check from "../../assets/home/hero/check.png";
 
 export default function Hero() {
   return (
-    <section className="h-screen text-white py-6 md:py-12 font-gilroy">
+    <section className="relative min-h-screen text-white py-6 md:py-12 font-gilroy">
       
       {/* ✅ PRIMARY SEO H1 (invisible but REAL for Google) */}
       <h1 className="sr-only">
