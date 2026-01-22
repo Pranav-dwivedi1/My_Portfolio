@@ -49,7 +49,10 @@ const blogs = [
 
 export default function Blogs() {
   return (
-    <section className="px-6 md:px-12 py-16 text-white">
+    <section
+      className="px-6 md:px-12 py-16 text-white"
+      aria-labelledby="blogs-heading"
+    >
 
       {/* Section Heading */}
       <motion.div
@@ -59,10 +62,20 @@ export default function Blogs() {
         viewport={{ once: true }}
         className="text-center mb-12"
       >
-        <h2 className="text-4xl font-bold mb-2">Tech Insights & Articles</h2>
-        <p className="text-gray-400 max-w-xl mx-auto">
-          Insights, tutorials, and real-world experiences from my journey as a full stack web developer.
-          Sharing practical knowledge, coding tips, and best practices to help developers and businesses build better digital products.
+        {/* ✅ H2 = section topic (NO name repetition) */}
+        <h2
+          id="blogs-heading"
+          className="text-4xl font-bold mb-2"
+        >
+          Tech Insights & Articles
+        </h2>
+
+        {/* Visible editorial description */}
+        <p className="text-gray-400 max-w-2xl mx-auto">
+          Insights, tutorials, and real-world experiences from my journey as a
+          full stack web developer. Sharing practical knowledge, coding tips,
+          and best practices to help developers and businesses build better
+          digital products.
         </p>
       </motion.div>
 
@@ -80,7 +93,7 @@ export default function Blogs() {
         {blogs.map((blog, index) => (
           <SwiperSlide key={blog.id}>
             <Link href={blog.link} className="block h-full">
-              <motion.div
+              <motion.article
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -89,26 +102,31 @@ export default function Blogs() {
               >
                 <Image
                   src={blog.image}
-                  alt={blog.title}
+                  alt={`${blog.title} – technical blog article`}
                   className="w-full h-[200px] object-cover"
                 />
 
                 <div className="py-6 px-2 flex flex-col justify-between h-full">
                   <div>
                     <p className="text-sm text-gray-400">{blog.date}</p>
-                    <h3 className="text-xl font-bold mt-2">{blog.title}</h3>
+
+                    {/* H3 = article title */}
+                    <h3 className="text-xl font-bold mt-2">
+                      {blog.title}
+                    </h3>
+
                     <p className="mt-3 text-gray-300 text-sm">
                       {blog.description}
                     </p>
                   </div>
                 </div>
-              </motion.div>
+              </motion.article>
             </Link>
           </SwiperSlide>
         ))}
       </Swiper>
 
-      {/* View More Blogs Button */}
+      {/* View More */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -122,6 +140,14 @@ export default function Blogs() {
           View All Blogs →
         </Link>
       </motion.div>
+
+      {/* 🔍 Invisible SEO reinforcement (NO UI impact) */}
+      <p className="sr-only">
+        This section contains technical blog articles focused on React,
+        Next.js, JavaScript, full stack development, deployment, performance
+        optimization, and AI-related topics. Articles are written by the
+        website owner and published on pranavdev.online.
+      </p>
 
     </section>
   );

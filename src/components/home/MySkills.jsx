@@ -10,9 +10,7 @@ import {
   FaGitAlt,
   FaDatabase
 } from "react-icons/fa";
-
 import { SiNextdotjs, SiWordpress } from "react-icons/si";
-
 
 const skills = [
   {
@@ -26,9 +24,9 @@ const skills = [
     desc: 'My go-to library for building UIs, SPAs & interactive apps.'
   },
   {
-  name: 'Next js',
-  icon: <SiNextdotjs className="text-black text-5xl" />,
-  desc: 'A powerful React framework for building fast, SEO-friendly and full-stack web applications.'
+    name: 'Next.js',
+    icon: <SiNextdotjs className="text-black text-5xl" />,
+    desc: 'A powerful React framework for building fast, SEO-friendly and full-stack web applications.'
   },
   {
     name: 'Node.js',
@@ -56,20 +54,21 @@ const skills = [
     desc: 'Document or relational, I work with both data models.'
   },
   {
-  name: "WordPress",
-  icon: <SiWordpress className="text-blue-500 text-5xl" />,
-  desc: "A popular CMS for building blogs, business websites, and fully customizable content-driven platforms."
+    name: "WordPress",
+    icon: <SiWordpress className="text-blue-500 text-5xl" />,
+    desc: "A popular CMS for building blogs, business websites, and fully customizable content-driven platforms."
   }
-
-  
 ];
 
 export default function MySkills() {
   return (
-    <section className="relative py-16 text-white px-4 md:px-20 lg:px-28 ">
-
-      <div className="absolute w-[608px] h-[502px] bottom-[-100px] left-[-150px] blur-[300px] mix-blend-screen rounded-full pointer-events-none z-0 overflow-hidden"  />
-        <div className="absolute w-[408px] h-[402px] top-[0px] right-[-200px]  blur-[300px] mix-blend-screen rounded-full pointer-events-none z-0 overflow-hidden" />
+    <section
+      className="relative py-16 text-white px-4 md:px-20 lg:px-28"
+      aria-labelledby="skills-heading"
+    >
+      {/* Background glows (unchanged) */}
+      <div className="absolute w-[608px] h-[502px] bottom-[-100px] left-[-150px] blur-[300px] mix-blend-screen rounded-full pointer-events-none z-0 overflow-hidden" />
+      <div className="absolute w-[408px] h-[402px] top-[0px] right-[-200px] blur-[300px] mix-blend-screen rounded-full pointer-events-none z-0 overflow-hidden" />
 
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
@@ -80,14 +79,25 @@ export default function MySkills() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Technologies I Work With</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">From crafting polished user interfaces to building reliable backend systems, these are the technologies I use every day.
-They help me deliver fast, scalable, and high-quality web solutions for real-world projects.</p>
+          {/* ✅ SEO-important H2 */}
+          <h2
+            id="skills-heading"
+            className="text-4xl md:text-5xl font-bold mb-4"
+          >
+            Technologies I Work With
+          </h2>
+
+          {/* Visible context (SEO + UX) */}
+          <p className="text-gray-400 max-w-2xl mx-auto">
+  I work across frontend and backend technologies to build fast, scalable, and
+  production-ready web applications. These are the tools and technologies I use
+  daily to deliver clean, reliable, and high-performance digital solutions.
+</p>
+
         </motion.div>
 
-        {/* Skills Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+        {/* Skills Grid (unchanged) */}
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {skills.map((skill, index) => (
             <motion.div
               key={index}
@@ -98,13 +108,22 @@ They help me deliver fast, scalable, and high-quality web solutions for real-wor
               className="bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 duration-300 p-6 rounded-2xl shadow-lg hover:shadow-purple-600/20 transition-shadow"
             >
               <div className="mb-4">{skill.icon}</div>
-              <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-400">{skill.name}</h3>
+              <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-400">
+                {skill.name}
+              </h3>
               <p className="text-sm text-gray-400">{skill.desc}</p>
             </motion.div>
           ))}
         </div>
+
+        {/* 🔍 Hidden SEO reinforcement (NO UI impact) */}
+        <p className="sr-only">
+          Pranav Dwivedi is a Full Stack Developer skilled in JavaScript, React,
+          Next.js, Node.js, MongoDB, SQL, Tailwind CSS, Git, GitHub, and WordPress.
+          This section highlights the technologies used by Pranav Dwivedi in
+          real-world web development projects.
+        </p>
       </div>
     </section>
   );
 }
-

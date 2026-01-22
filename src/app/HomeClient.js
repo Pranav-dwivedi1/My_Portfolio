@@ -16,7 +16,6 @@ export default function HomeClient() {
 
       {/* HERO MUST CONTAIN H1 WITH YOUR NAME */}
       <Hero />
-
       <Projects />
       <Skill />
       <Blogs />

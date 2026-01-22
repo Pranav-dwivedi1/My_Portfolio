@@ -7,26 +7,34 @@ import background from '../../assets/home/ctabg.webp';
 import ctaimg1 from '../../assets/home/ctaimg1.webp';
 import ctaimg2 from '../../assets/home/ctaimg2.webp';
 import ctaimg3 from '../../assets/home/ctaimg3.webp';
-import ctaimg4 from '../../assets/home/ctaimg3.webp'; // use correct image here
+import ctaimg4 from '../../assets/home/ctaimg3.webp';
 
 export default function Cta() {
   const images = [
-    { src: ctaimg1, fallback: '/placeholder1.jpg', alt: 'CTA Image 1' },
-    { src: ctaimg2, fallback: '/placeholder2.jpg', alt: 'CTA Image 2' },
-    { src: ctaimg3, fallback: '/placeholder3.jpg', alt: 'CTA Image 3' },
-    { src: ctaimg4, fallback: '/placeholder4.jpg', alt: 'CTA Image 4' }
+    { src: ctaimg1, fallback: '/placeholder1.jpg', alt: 'Website design preview' },
+    { src: ctaimg2, fallback: '/placeholder2.jpg', alt: 'Web application interface preview' },
+    { src: ctaimg3, fallback: '/placeholder3.jpg', alt: 'Modern UI layout example' },
+    { src: ctaimg4, fallback: '/placeholder4.jpg', alt: 'Responsive website layout' }
   ];
 
   return (
-    <section className=" relative py-16 flex items-center justify-center overflow-hidden ">
-      {/* Background */}
-      
-
-      
-      {/* Floating elements */}
-      <div className="absolute top-1/7 left-[8%] w-20 h-20 bg-white/10 rounded-full animate-bounce z-10" style={{ animationDelay: '0s' }} />
-      <div className="absolute top-[68%] right-[12%] w-10 h-10  bg-white/10 rounded-full animate-bounce z-10" style={{ animationDelay: '2s' }} />
-      <div className="absolute bottom-1/9 left-[20%] w-15 h-15 bg-white/10 rounded-full animate-bounce z-10" style={{ animationDelay: '4s' }} />
+    <section
+      className="relative py-16 flex items-center justify-center overflow-hidden"
+      aria-labelledby="cta-heading"
+    >
+      {/* Floating elements (unchanged) */}
+      <div
+        className="absolute top-1/7 left-[8%] w-20 h-20 bg-white/10 rounded-full animate-bounce z-10"
+        style={{ animationDelay: '0s' }}
+      />
+      <div
+        className="absolute top-[68%] right-[12%] w-10 h-10 bg-white/10 rounded-full animate-bounce z-10"
+        style={{ animationDelay: '2s' }}
+      />
+      <div
+        className="absolute bottom-1/9 left-[20%] w-15 h-15 bg-white/10 rounded-full animate-bounce z-10"
+        style={{ animationDelay: '4s' }}
+      />
 
       {/* Main content */}
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -61,54 +69,73 @@ export default function Cta() {
 
           {/* Text Content */}
           <div className="text-white space-y-6 lg:pl-8">
-            <h2 className="text-4xl sm:text-5xl lg:text-5xl font-semibold leading-tight">
+
+            {/* ✅ H2 – CTA intent (NO name) */}
+            <h2
+              id="cta-heading"
+              className="text-4xl sm:text-5xl lg:text-5xl font-semibold leading-tight"
+            >
               <span className="bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">
-                Design 
+                Design
                 <br />
                 <span> and Code Your</span>
                 <br />
-<motion.span
-  animate={{
-    textShadow: [
-      '0px 0px 0px rgba(255,255,255,0.2)',
-      '0px 0px 20px rgba(0,255,255,1)',
-      '0px 0px 0px rgba(255,255,255,0.5)'
-    ],
-    color: ['#ffffff', '#00e5ff', '#ffffff']
-  }}
-  transition={{
-    duration: 3,
-    repeat: Infinity,
-    ease: 'easeInOut',
-  }}
-  className="inline-block"
->
-  website
-</motion.span>         </span>
+                <motion.span
+                  animate={{
+                    textShadow: [
+                      '0px 0px 0px rgba(255,255,255,0.2)',
+                      '0px 0px 20px rgba(0,255,255,1)',
+                      '0px 0px 0px rgba(255,255,255,0.5)'
+                    ],
+                    color: ['#ffffff', '#00e5ff', '#ffffff']
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                  }}
+                  className="inline-block"
+                >
+                  website
+                </motion.span>
+              </span>
             </h2>
+
+            {/* Visible CTA copy */}
             <p className="text-lg sm:text-xl text-gray-200 leading-relaxed max-w-lg">
-              Create something amazing. No code needed <br /> just vision and action.
+              Create something amazing. No code needed <br />
+              just vision and action.
             </p>
+
+            {/* CTA Button */}
             <div className="pt-4">
-           <button className="
-  group relative inline-flex items-center justify-center
-  px-12 py-4 text-lg font-semibold text-white
-  bg-gradient-to-br from-[#2222a0] via-[#3e64ba] to-[#0d1e6a]
-  rounded-full transition-all duration-300 ease-out
-  hover:scale-105 hover:-translate-y-1
-  hover:shadow-xl hover:shadow-orange-100/25
-  active:scale-95 active:translate-y-0
-">
-  <span className="relative z-10">Contact Us</span>
-  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#2222a0] via-[#3e64ba] to-[#0d1e6a] opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-xl" />
-</button>
-
-
+              <button
+                className="
+                  group relative inline-flex items-center justify-center
+                  px-12 py-4 text-lg font-semibold text-white
+                  bg-gradient-to-br from-[#2222a0] via-[#3e64ba] to-[#0d1e6a]
+                  rounded-full transition-all duration-300 ease-out
+                  hover:scale-105 hover:-translate-y-1
+                  hover:shadow-xl hover:shadow-orange-100/25
+                  active:scale-95 active:translate-y-0
+                "
+              >
+                <span className="relative z-10">Contact Us</span>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#2222a0] via-[#3e64ba] to-[#0d1e6a] opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-xl" />
+              </button>
             </div>
-          </div>
 
+          </div>
         </div>
       </div>
+
+      {/* 🔍 Invisible SEO reinforcement (NO UI impact) */}
+      <p className="sr-only">
+        This call-to-action section encourages visitors to contact the website
+        owner for professional web design, frontend development, and full stack
+        web application services, including React, Next.js, and modern web
+        technologies.
+      </p>
     </section>
   );
 }
