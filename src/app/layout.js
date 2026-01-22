@@ -78,6 +78,7 @@ export default function RootLayout({ children }) {
   <Header />
   <MouseLight />
   {children}
+  <SpeedInsights/>
   <Footer />
 </body>
 
