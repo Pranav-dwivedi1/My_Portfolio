@@ -6,11 +6,14 @@ import RelatedBlogs from "../../../components/blog/RelatedBlogs";
 import ContactForm from "../../../components/contact/ContactForm";
 
 export const metadata = {
-  title: "How to Become a Prompt Engineer in AI (2025 Guide) | Skills, Roadmap & Salary",
-  description: "Learn how to become a Prompt Engineer in AI in 2025. Explore skills, tools, career roadmap, real-world use cases, and salary insights. Start your AI career today with Yantra's guidance.",
+  title:
+    "How to Become a Prompt Engineer in AI (2025 Guide) | Skills, Roadmap & Salary",
+  description:
+    "Learn how to become a Prompt Engineer in AI in 2025. Explore skills, tools, career roadmap, real-world use cases, and salary insights. Start your AI career today with Yantra's guidance.",
   openGraph: {
     title: "How to Become a Prompt Engineer in AI (2025 Guide)",
-    description: "A complete beginner-to-advanced guide on becoming a Prompt Engineer in AI, including skills, tools, examples, and career opportunities.",
+    description:
+      "A complete beginner-to-advanced guide on becoming a Prompt Engineer in AI, including skills, tools, examples, and career opportunities.",
     url: "https://www.yantra.co.in/blogs/prompt-engineering-guide",
     type: "website",
   },
@@ -115,13 +118,34 @@ const PromptEngineeringBlog = () => {
               <ul className="list-disc list-inside hover:text-blue-800">
                 {[
                   { id: "intro", title: "Introduction" },
-                  { id: "what-is-prompt-engineering", title: "What is Prompt Engineering?" },
-                  { id: "why-it-matters", title: "Why Prompt Engineering Matters in 2025" },
-                  { id: "essential-skills", title: "Essential Skills for Prompt Engineers" },
-                  { id: "learning-roadmap", title: "Step-by-Step Learning Roadmap" },
-                  { id: "tools-technologies", title: "Tools & Technologies Used" },
-                  { id: "salary-career", title: "Salary & Career Opportunities" },
-                  { id: "yantra-ai-support", title: "How Yantra Supports AI Career Growth" },
+                  {
+                    id: "what-is-prompt-engineering",
+                    title: "What is Prompt Engineering?",
+                  },
+                  {
+                    id: "why-it-matters",
+                    title: "Why Prompt Engineering Matters in 2025",
+                  },
+                  {
+                    id: "essential-skills",
+                    title: "Essential Skills for Prompt Engineers",
+                  },
+                  {
+                    id: "learning-roadmap",
+                    title: "Step-by-Step Learning Roadmap",
+                  },
+                  {
+                    id: "tools-technologies",
+                    title: "Tools & Technologies Used",
+                  },
+                  {
+                    id: "salary-career",
+                    title: "Salary & Career Opportunities",
+                  },
+                  {
+                    id: "yantra-ai-support",
+                    title: "How Yantra Supports AI Career Growth",
+                  },
                   { id: "faqs", title: "FAQs on Prompt Engineering Career" },
                   { id: "conclusion", title: "Conclusion" },
                 ].map(({ id, title }) => (
@@ -145,16 +169,24 @@ const PromptEngineeringBlog = () => {
             <section className="mb-8" id="intro">
               <div className="bg-gradient-to-r from-gray-50 to-blue-50 p-6 rounded-xl mb-6">
                 <p className="text-gray-700 text-lg leading-relaxed">
-                  With the explosive growth of AI tools like <b>ChatGPT, Claude, and Gemini</b>, a new high-demand career has emerged — <b>Prompt Engineering</b>.
+                  With the explosive growth of AI tools like{" "}
+                  <b>ChatGPT, Claude, and Gemini</b>, a new high-demand career
+                  has emerged — <b>Prompt Engineering</b>.
                 </p>
                 <p className="text-gray-700 text-lg leading-relaxed">
-                  In 2025, companies across industries are actively hiring professionals who can communicate effectively with AI models to extract accurate, high-quality outputs.
+                  In 2025, companies across industries are actively hiring
+                  professionals who can communicate effectively with AI models
+                  to extract accurate, high-quality outputs.
                 </p>
                 <p className="text-gray-700 text-lg leading-relaxed">
-                  But <b>what exactly is prompt engineering</b>, and how can you build a successful career in this field?
+                  But <b>what exactly is prompt engineering</b>, and how can you
+                  build a successful career in this field?
                 </p>
                 <p className="text-gray-700 text-lg leading-relaxed">
-                  In this comprehensive guide, we explore the skills, roadmap, tools, and opportunities in prompt engineering, and discuss how <b>Yantra Services Private Limited</b> can help you navigate this exciting career path.
+                  In this comprehensive guide, we explore the skills, roadmap,
+                  tools, and opportunities in prompt engineering, and discuss
+                  how <b>Yantra Services Private Limited</b> can help you
+                  navigate this exciting career path.
                 </p>
               </div>
             </section>
@@ -165,11 +197,18 @@ const PromptEngineeringBlog = () => {
                   What is Prompt Engineering?
                 </h2>
                 <p className="text-gray-700 text-lg mb-4">
-                  <b>Prompt Engineering</b> is the skill of designing clear, structured, and optimized inputs (prompts) to guide AI models toward desired outputs. It combines logic, creativity, and domain knowledge to control AI behavior effectively.
+                  <b>Prompt Engineering</b> is the skill of designing clear,
+                  structured, and optimized inputs (prompts) to guide AI models
+                  toward desired outputs. It combines logic, creativity, and
+                  domain knowledge to control AI behavior effectively.
                 </p>
-                
+
                 <p className="text-gray-800 text-lg leading-relaxed bg-yellow-100 border-l-4 border-yellow-500 p-4 my-4 italic">
-                  <strong>Real-World Example:</strong> Instead of asking "Write about marketing," a prompt engineer would ask: "Act as a senior digital marketing strategist. Write a 500-word blog post about AI-driven SEO strategies for e-commerce businesses in 2025, focusing on practical implementation steps."
+                  <strong>Real-World Example:</strong> Instead of asking "Write
+                  about marketing," a prompt engineer would ask: "Act as a
+                  senior digital marketing strategist. Write a 500-word blog
+                  post about AI-driven SEO strategies for e-commerce businesses
+                  in 2025, focusing on practical implementation steps."
                 </p>
               </div>
             </section>
@@ -180,18 +219,34 @@ const PromptEngineeringBlog = () => {
                   Why Prompt Engineering Matters in 2025
                 </h2>
                 <p className="text-gray-700 text-lg mb-4">
-                  Prompt engineering isn't just a technical skill — it's becoming a critical business competency:
+                  Prompt engineering isn't just a technical skill — it's
+                  becoming a critical business competency:
                 </p>
 
                 <ul className="list-disc list-inside text-gray-700 text-lg mb-4">
-                  <li><strong>Improves Accuracy:</strong> Reduces AI hallucinations and vague outputs</li>
-                  <li><strong>Boosts Productivity:</strong> Automates content, coding, and analysis tasks</li>
-                  <li><strong>Creates Competitive Advantage:</strong> Businesses with skilled prompt engineers outperform competitors</li>
-                  <li><strong>High Demand:</strong> Companies are creating dedicated prompt engineering roles</li>
+                  <li>
+                    <strong>Improves Accuracy:</strong> Reduces AI
+                    hallucinations and vague outputs
+                  </li>
+                  <li>
+                    <strong>Boosts Productivity:</strong> Automates content,
+                    coding, and analysis tasks
+                  </li>
+                  <li>
+                    <strong>Creates Competitive Advantage:</strong> Businesses
+                    with skilled prompt engineers outperform competitors
+                  </li>
+                  <li>
+                    <strong>High Demand:</strong> Companies are creating
+                    dedicated prompt engineering roles
+                  </li>
                 </ul>
-                
+
                 <p className="text-gray-800 text-lg leading-relaxed bg-blue-100 border-l-4 border-blue-500 p-4 my-4 italic">
-                  <strong>Insight:</strong> Prompt engineering is to AI what search engine optimization (SEO) was to the internet — a critical skill that maximizes value from a transformative technology.
+                  <strong>Insight:</strong> Prompt engineering is to AI what
+                  search engine optimization (SEO) was to the internet — a
+                  critical skill that maximizes value from a transformative
+                  technology.
                 </p>
               </div>
             </section>
@@ -206,12 +261,30 @@ const PromptEngineeringBlog = () => {
                 </p>
 
                 <ul className="list-disc list-inside text-gray-700 text-lg mb-4">
-                  <li><strong>Clear Communication:</strong> Precise, unambiguous language</li>
-                  <li><strong>Domain Expertise:</strong> Knowledge in specific fields (tech, marketing, finance, etc.)</li>
-                  <li><strong>Critical Thinking:</strong> Breaking down complex problems</li>
-                  <li><strong>Pattern Recognition:</strong> Identifying effective prompt structures</li>
-                  <li><strong>Technical Understanding:</strong> Basic knowledge of AI/ML concepts</li>
-                  <li><strong>Creativity:</strong> Innovative approaches to prompt design</li>
+                  <li>
+                    <strong>Clear Communication:</strong> Precise, unambiguous
+                    language
+                  </li>
+                  <li>
+                    <strong>Domain Expertise:</strong> Knowledge in specific
+                    fields (tech, marketing, finance, etc.)
+                  </li>
+                  <li>
+                    <strong>Critical Thinking:</strong> Breaking down complex
+                    problems
+                  </li>
+                  <li>
+                    <strong>Pattern Recognition:</strong> Identifying effective
+                    prompt structures
+                  </li>
+                  <li>
+                    <strong>Technical Understanding:</strong> Basic knowledge of
+                    AI/ML concepts
+                  </li>
+                  <li>
+                    <strong>Creativity:</strong> Innovative approaches to prompt
+                    design
+                  </li>
                 </ul>
               </div>
             </section>
@@ -224,25 +297,38 @@ const PromptEngineeringBlog = () => {
 
                 <div className="space-y-4">
                   <div className="bg-gray-50 p-4 rounded-lg">
-                    <h3 className="font-bold text-lg text-blue-700 mb-2">Month 1: Foundation</h3>
+                    <h3 className="font-bold text-lg text-blue-700 mb-2">
+                      Month 1: Foundation
+                    </h3>
                     <ul className="list-disc list-inside text-gray-700">
                       <li>Start daily practice with ChatGPT/Claude</li>
-                      <li>Learn basic prompt patterns (role-playing, chain-of-thought)</li>
+                      <li>
+                        Learn basic prompt patterns (role-playing,
+                        chain-of-thought)
+                      </li>
                       <li>Complete free online courses</li>
                     </ul>
                   </div>
 
                   <div className="bg-gray-50 p-4 rounded-lg">
-                    <h3 className="font-bold text-lg text-blue-700 mb-2">Month 2-3: Specialization</h3>
+                    <h3 className="font-bold text-lg text-blue-700 mb-2">
+                      Month 2-3: Specialization
+                    </h3>
                     <ul className="list-disc list-inside text-gray-700">
-                      <li>Choose a domain (coding, marketing, data analysis)</li>
+                      <li>
+                        Choose a domain (coding, marketing, data analysis)
+                      </li>
                       <li>Build a portfolio of effective prompts</li>
-                      <li>Learn advanced techniques (few-shot, zero-shot learning)</li>
+                      <li>
+                        Learn advanced techniques (few-shot, zero-shot learning)
+                      </li>
                     </ul>
                   </div>
 
                   <div className="bg-gray-50 p-4 rounded-lg">
-                    <h3 className="font-bold text-lg text-blue-700 mb-2">Month 4-6: Professional Growth</h3>
+                    <h3 className="font-bold text-lg text-blue-700 mb-2">
+                      Month 4-6: Professional Growth
+                    </h3>
                     <ul className="list-disc list-inside text-gray-700">
                       <li>Contribute to open-source prompt libraries</li>
                       <li>Freelance or intern projects</li>
@@ -263,11 +349,25 @@ const PromptEngineeringBlog = () => {
                 </p>
 
                 <ul className="list-disc list-inside text-gray-700 text-lg mb-4">
-                  <li><strong>AI Platforms:</strong> OpenAI GPT-4, Claude, Gemini, Copilot</li>
-                  <li><strong>Development Tools:</strong> Jupyter Notebooks, VS Code with AI extensions</li>
-                  <li><strong>Prompt Management:</strong> PromptHub, Notion AI databases</li>
-                  <li><strong>Testing Frameworks:</strong> LangChain, AutoGPT</li>
-                  <li><strong>API Integration:</strong> REST APIs for custom AI applications</li>
+                  <li>
+                    <strong>AI Platforms:</strong> OpenAI GPT-4, Claude, Gemini,
+                    Copilot
+                  </li>
+                  <li>
+                    <strong>Development Tools:</strong> Jupyter Notebooks, VS
+                    Code with AI extensions
+                  </li>
+                  <li>
+                    <strong>Prompt Management:</strong> PromptHub, Notion AI
+                    databases
+                  </li>
+                  <li>
+                    <strong>Testing Frameworks:</strong> LangChain, AutoGPT
+                  </li>
+                  <li>
+                    <strong>API Integration:</strong> REST APIs for custom AI
+                    applications
+                  </li>
                 </ul>
               </div>
             </section>
@@ -277,14 +377,20 @@ const PromptEngineeringBlog = () => {
                 <h2 className="text-2xl font-semibold text-blue-800 mb-4">
                   Salary & Career Opportunities
                 </h2>
-                
+
                 <div className="overflow-x-auto">
                   <table className="min-w-full bg-white border border-gray-200">
                     <thead>
                       <tr className="bg-blue-50">
-                        <th className="py-3 px-4 border-b text-left">Experience Level</th>
-                        <th className="py-3 px-4 border-b text-left">India (Annual)</th>
-                        <th className="py-3 px-4 border-b text-left">Global (Annual)</th>
+                        <th className="py-3 px-4 border-b text-left">
+                          Experience Level
+                        </th>
+                        <th className="py-3 px-4 border-b text-left">
+                          India (Annual)
+                        </th>
+                        <th className="py-3 px-4 border-b text-left">
+                          Global (Annual)
+                        </th>
                       </tr>
                     </thead>
                     <tbody>
@@ -315,38 +421,53 @@ const PromptEngineeringBlog = () => {
                   How Yantra Supports AI Career Growth
                 </h2>
                 <p className="text-gray-700 mb-4 text-lg">
-                  <b>Yantra Services Private Limited</b> helps aspiring prompt engineers and businesses leverage AI effectively:
+                  <b>Yantra Services Private Limited</b> helps aspiring prompt
+                  engineers and businesses leverage AI effectively:
                 </p>
 
                 <ul className="list-disc list-inside text-gray-700 text-lg mb-4">
                   <li>
-                    <Link href="/ai-training" className="text-blue-600 hover:underline">
+                    <Link
+                      href="/ai-training"
+                      className="text-blue-600 hover:underline"
+                    >
                       AI Skill Development Programs
                     </Link>{" "}
                     with certification
                   </li>
                   <li>
-                    <Link href="/business-automation" className="text-blue-600 hover:underline">
+                    <Link
+                      href="/business-automation"
+                      className="text-blue-600 hover:underline"
+                    >
                       Business AI Integration
                     </Link>{" "}
                     consulting
                   </li>
                   <li>
-                    <Link href="/career-counseling" className="text-blue-600 hover:underline">
+                    <Link
+                      href="/career-counseling"
+                      className="text-blue-600 hover:underline"
+                    >
                       Career Counseling
                     </Link>{" "}
                     for emerging tech roles
                   </li>
                   <li>
-                    <Link href="/startup-ai" className="text-blue-600 hover:underline">
+                    <Link
+                      href="/startup-ai"
+                      className="text-blue-600 hover:underline"
+                    >
                       Startup AI Strategy
                     </Link>{" "}
                     development
                   </li>
                 </ul>
-                
+
                 <p className="text-gray-800 text-lg leading-relaxed bg-green-100 border-l-4 border-green-500 p-4 my-4 italic">
-                  <strong>For Businesses:</strong> Implement AI workflows that save 40%+ on content creation, customer service, and data analysis costs.
+                  <strong>For Businesses:</strong> Implement AI workflows that
+                  save 40%+ on content creation, customer service, and data
+                  analysis costs.
                 </p>
               </div>
             </section>
@@ -362,7 +483,11 @@ const PromptEngineeringBlog = () => {
                     Do I need coding skills to become a Prompt Engineer?
                   </strong>
                   <p className="text-gray-700 text-lg mt-2">
-                    No, but basic technical knowledge helps. Many prompt engineers come from non-tech backgrounds like marketing, content creation, or business analysis. However, understanding basic programming concepts can be advantageous.
+                    No, but basic technical knowledge helps. Many prompt
+                    engineers come from non-tech backgrounds like marketing,
+                    content creation, or business analysis. However,
+                    understanding basic programming concepts can be
+                    advantageous.
                   </p>
                 </div>
 
@@ -371,7 +496,10 @@ const PromptEngineeringBlog = () => {
                     What is the salary of a Prompt Engineer in India?
                   </strong>
                   <p className="text-gray-700 text-lg mt-2">
-                    In 2025, prompt engineers earn between ₹6–25 LPA in India and $80k–200k globally, depending on expertise, industry, and location. Senior roles with specialized domain knowledge command higher compensation.
+                    In 2025, prompt engineers earn between ₹6–25 LPA in India
+                    and $80k–200k globally, depending on expertise, industry,
+                    and location. Senior roles with specialized domain knowledge
+                    command higher compensation.
                   </p>
                 </div>
 
@@ -380,7 +508,10 @@ const PromptEngineeringBlog = () => {
                     How can businesses benefit from prompt engineering?
                   </strong>
                   <p className="text-gray-700 text-lg mt-2">
-                    Businesses can use prompt engineering to automate content creation, improve customer service with AI chatbots, enhance data analysis, generate code snippets, create marketing copy, and boost overall productivity by 30-50%.
+                    Businesses can use prompt engineering to automate content
+                    creation, improve customer service with AI chatbots, enhance
+                    data analysis, generate code snippets, create marketing
+                    copy, and boost overall productivity by 30-50%.
                   </p>
                 </div>
 
@@ -389,7 +520,10 @@ const PromptEngineeringBlog = () => {
                     How long does it take to become job-ready?
                   </strong>
                   <p className="text-gray-700 text-lg mt-2">
-                    With dedicated practice, 3-6 months to become competent, and 6-12 months to secure a professional role. The key is consistent practice and building a portfolio of effective prompts.
+                    With dedicated practice, 3-6 months to become competent, and
+                    6-12 months to secure a professional role. The key is
+                    consistent practice and building a portfolio of effective
+                    prompts.
                   </p>
                 </div>
               </div>
@@ -401,25 +535,41 @@ const PromptEngineeringBlog = () => {
                   Conclusion: Your AI Career Starts Here
                 </h2>
                 <p className="text-gray-700 text-lg mb-4">
-                  Prompt Engineering represents one of the most accessible entry points into the AI revolution. Whether you're a developer, marketer, entrepreneur, or career changer, mastering this skill can multiply your productivity and open new career opportunities.
+                  Prompt Engineering represents one of the most accessible entry
+                  points into the AI revolution. Whether you're a developer,
+                  marketer, entrepreneur, or career changer, mastering this
+                  skill can multiply your productivity and open new career
+                  opportunities.
                 </p>
                 <p className="text-gray-700 text-lg mb-4">
-                  <strong>The future belongs to those who can effectively communicate with AI.</strong> Start your journey today by practicing with AI tools, learning prompt patterns, and building your portfolio.
+                  <strong>
+                    The future belongs to those who can effectively communicate
+                    with AI.
+                  </strong>{" "}
+                  Start your journey today by practicing with AI tools, learning
+                  prompt patterns, and building your portfolio.
                 </p>
                 <p className="text-gray-700 text-lg mb-6">
-                  🚀 <strong>Ready to launch your AI career or integrate AI into your business?</strong>
+                  🚀{" "}
+                  <strong>
+                    Ready to launch your AI career or integrate AI into your
+                    business?
+                  </strong>
                 </p>
                 <p className="text-gray-700 text-lg">
                   <Link
                     href="/contact"
                     className="text-blue-600 hover:underline font-semibold"
                   >
-                    Contact Yantra
+                    Contact pranavdev{" "}
                   </Link>{" "}
-                  — your partner in AI skill development and business transformation.
+                  — your partner in AI skill development and business
+                  transformation.
                 </p>
                 <p className="text-gray-700 text-lg leading-relaxed py-4 mt-6 border-t border-gray-200">
-                  <strong>Disclaimer: </strong> Salary figures are estimates based on 2024-2025 market trends. Actual compensation may vary based on individual skills, experience, and employer.
+                  <strong>Disclaimer: </strong> Salary figures are estimates
+                  based on 2024-2025 market trends. Actual compensation may vary
+                  based on individual skills, experience, and employer.
                 </p>
               </div>
             </section>
@@ -429,7 +579,7 @@ const PromptEngineeringBlog = () => {
             <SideBar />
           </aside>
         </div>
-        
+
         <RelatedBlogs />
         <ContactForm />
       </div>

@@ -7,51 +7,123 @@ import ContactForm from "../../../components/contact/ContactForm";
 
 export const metadata = {
   title:
-    "How ChatGPT is Transforming Business in 2025 | AI for MSMEs and Startups",
+    "How ChatGPT is Transforming Business in 2025 | AI for MSMEs & Startups",
   description:
-    "Explore how ChatGPT and AI tools are revolutionizing MSMEs and startup operations in 2025 — from content creation to customer support and strategic planning.",
+    "Discover how ChatGPT is transforming business operations in 2025. Learn AI use cases for MSMEs, startups, automation, marketing, and customer support.",
+  keywords: [
+    "ChatGPT for business",
+    "AI for MSMEs",
+    "ChatGPT use cases 2025",
+    "AI for startups",
+    "business automation with AI",
+  ],
   openGraph: {
-    title:
-      "How ChatGPT is Transforming Business in 2025 | AI for MSMEs and Startups",
+    title: "How ChatGPT is Transforming Business in 2025",
     description:
-      "Explore how ChatGPT and AI tools are revolutionizing MSMEs and startup operations in 2025 — from content creation to customer support and strategic planning.",
-    url: "https://www.Yantra.co.in/blogs/chatgpt-business-2025",
-    type: "website",
+      "Explore how ChatGPT and AI tools are revolutionizing MSMEs and startups in 2025.",
+    url: "https://www.pranavdev.online/blogs/chatgpt-business-2025",
+    siteName: "PranavDev",
+    ttype: "article",
+  publishedTime: "2025-05-25",
   },
   alternates: {
-    canonical: "https://www.Yantra.co.in/blogs/chatgpt-business-2025",
+    canonical: "https://www.pranavdev.online/blogs/chatgpt-business-2025",
   },
 };
+
+
 
 export default function ChatGPTBusinessBlog() {
   return (
     <>
-      <Script id="newsarticle-schema" type="application/ld+json">
+      <Script id="blogposting-schema" type="application/ld+json">
+{`
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "https://www.pranavdev.online/blogs/chatgpt-business-2025#blog",
+  "headline": "How ChatGPT is Transforming Business in 2025",
+  "description": "Explore how ChatGPT and AI tools are revolutionizing MSMEs and startup operations in 2025.",
+  "datePublished": "2025-05-25",
+  "dateModified": "2025-05-25",
+  "inLanguage": "en-IN",
+  "author": {
+    "@type": "Person",
+    "name": "Pranav Dwivedi",
+    "url": "https://www.pranavdev.online"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Pranav Dwivedi",
+    "url": "https://www.pranavdev.online"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.pranavdev.online/blogs/chatgpt-business-2025"
+  }
+}
+`}
+</Script>
+
+
+      <Script id="faq-schema" type="application/ld+json">
         {`
-        {
-          "@context": "https://schema.org",
-          "@type": "NewsArticle",
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://www.Yantra.co.in/blogs/chatgpt-business-2025"
-          },
-          "headline": "How ChatGPT is Transforming Business in 2025",
-          "description": "Explore how ChatGPT and AI tools are revolutionizing MSMEs and startup operations in 2025.",
-          "author": {
-            "@type": "Organization",
-            "name": "Yantra"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Yantra Services Private Limited",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://www.Yantra.co.in/images/logo.png"
-            }
-          },
-          "datePublished": "2025-05-25"
-        }`}
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can ChatGPT replace humans?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, ChatGPT complements human intelligence by handling repetitive and data-heavy tasks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is ChatGPT safe for business use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, when used responsibly with proper data governance, ChatGPT enhances business operations securely."
+      }
+    }
+  ]
+}
+`}
       </Script>
+
+      <Script id="breadcrumb-schema" type="application/ld+json">
+{`
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.pranavdev.online"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blogs",
+      "item": "https://www.pranavdev.online/blogs"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "How ChatGPT is Transforming Business in 2025",
+      "item": "https://www.pranavdev.online/blogs/chatgpt-business-2025"
+    }
+  ]
+}
+`}
+</Script>
+
+
+<article itemScope itemType="https://schema.org/BlogPosting">
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
         <header className="relative text-white bg-gradient-to-r from-indigo-900 to-purple-900 shadow-md py-24 text-center">
@@ -72,7 +144,7 @@ export default function ChatGPTBusinessBlog() {
                   "What is ChatGPT?",
                   "Why It Matters to MSMEs",
                   "Top Use Cases in 2025",
-                  "How Yantra Supports AI Adoption",
+                  "How pranavdev Supports AI Adoption",
                   "FAQs",
                   "Conclusion",
                 ].map((title, i) => (
@@ -89,7 +161,7 @@ export default function ChatGPTBusinessBlog() {
             </div>
           </nav>
 
-          <main className="w-full lg:w-1/2 space-y-12">
+          <main className="w-full lg:w-1/2 space-y-12" role="main">
             <section id="section0">
               <h2 className="text-2xl font-semibold text-indigo-800 mb-4">
                 Introduction
@@ -145,10 +217,10 @@ export default function ChatGPTBusinessBlog() {
 
             <section id="section4">
               <h2 className="text-2xl font-semibold text-indigo-800 mb-4">
-                How Yantra Supports AI Adoption
+                How Pranavdev Supports AI Adoption
               </h2>
               <p className="text-gray-700 text-lg">
-                Yantra helps Indian MSMEs integrate ChatGPT and AI tools by:
+                Pranavdev helps Indian MSMEs integrate ChatGPT and AI tools by:
               </p>
               <ul className="list-disc list-inside text-gray-700 text-lg">
                 <li>Setting up automation for lead generation</li>
@@ -193,14 +265,14 @@ export default function ChatGPTBusinessBlog() {
               <p className="text-gray-700 text-lg mt-4">
                 📩{" "}
                 <Link href="/contact" className="text-indigo-600 underline">
-                  Connect with Yantra
+                  Connect with pranavdev{" "}
                 </Link>{" "}
                 — your AI implementation partner for MSMEs.
               </p>
             </section>
           </main>
 
-          <aside className="w-full lg:w-1/4">
+          <aside className="w-full lg:w-1/4" aria-label="Blog sidebar">
             <SideBar />
           </aside>
         </div>
@@ -210,6 +282,7 @@ export default function ChatGPTBusinessBlog() {
           <ContactForm />
         </div>
       </div>
+      </article> 
     </>
   );
 }

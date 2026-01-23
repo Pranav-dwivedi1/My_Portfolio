@@ -50,8 +50,7 @@ const ZomatoSensex = () => {
   },
    "publisher": {
     "@type": "Organization",
-    "name": "Yantra Services Private Limited", // Assuming publisher is Yantra
-    "logo": {
+    "name": "Yantra Services Private Limited", // Assuming publisher is pranavdev    "logo": {
       "@type": "ImageObject",
       "url": "https://www.Yantra.co.in/images/logo.png" // Replace with actual logo URL
     }
@@ -251,7 +250,7 @@ const ZomatoSensex = () => {
                     href="https://www.Yantra.co.in/about-us"
                     className="text-blue-600 hover:underline"
                   >
-                    Yantra
+                    pranavdev{" "}
                   </Link>{" "}
                   is a catalyst for MSME innovation.
                 </p>
