@@ -337,39 +337,43 @@ const RelatedBlogs = () => {
       link: "/blogs/delhi-govt-new-scheme  ",
     },
   ];
-
+  
   return (
-    <div className="w-full bg-gradient-to-br from-blue-50 to-gray-100 py-16 mx-auto">
+    <section
+      className="w-full bg-gradient-to-br from-blue-50 to-gray-100 py-16 mx-auto"
+      aria-labelledby="related-blogs-heading"
+    >
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-blue-800">
+        {/* Section Heading */}
+        <h2
+          id="related-blogs-heading"
+          className="text-3xl md:text-4xl font-bold text-center mb-10 text-blue-800"
+        >
           Related <span className="text-blue-600">Blogs</span>
         </h2>
 
-        {/* Desktop and Tablet View */}
+        {/* Invisible SEO reinforcement */}
+        <p className="sr-only">
+          A curated list of related blog articles to help readers explore more
+          content on similar topics and deepen their understanding.
+        </p>
 
-        <div className="hidden md:block ">
+        {/* Desktop & Tablet */}
+        <div className="hidden md:block">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={24}
             slidesPerView={3}
             navigation
-            // pagination={{ clickable: true }}
             autoplay={{ delay: 5000, disableOnInteraction: false }}
             breakpoints={{
-              640: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-              },
-              768: {
-                slidesPerView: 2,
-                spaceBetween: 24,
-              },
-              1024: {
-                slidesPerView: 3,
-                spaceBetween: 24,
-              },
+              640: { slidesPerView: 1, spaceBetween: 20 },
+              768: { slidesPerView: 2, spaceBetween: 24 },
+              1024: { slidesPerView: 3, spaceBetween: 24 },
             }}
-            className="py-8 "
+            className="py-8"
+            aria-roledescription="carousel"
+            aria-label="Related blog articles carousel"
           >
             {relatedBlogData.map((blog, index) => (
               <SwiperSlide key={index}>
@@ -381,35 +385,43 @@ const RelatedBlogs = () => {
           </Swiper>
         </div>
 
-        {/* Mobile View */}
+        {/* Mobile */}
         <div className="md:hidden">
           <Swiper
             modules={[Pagination, Autoplay]}
             spaceBetween={16}
             slidesPerView={1}
-            // pagination={{ clickable: true }}
             autoplay={{ delay: 5000, disableOnInteraction: false }}
             className="py-8"
+            aria-roledescription="carousel"
+            aria-label="Related blog articles"
           >
             {relatedBlogData.map((blog, index) => (
               <SwiperSlide key={index}>
-                <div className="">
-                  <BlogCard blog={blog} />
-                </div>
+                <BlogCard blog={blog} />
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-// Blog Card Component
+export default RelatedBlogs;
+
+/* ---------------------------------- */
+/* Blog Card Component (SEO optimized) */
+/* ---------------------------------- */
+
 const BlogCard = ({ blog }) => {
   return (
-    <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 h-full flex flex-col md:w-[90%] mx-auto">
+    <article
+      className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 h-full flex flex-col md:w-[90%] mx-auto"
+      aria-labelledby={`blog-title-${blog.title}`}
+    >
       <div className="p-6 flex-grow">
+        {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-3">
           {blog.tags &&
             blog.tags.map((tag, idx) => (
@@ -422,20 +434,39 @@ const BlogCard = ({ blog }) => {
             ))}
         </div>
 
-        <Link href={blog.link} className="group">
-          <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-3 group-hover:text-blue-700 transition-colors duration-200 line-clamp-2">
+        {/* Blog Link */}
+        <Link
+          href={blog.link}
+          className="group"
+          aria-label={`Read blog article: ${blog.title}`}
+        >
+          <h3
+            id={`blog-title-${blog.title}`}
+            className="text-lg md:text-xl font-semibold text-gray-800 mb-3 group-hover:text-blue-700 transition-colors duration-200 line-clamp-2"
+          >
             {blog.title}
           </h3>
-          <p className="text-gray-600 mb-4 line-clamp-3">{blog.desc}</p>
+
+          <p className="text-gray-600 mb-4 line-clamp-3">
+            {blog.desc}
+          </p>
         </Link>
       </div>
 
+      {/* Footer */}
       <div className="px-6 pb-6 mt-auto">
         <div className="flex justify-between items-center pt-4 border-t border-gray-200">
-          <span className="text-sm text-gray-500">{blog.date}</span>
+          <time
+            className="text-sm text-gray-500"
+            dateTime={blog.date}
+          >
+            {blog.date}
+          </time>
+
           <Link
             href={blog.link}
             className="text-blue-600 hover:text-blue-800 font-medium text-sm flex items-center gap-1"
+            aria-label={`Continue reading: ${blog.title}`}
           >
             Read More
             <svg
@@ -444,6 +475,7 @@ const BlogCard = ({ blog }) => {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
+              aria-hidden="true"
             >
               <path
                 strokeLinecap="round"
@@ -455,8 +487,12 @@ const BlogCard = ({ blog }) => {
           </Link>
         </div>
       </div>
-    </div>
+
+      {/* Invisible SEO context */}
+      <p className="sr-only">
+        This article is related to the current blog topic and provides additional
+        insights and relevant information for readers.
+      </p>
+    </article>
   );
 };
-
-export default RelatedBlogs;

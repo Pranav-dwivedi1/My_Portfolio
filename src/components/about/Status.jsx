@@ -1,8 +1,7 @@
 "use client";
-import React from 'react';
+import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import CountUp from 'react-countup';
-import { useRef } from 'react';
 
 export default function Status() {
   const ref = useRef(null);
@@ -16,10 +15,16 @@ export default function Status() {
   ];
 
   return (
-    <div
+    <section
       ref={ref}
       className="relative bg-[#030d23de] border-t border-b border-white/20 py-8"
+      aria-labelledby="status-heading"
     >
+      {/* ✅ Invisible semantic heading for SEO */}
+      <h2 id="status-heading" className="sr-only">
+        Company performance statistics and experience highlights
+      </h2>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {stats.map((stat, index) => (
@@ -46,6 +51,13 @@ export default function Status() {
           ))}
         </div>
       </div>
-    </div>
+
+      {/* 🔍 SEO reinforcement (no UI impact) */}
+      <p className="sr-only">
+        These statistics highlight project experience, client satisfaction,
+        team size, and years of professional work. This section reinforces
+        credibility, expertise, and trust for visitors and search engines.
+      </p>
+    </section>
   );
 }
