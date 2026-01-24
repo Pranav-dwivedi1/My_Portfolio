@@ -19,8 +19,8 @@ const Skills = () => {
     "PostgreSQL": 72,
     "Git": 85,
     "Docker": 70,
-    "AWS": 65,
-    "CI/CD": 68,
+    "AWS": 55,
+    "CI/CD": 58,
   };
 
   const getSkillLevel = (skill) =>
