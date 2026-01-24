@@ -9,33 +9,57 @@ export default function SideBar({ propsData }) {
     { title: "Business Website Setup", url: "/services/business-website" },
     { title: "Professional Email & Hosting", url: "/services/email-hosting" },
     { title: "Brand Identity & Logo Design", url: "/services/branding" },
-    { title: "Social Media Account Setup", url: "/services/social-media-setup" },
-    { title: "Google Business Profile Setup", url: "/services/google-business-setup" },
+    {
+      title: "Social Media Account Setup",
+      url: "/services/social-media-setup",
+    },
+    {
+      title: "Google Business Profile Setup",
+      url: "/services/google-business-setup",
+    },
     { title: "Website Launch & Go-Live Support", url: "/contact" },
   ];
 
   const digitalGrowth = [
     { title: "Website Development", url: "/services/website-development" },
-    { title: "Web Application Development", url: "/services/web-app-development" },
+    {
+      title: "Web Application Development",
+      url: "/services/web-app-development",
+    },
     { title: "UI/UX Design", url: "/services/ui-ux-design" },
-    { title: "Social Media Marketing", url: "/services/social-media-marketing" },
-    { title: "SEO & Performance Optimization", url: "/services/seo-optimization" },
+    {
+      title: "Social Media Marketing",
+      url: "/services/social-media-marketing",
+    },
+    {
+      title: "SEO & Performance Optimization",
+      url: "/services/seo-optimization",
+    },
     { title: "Free Consultation", url: "/contact" },
   ];
 
   const businessExpansion = [
     { title: "Website Development", url: "https://Yantradigital.com/services" },
     { title: "Digital Marketing", url: "https://Yantradigital.com/services" },
-    { title: "Search Engine Optimization", url: "https://Yantradigital.com/services/" },
-    { title: "Social Media Marketing", url: "https://Yantradigital.com/services/" },
-    { title: "Performance Marketing", url: "https://Yantradigital.com/services/" },
+    {
+      title: "Search Engine Optimization",
+      url: "https://Yantradigital.com/services/",
+    },
+    {
+      title: "Social Media Marketing",
+      url: "https://Yantradigital.com/services/",
+    },
+    {
+      title: "Performance Marketing",
+      url: "https://Yantradigital.com/services/",
+    },
     { title: "Whatsapp Marketing", url: "https://Yantradigital.com/services/" },
   ];
 
   const businessProtection = [
     {
       title: "Legal & Compliances",
-      url: "https://www.Yantra.co.in/legal-and-compliances",
+      url: "https://www.Yantraonline/legal-and-compliances",
     },
   ];
 
@@ -108,7 +132,7 @@ export default function SideBar({ propsData }) {
         digitalSetup,
         "bg-gradient-to-r from-orange-500 to-pink-500",
         "text-xl",
-        "digital-setup"
+        "digital-setup",
       )}
 
       {renderSection(
@@ -116,7 +140,7 @@ export default function SideBar({ propsData }) {
         digitalGrowth,
         "bg-gradient-to-r from-blue-500 to-cyan-500",
         "text-xl",
-        "digital-growth"
+        "digital-growth",
       )}
 
       {renderSection(
@@ -124,7 +148,7 @@ export default function SideBar({ propsData }) {
         businessExpansion,
         "bg-gradient-to-r from-green-500 to-teal-500",
         "text-xl",
-        "business-expansion"
+        "business-expansion",
       )}
 
       {/* Reserved for future CTA / form */}

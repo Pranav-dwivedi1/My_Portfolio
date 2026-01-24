@@ -5,93 +5,138 @@ import SideBar from "@/components/blog/SideBar";
 import RelatedBlogs from "../../../components/blog/RelatedBlogs";
 import ContactForm from "../../../components/contact/ContactForm";
 
+
 export const metadata = {
-  title:
-    "How to Become a Prompt Engineer in AI (2025 Guide) | Skills, Roadmap & Salary",
+  title: "How to Become a Prompt Engineer in AI (2026 Guide)",
   description:
-    "Learn how to become a Prompt Engineer in AI in 2025. Explore skills, tools, career roadmap, real-world use cases, and salary insights. Start your AI career today with Yantra's guidance.",
+    "Learn how to become a Prompt Engineer in 2026. Skills, roadmap, salary, tools, jobs, and real-world use cases explained.",
+  keywords: [
+    "prompt engineering",
+    "prompt engineer career",
+    "prompt engineering roadmap",
+    "AI prompt engineer jobs",
+    "prompt engineering salary",
+  ],
   openGraph: {
-    title: "How to Become a Prompt Engineer in AI (2025 Guide)",
+    title: "How to Become a Prompt Engineer in 2026",
     description:
-      "A complete beginner-to-advanced guide on becoming a Prompt Engineer in AI, including skills, tools, examples, and career opportunities.",
-    url: "https://www.yantra.co.in/blogs/prompt-engineering-guide",
-    type: "website",
+      "Complete guide to becoming a Prompt Engineer in 2026 with skills, salary, roadmap, and job opportunities.",
+    url: "https://www.pranavdev.online/blogs/prompt-engineering-guide",
+    siteName: "PranavDev",
+    type: "article",
   },
   alternates: {
-    canonical: "https://www.yantra.co.in/blogs/prompt-engineering-guide",
+    canonical: "https://www.pranavdev.online/blogs/prompt-engineering-guide",
   },
 };
+
 
 const PromptEngineeringBlog = () => {
   return (
     <>
-      <Script
-        id="newsarticle-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: `
+
+     <Script type="application/ld+json" id="blog-schema">
+{`
 {
   "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://www.yantra.co.in/blogs/prompt-engineering-guide"
+  "@type": "BlogPosting",
+  "@id": "https://www.pranavdev.online/blogs/prompt-engineering-guide#blog",
+  "headline": "How to Become a Prompt Engineer in 2026",
+  "description": "Complete guide to becoming a Prompt Engineer in 2026 including skills, roadmap, salary, tools, and career opportunities.",
+  "articleSection": [
+    "Artificial Intelligence",
+    "AI Careers",
+    "Prompt Engineering"
+  ],
+  "about": {
+    "@type": "Thing",
+    "name": "Prompt Engineering Career"
   },
-  "headline": "How to Become a Prompt Engineer in AI (2025 Guide)",
-  "description": "Learn how to become a Prompt Engineer in AI in 2025. Explore skills, tools, career roadmap, real-world use cases, and salary insights.",
-  "image": "",
+  "wordCount": 3200,
+  "datePublished": "2026-01-24",
+  "dateModified": "2026-01-24",
+  "inLanguage": "en-IN",
   "author": {
-    "@type": "Organization",
-    "name": "Yantra"
+    "@type": "Person",
+    "name": "Pranav Dwivedi",
+    "url": "https://www.pranavdev.online"
   },
   "publisher": {
-    "@type": "Organization",
-    "name": "Yantra Services Private Limited",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.yantra.co.in/images/logo.png"
-    }
+    "@type": "Person",
+    "name": "Pranav Dwivedi",
+    "url": "https://www.pranavdev.online"
   },
-  "datePublished": "2025-06-10T00:00:00+05:30"
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.pranavdev.online/blogs/prompt-engineering-guide"
+  }
 }
-`,
-        }}
-      />
+`}
+</Script>
 
-      <Script
-        id="faqpage-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: `
+
+
+<Script type="application/ld+json" id="breadcrumb-schema">
+{`
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.pranavdev.online"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blogs",
+      "item": "https://www.pranavdev.online/blogs"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Prompt Engineering Career Guide",
+      "item": "https://www.pranavdev.online/blogs/prompt-engineering-guide"
+    }
+  ]
+}
+`}
+</Script>
+
+
+
+
+   <Script type="application/ld+json" id="faq-schema">
+{`
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [{
-    "@type": "Question",
-    "name": "Do I need coding skills to become a Prompt Engineer?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "No, but basic technical knowledge helps. Many prompt engineers come from non-tech backgrounds like marketing, content creation, or business analysis."
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is prompt engineering a good career in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, prompt engineering is one of the fastest growing AI careers with high demand."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need coding skills for prompt engineering?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Basic programming knowledge helps, but strong logical thinking and AI understanding are more important."
+      }
     }
-  },{
-    "@type": "Question",
-    "name": "What is the salary of a Prompt Engineer in India?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "In 2025, prompt engineers earn between ₹6–25 LPA in India and $80k–200k globally, depending on expertise and industry."
-    }
-  },{
-    "@type": "Question",
-    "name": "How can businesses benefit from prompt engineering?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Businesses can use prompt engineering to automate content creation, improve customer service, enhance data analysis, and boost overall productivity with AI tools."
-    }
-  }]
+  ]
 }
+`}
+</Script>
+
 `,
-        }}
-      />
+    
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
         <header className="gradient-header text-white relative">
@@ -99,7 +144,7 @@ const PromptEngineeringBlog = () => {
           <div className="container mx-auto bg-gradient-to-r from-indigo-900 to-purple-900 shadow-md md:py-24 lg:py-20 relative">
             <div className="w-full">
               <h1 className="py-2 text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-100 to-white w-[90%] mx-auto">
-                How to Become a Prompt Engineer in AI (2025 Guide)
+                How to Become a Prompt Engineer in AI (2026 Guide)
               </h1>
               <p className="text-center text-blue-200 text-lg md:text-xl max-w-3xl mx-auto px-4">
                 Skills, Roadmap, Tools & Salary Insights
@@ -143,8 +188,8 @@ const PromptEngineeringBlog = () => {
                     title: "Salary & Career Opportunities",
                   },
                   {
-                    id: "yantra-ai-support",
-                    title: "How Yantra Supports AI Career Growth",
+                    id: "pranavdev-ai-support",
+                    title: "How pranavdev Supports AI Career Growth",
                   },
                   { id: "faqs", title: "FAQs on Prompt Engineering Career" },
                   { id: "conclusion", title: "Conclusion" },
@@ -185,7 +230,7 @@ const PromptEngineeringBlog = () => {
                 <p className="text-gray-700 text-lg leading-relaxed">
                   In this comprehensive guide, we explore the skills, roadmap,
                   tools, and opportunities in prompt engineering, and discuss
-                  how <b>Yantra Services Private Limited</b> can help you
+                  how <b>Pranavdev Services Private Limited</b> can help you
                   navigate this exciting career path.
                 </p>
               </div>
@@ -216,7 +261,7 @@ const PromptEngineeringBlog = () => {
             <section className="mb-8" id="why-it-matters">
               <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
                 <h2 className="text-2xl font-semibold text-blue-800 mb-4">
-                  Why Prompt Engineering Matters in 2025
+                  Why Prompt Engineering Matters in 2026
                 </h2>
                 <p className="text-gray-700 text-lg mb-4">
                   Prompt engineering isn't just a technical skill — it's
@@ -415,14 +460,14 @@ const PromptEngineeringBlog = () => {
               </div>
             </section>
 
-            <section className="mb-8" id="yantra-ai-support">
+            <section className="mb-8" id="pranavdev-ai-support">
               <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
                 <h2 className="text-2xl font-semibold text-blue-800 mb-4">
-                  How Yantra Supports AI Career Growth
+                  How pranavdev Supports AI Career Growth
                 </h2>
                 <p className="text-gray-700 mb-4 text-lg">
-                  <b>Yantra Services Private Limited</b> helps aspiring prompt
-                  engineers and businesses leverage AI effectively:
+                  <b>Pranavdev Services Private Limited</b> helps aspiring
+                  prompt engineers and businesses leverage AI effectively:
                 </p>
 
                 <ul className="list-disc list-inside text-gray-700 text-lg mb-4">
@@ -575,9 +620,10 @@ const PromptEngineeringBlog = () => {
             </section>
           </main>
 
-          <aside className="w-full lg:w-1/4 bg-gradient-to-br from-gray-50 to-blue-50 shadow-lg">
-            <SideBar />
-          </aside>
+         <aside className="w-full lg:w-1/4 bg-gradient-to-br from-gray-50 to-blue-50 shadow-lg">
+  <SideBar />
+</aside>
+
         </div>
 
         <RelatedBlogs />

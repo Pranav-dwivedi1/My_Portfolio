@@ -3,30 +3,47 @@ import Link from "next/link";
 
 const BlogCard = ({ blog }) => {
   return (
-    <section className="relative rounded-[25px] p-[2px] transition-all duration-300 hover:scale-[1.01] bg-gradient-to-br from-[#1c3261] via-[#051e25] to-[#143e65]">
-      <div className="relative group overflow-hidden rounded-[25px] shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform  h-[450px] flex flex-col">
-        {/* Image or banner */}
-        <div className="h-48 bg-gradient-to-r from-blue-500 to-purple-600 opacity-80"></div>
+    <article
+      itemScope
+      itemType="https://schema.org/BlogPosting"
+      className="relative rounded-[25px] p-[2px] transition-all duration-300 hover:scale-[1.01] bg-gradient-to-br from-[#1c3261] via-[#051e25] to-[#143e65]"
+    >
+      <div className="relative group overflow-hidden rounded-[25px] shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out h-[450px] flex flex-col">
+        
+        {/* Image / Banner */}
+        <div
+          className="h-48 bg-gradient-to-r from-blue-500 to-purple-600 opacity-80"
+          aria-hidden="true"
+        />
 
-        {/* Card content */}
+        {/* Content */}
         <div className="p-6 flex flex-col flex-grow">
+          
           {/* Date */}
-          <div className="text-sm text-gray-500 dark:text-gray-400 mb-2 transition-colors duration-300 group-hover:text-blue-500">
+          <time
+            itemProp="datePublished"
+            dateTime={blog.date}
+            className="text-sm text-gray-500 dark:text-gray-400 mb-2 transition-colors duration-300 group-hover:text-blue-500"
+          >
             {blog.date}
-          </div>
+          </time>
 
           {/* Title */}
-          <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-3 line-clamp-2 transition-colors duration-300 dark:group-hover:text-blue-400">
+          <h3
+            itemProp="headline"
+            className="text-xl font-bold text-gray-800 dark:text-white mb-3 line-clamp-2 transition-colors duration-300 dark:group-hover:text-blue-400"
+          >
             {blog.title}
           </h3>
 
-          {/* Tags */}
+          {/* Tags (articleSection) */}
           {blog.tags && (
             <div className="flex flex-wrap gap-2 mb-4">
               {blog.tags.map((tag, index) => (
                 <span
                   key={index}
-                  className="px-3 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 transition-all duration-300 "
+                  itemProp="articleSection"
+                  className="px-3 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 transition-all duration-300"
                 >
                   {tag.tagTitle}
                 </span>
@@ -35,16 +52,21 @@ const BlogCard = ({ blog }) => {
           )}
 
           {/* Description */}
-          <p className="text-gray-600 dark:text-gray-300 mb-5 line-clamp-3">
+          <p
+            itemProp="description"
+            className="text-gray-600 dark:text-gray-300 mb-5 line-clamp-3"
+          >
             {blog.desc}
           </p>
 
-          {/* Spacer to push Read More down */}
+          {/* Read More */}
           <div className="mt-auto">
             {blog.link && (
               <Link
                 href={blog.link}
+                itemProp="url"
                 className="inline-flex items-center font-medium text-blue-600 dark:text-blue-400 group-hover:text-blue-800 dark:group-hover:text-blue-300 transition-colors duration-300"
+                aria-label={`Read full article: ${blog.title}`}
               >
                 Read More
                 <svg
@@ -52,7 +74,6 @@ const BlogCard = ({ blog }) => {
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     strokeLinecap="round"
@@ -66,10 +87,13 @@ const BlogCard = ({ blog }) => {
           </div>
         </div>
 
-        {/* Bottom Hover Element (Optional) */}
-        <span className="absolute bottom-0 left-0 h-[3px] w-0 group-hover:w-full transition-[width] duration-500 ease-out " />
+        {/* Bottom Hover Line */}
+        <span
+          aria-hidden="true"
+          className="absolute bottom-0 left-0 h-[3px] w-0 group-hover:w-full transition-[width] duration-500 ease-out bg-blue-500"
+        />
       </div>
-    </section>
+    </article>
   );
 };
 

@@ -5,17 +5,26 @@ import ButtonOrange from "@/components/comman/ui/ButtonOrange";
 import ButtonGray from "@/components/comman/ui/ButtonGray";
 import { FiArrowRight } from 'react-icons/fi';
 
-export default function BlogHeader({ latestBlogsRef = null }) {
+// Fix: Add default prop value and handle undefined case
+export default function BlogHeader({ latestBlogsRef }) {
   const handleScrollToLatestBlogs = () => {
-    if (latestBlogsRef?.current) {
+    // Check if ref exists and has current property
+    if (latestBlogsRef && latestBlogsRef.current) {
       latestBlogsRef.current.scrollIntoView({
         behavior: 'smooth',
         block: 'start',
       });
     } else {
+      // Fallback to ID selector
       const section = document.getElementById('latest-blogs');
       if (section) {
         section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        // Additional fallback - scroll to top of blog grid section
+        const blogSection = document.querySelector('section[ref*="latest"]');
+        if (blogSection) {
+          blogSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       }
     }
   };
@@ -92,3 +101,8 @@ export default function BlogHeader({ latestBlogsRef = null }) {
     </header>
   );
 }
+
+// Add default props
+BlogHeader.defaultProps = {
+  latestBlogsRef: null
+};

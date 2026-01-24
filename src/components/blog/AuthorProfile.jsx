@@ -2,7 +2,7 @@ import React from "react";
 import { FaLinkedin } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
-import Chirag from "../../assets/experts/Yantra-chirag-matholiya-head-of-r-d-training-collaboration.webp";
+import Chirag from "../../assets/experts/pranavdev-chirag-matholiya-head-of-r-d-training-collaboration.webp";
 
 const AuthorProfile = () => {
   return (
@@ -19,7 +19,6 @@ const AuthorProfile = () => {
       </h2>
 
       <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 flex flex-col sm:flex-row justify-between">
-
         {/* IMAGE */}
         <div className="flex flex-col w-full group cursor-pointer p-8 sm:p-0">
           <div className="w-full aspect-[4/5] mb-2 relative overflow-hidden">
@@ -43,17 +42,11 @@ const AuthorProfile = () => {
         <div className="px-8">
           <p className="text-sm font-semibold py-1">About the author:</p>
 
-          <h3
-            className="text-blue-800 text-lg font-bold py-1"
-            itemProp="name"
-          >
+          <h3 className="text-blue-800 text-lg font-bold py-1" itemProp="name">
             Dr. Chirag Matholiya
           </h3>
 
-          <h4
-            className="text-base mb-6"
-            itemProp="jobTitle"
-          >
+          <h4 className="text-base mb-6" itemProp="jobTitle">
             Head of R&amp;D, Training and Collaboration
           </h4>
 

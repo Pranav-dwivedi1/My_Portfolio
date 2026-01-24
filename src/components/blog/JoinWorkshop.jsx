@@ -14,7 +14,7 @@ const JoinWorkshop = () => {
       </h2>
 
       <Link
-        href="https://webinar.Yantra.co.in/"
+        href="https://webinar.Yantraonline/"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Join free online workshop on business and growth strategies"

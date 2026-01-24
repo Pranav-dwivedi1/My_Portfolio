@@ -276,7 +276,7 @@ const RelatedBlogs = () => {
     {
       title:
         "Sensex Zomato: What’s Driving Zomato’s Performance on the BSE Sensex?",
-      desc: " Explore Zomato’s impact on the BSE Sensex today and learn how Yantra Services Private Limited helps businesses secure MSME loans, government funding, and equity-based investments, and create compelling pitch decks for growth.",
+      desc: " Explore Zomato’s impact on the BSE Sensex today and learn how pranavdev Services Private Limited helps businesses secure MSME loans, government funding, and equity-based investments, and create compelling pitch decks for growth.",
 
       date: "December 25, 2024",
       tags: [{ tagTitle: "News" }],
@@ -337,7 +337,7 @@ const RelatedBlogs = () => {
       link: "/blogs/delhi-govt-new-scheme  ",
     },
   ];
-  
+
   return (
     <section
       className="w-full bg-gradient-to-br from-blue-50 to-gray-100 py-16 mx-auto"
@@ -447,19 +447,14 @@ const BlogCard = ({ blog }) => {
             {blog.title}
           </h3>
 
-          <p className="text-gray-600 mb-4 line-clamp-3">
-            {blog.desc}
-          </p>
+          <p className="text-gray-600 mb-4 line-clamp-3">{blog.desc}</p>
         </Link>
       </div>
 
       {/* Footer */}
       <div className="px-6 pb-6 mt-auto">
         <div className="flex justify-between items-center pt-4 border-t border-gray-200">
-          <time
-            className="text-sm text-gray-500"
-            dateTime={blog.date}
-          >
+          <time className="text-sm text-gray-500" dateTime={blog.date}>
             {blog.date}
           </time>
 
@@ -490,8 +485,8 @@ const BlogCard = ({ blog }) => {
 
       {/* Invisible SEO context */}
       <p className="sr-only">
-        This article is related to the current blog topic and provides additional
-        insights and relevant information for readers.
+        This article is related to the current blog topic and provides
+        additional insights and relevant information for readers.
       </p>
     </article>
   );

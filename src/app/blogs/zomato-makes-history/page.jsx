@@ -12,17 +12,17 @@ export const metadata = {
   title:
     "Sensex Zomato: What’s Driving Zomato’s Performance on the BSE Sensex?",
   description:
-    " Explore Zomato’s impact on the BSE Sensex today and learn how Yantra Services Private Limited helps businesses secure MSME loans, government funding, and equity-based investments, and create compelling pitch decks for growth.",
+    " Explore Zomato’s impact on the BSE Sensex today and learn how pranavdev Services Private Limited helps businesses secure MSME loans, government funding, and equity-based investments, and create compelling pitch decks for growth.",
   openGraph: {
     title:
       "Sensex Zomato: What’s Driving Zomato’s Performance on the BSE Sensex?",
     description:
-      " Explore Zomato’s impact on the BSE Sensex today and learn how Yantra Services Private Limited helps businesses secure MSME loans, government funding, and equity-based investments, and create compelling pitch decks for growth.",
-    url: "https://www.Yantra.co.in/blogs/zomato-makes-history",
+      " Explore Zomato’s impact on the BSE Sensex today and learn how pranavdev Services Private Limited helps businesses secure MSME loans, government funding, and equity-based investments, and create compelling pitch decks for growth.",
+    url: "https://www.Yantraonline/blogs/zomato-makes-history",
     type: "website",
   },
   alternates: {
-    canonical: "https://www.Yantra.co.in/blogs/zomato-makes-history",
+    canonical: "https://www.Yantraonline/blogs/zomato-makes-history",
   },
 };
 
@@ -39,20 +39,20 @@ const ZomatoSensex = () => {
   "@type": "NewsArticle",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://www.Yantra.co.in/blogs/zomato-makes-history"
+    "@id": "https://www.Yantraonline/blogs/zomato-makes-history"
   },
   "headline": "Sensex Zomato: What’s Driving Zomato’s Performance on the BSE Sensex?",
-  "description": "Explore Zomato’s impact on the BSE Sensex today and learn how Yantra Services Private Limited helps businesses secure MSME loans, government funding, and equity-based investments, and create compelling pitch decks for growth.",
+  "description": "Explore Zomato’s impact on the BSE Sensex today and learn how pranavdev Services Private Limited helps businesses secure MSME loans, government funding, and equity-based investments, and create compelling pitch decks for growth.",
   "image": "",
   "author": {
     "@type": "Organization",
-    "name": "Yantra" // Assuming author is Yantra based on content
+    "name": "pranavdev" // Assuming author is pranavdev based on content
   },
    "publisher": {
     "@type": "Organization",
-    "name": "Yantra Services Private Limited", // Assuming publisher is pranavdev    "logo": {
+    "name": "pranavdev Services Private Limited", // Assuming publisher is pranavdev    "logo": {
       "@type": "ImageObject",
-      "url": "https://www.Yantra.co.in/images/logo.png" // Replace with actual logo URL
+      "url": "https://www.Yantraonline/images/logo.png" // Replace with actual logo URL
     }
   },
   "datePublished": "2024-07-28T00:00:00+05:30" // Replace with the actual publication date
@@ -85,10 +85,10 @@ const ZomatoSensex = () => {
     }
   },{
     "@type": "Question",
-    "name": "What support does Yantra offer?",
+    "name": "What support does pranavdev offer?",
     "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Yantra helps businesses secure MSME loans, grants, equity funding, and design powerful pitch decks."
+      "text": "pranavdev helps businesses secure MSME loans, grants, equity funding, and design powerful pitch decks."
     }
   }]
 }
@@ -132,8 +132,8 @@ const ZomatoSensex = () => {
                     title: "How Zomato Impacts Sensex Today",
                   },
                   {
-                    id: "Yantra-helping-msmes",
-                    title: "Yantra: Helping MSMEs Leverage Market Trends",
+                    id: "pranavdev-helping-msmes",
+                    title: "pranavdev: Helping MSMEs Leverage Market Trends",
                   },
                   {
                     id: "why-zomatos-moves-matter",
@@ -190,7 +190,7 @@ const ZomatoSensex = () => {
                   In this post, we explore Zomato’s influence on the{" "}
                   <b>BSE Sensex</b> and discuss how businesses, including those
                   supported by companies like{" "}
-                  <b>Yantra Services Private Limited</b>, can leverage market
+                  <b>pranavdev Services Private Limited</b>, can leverage market
                   trends to grow and secure funding.
                 </p>
               </div>
@@ -218,8 +218,8 @@ const ZomatoSensex = () => {
                 <p className="text-gray-800 text-lg leading-relaxed bg-yellow-100 border-l-4 border-yellow-500 p-4 my-4 italic">
                   <strong>Did You Know?</strong> Zomato&apos;s growth mirrors
                   the rise of India&apos;s digital and consumer-first businesses
-                  — just like how Yantra supports emerging MSMEs in navigating
-                  funding challenges.
+                  — just like how pranavdev supports emerging MSMEs in
+                  navigating funding challenges.
                 </p>
               </div>
             </section>
@@ -247,7 +247,7 @@ const ZomatoSensex = () => {
                   <strong>Insight:</strong> Zomato is now a barometer for
                   India’s food-tech and digital economy, much like how{" "}
                   <Link
-                    href="https://www.Yantra.co.in/about-us"
+                    href="https://www.Yantraonline/about-us"
                     className="text-blue-600 hover:underline"
                   >
                     pranavdev{" "}
@@ -278,7 +278,7 @@ const ZomatoSensex = () => {
                   <strong>Pro Tip for Entrepreneurs:</strong> Use these market
                   moments to strengthen investor outreach via a compelling{" "}
                   <Link
-                    href="https://www.Yantra.co.in/pitch-deck-consultation"
+                    href="https://www.Yantraonline/pitch-deck-consultation"
                     className="text-blue-600 hover:underline"
                   >
                     pitch deck
@@ -288,13 +288,13 @@ const ZomatoSensex = () => {
               </div>
             </section>
 
-            <section className="mb-8" id="Yantra-helping-msmes">
+            <section className="mb-8" id="pranavdev-helping-msmes">
               <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
                 <h2 className="text-2xl font-semibold text-blue-800 mb-4">
-                  Yantra: Helping MSMEs Leverage Market Trends
+                  pranavdev: Helping MSMEs Leverage Market Trends
                 </h2>
                 <p className="text-gray-700 mb-4 text-lg">
-                  <b>Yantra Services Private Limited</b> offers end-to-end
+                  <b>pranavdev Services Private Limited</b> offers end-to-end
                   support for startups and MSMEs — from funding to certification
                   to pitch creation.
                 </p>
@@ -305,7 +305,7 @@ const ZomatoSensex = () => {
                 <ul className="list-disc list-inside text-gray-700 text-lg mb-4">
                   <li>
                     <Link
-                      href="https://www.Yantra.co.in/msme-loans"
+                      href="https://www.Yantraonline/msme-loans"
                       className="text-blue-600 hover:underline"
                     >
                       MSME Loans
@@ -314,7 +314,7 @@ const ZomatoSensex = () => {
                   </li>
                   <li>
                     <Link
-                      href="https://www.Yantra.co.in/government-business-loans"
+                      href="https://www.Yantraonline/government-business-loans"
                       className="text-blue-600 hover:underline"
                     >
                       Government Grants
@@ -323,7 +323,7 @@ const ZomatoSensex = () => {
                   </li>
                   <li>
                     <Link
-                      href="https://www.Yantra.co.in/equity-based-funding"
+                      href="https://www.Yantraonline/equity-based-funding"
                       className="text-blue-600 hover:underline"
                     >
                       Equity-Based Funding
@@ -332,7 +332,7 @@ const ZomatoSensex = () => {
                   </li>
                   <li>
                     <Link
-                      href="https://www.Yantra.co.in/msme-certification"
+                      href="https://www.Yantraonline/msme-certification"
                       className="text-blue-600 hover:underline"
                     >
                       MSME Certification
@@ -365,14 +365,14 @@ const ZomatoSensex = () => {
                 <p className="text-gray-800 text-lg leading-relaxed bg-indigo-100 border-l-4 border-indigo-500 p-4 my-4 italic">
                   Check if you qualify for{" "}
                   <Link
-                    href="https://www.Yantra.co.in/startup-india-certification"
+                    href="https://www.Yantraonline/startup-india-certification"
                     className="text-blue-600 hover:underline"
                   >
                     Startup India Certification
                   </Link>{" "}
                   or apply for a{" "}
                   <Link
-                    href="https://www.Yantra.co.in/private-limited-company-registration"
+                    href="https://www.Yantraonline/private-limited-company-registration"
                     className="text-blue-600 hover:underline"
                   >
                     Private Limited Company Registration
@@ -394,19 +394,19 @@ const ZomatoSensex = () => {
                 <p className="text-gray-700 text-lg mb-4">
                   Startups aligned with digital, logistics, sustainability, or
                   AI can ride the wave — especially with the support of advisory
-                  platforms like <b>Yantra</b>.
+                  platforms like <b>pranavdev</b>.
                 </p>
                 <p className="text-gray-700 text-lg mb-4">
                   Whether you&apos;re preparing for{" "}
                   <Link
-                    href="https://www.Yantra.co.in/venture-capitalist"
+                    href="https://www.Yantraonline/venture-capitalist"
                     className="text-blue-600 hover:underline"
                   >
                     venture capitalist outreach
                   </Link>{" "}
                   or applying for{" "}
                   <Link
-                    href="https://www.Yantra.co.in/nbfc-loan"
+                    href="https://www.Yantraonline/nbfc-loan"
                     className="text-blue-600 hover:underline"
                   >
                     NBFC loans
@@ -441,7 +441,7 @@ const ZomatoSensex = () => {
                     Entrepreneurs can use bullish markets to pitch investors and
                     apply for funding programs like{" "}
                     <Link
-                      href="https://www.Yantra.co.in/government-business-loans"
+                      href="https://www.Yantraonline/government-business-loans"
                       className="text-blue-600 hover:underline"
                     >
                       government business loans
@@ -452,26 +452,26 @@ const ZomatoSensex = () => {
 
                 <div>
                   <strong className="text-gray-800 text-lg">
-                    What support does Yantra offer?
+                    What support does pranavdev offer?
                   </strong>
                   <p className="text-gray-700 text-lg mt-1">
-                    Yantra helps businesses secure{" "}
+                    pranavdev helps businesses secure{" "}
                     <Link
-                      href="https://www.Yantra.co.in/msme-loans"
+                      href="https://www.Yantraonline/msme-loans"
                       className="text-blue-600 hover:underline"
                     >
                       MSME loans
                     </Link>
                     ,{" "}
                     <Link
-                      href="https://www.Yantra.co.in/government-grants"
+                      href="https://www.Yantraonline/government-grants"
                       className="text-blue-600 hover:underline"
                     >
                       grants
                     </Link>
                     ,
                     <Link
-                      href="https://www.Yantra.co.in/pitch-deck-consultation"
+                      href="https://www.Yantraonline/pitch-deck-consultation"
                       className="text-blue-600 hover:underline"
                     >
                       pitch decks
@@ -500,10 +500,10 @@ const ZomatoSensex = () => {
                 </p>
                 <p className="text-gray-700 text-lg mb-4">
                   <Link
-                    href="https://www.Yantra.co.in/msme-loans"
+                    href="https://www.Yantraonline/msme-loans"
                     className="text-blue-600 hover:underline"
                   >
-                    Contact Yantra{" "}
+                    Contact pranavdev{" "}
                   </Link>{" "}
                   — your growth strategy partner for MSME loans, pitch
                   preparation, and strategic funding.
