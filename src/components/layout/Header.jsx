@@ -18,6 +18,8 @@ function Dropdown({ label, labelHref, links, closeMenu }) {
           href={labelHref}
           onClick={closeMenu}
           className="text-lg font-medium text-gray-700 hover:text-blue-600"
+          aria-expanded={open}
+          title={`Navigate to ${label} page`}
         >
           {label}
         </Link>
@@ -25,7 +27,9 @@ function Dropdown({ label, labelHref, links, closeMenu }) {
           <button
             onClick={() => setOpen(!open)}
             className="text-gray-700"
-            aria-label={`Toggle ${label} menu`}
+            aria-label={`Toggle ${label} submenu`}
+            aria-controls={`${label.toLowerCase()}-submenu`}
+            aria-expanded={open}
           >
             <svg
               className={`w-4 h-4 transition-transform ${
@@ -35,6 +39,7 @@ function Dropdown({ label, labelHref, links, closeMenu }) {
               stroke="currentColor"
               strokeWidth="2"
               viewBox="0 0 24 24"
+              aria-hidden="true"
             >
               <path d="M19 9l-7 7-7-7" />
             </svg>
@@ -43,13 +48,20 @@ function Dropdown({ label, labelHref, links, closeMenu }) {
       </div>
 
       {open && links?.length > 0 && (
-        <div className="ml-4 space-y-1">
+        <div 
+          id={`${label.toLowerCase()}-submenu`}
+          className="ml-4 space-y-1"
+          role="menu"
+          aria-label={`${label} submenu`}
+        >
           {links.map(({ label, href }, idx) => (
             <Link
               key={idx}
               href={href}
               onClick={closeMenu}
               className="block text-lg text-gray-600 hover:text-blue-500"
+              role="menuitem"
+              title={`Navigate to ${label}`}
             >
               {label}
             </Link>
@@ -66,6 +78,22 @@ export default function Header() {
   const [showHeader, setShowHeader] = useState(true);
   const headerRef = useRef(null);
   const lastScrollY = useRef(0);
+
+  // Navigation structure for better SEO
+  const navigation = [
+    { label: "Home", href: "/", links: [] },
+    { label: "About", href: "/about", links: [] },
+    { label: "Blogs", href: "/blogs", links: [] },
+    { label: "Portfolio", href: "/portfolio", links: [] },
+    { 
+      label: "Services", 
+      href: "/services", 
+      links: [
+        // { label: "Website Development", href: "/website-development" }
+      ]
+    },
+    { label: "Contact", href: "/contact", links: [] },
+  ];
 
   // Detect click outside to close mobile menu
   useEffect(() => {
@@ -104,210 +132,235 @@ export default function Header() {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Add structured data for navigation
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Pranav Dwivedi",
+    "url": "https://yourdomain.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://yourdomain.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  };
+
   return (
-    <header
-      ref={headerRef}
-      className={`sticky top-0 left-0 mx-auto px-4 py-4 md:px-0 md:py-6 w-full z-50 transition-all duration-300 ease-[cubic-bezier(0.4, 0, 0.2, 1)] transform ${
-        showHeader
-          ? "translate-y-0 opacity-100 shadow-md"
-          : "-translate-y-full opacity-0"
-      }  backdrop-blur-md`}
-    >
-      <div className="max-w-7xl mx-auto px-3 md:py-0 flex justify-between items-center  rounded-full md:border-none">
-        <div className="flex items-center gap-2">
-          <Link href="/" passHref>
-            {/* <Image
-              src={Logo}
-              alt="L2C Logo"
-              width={0}
-              height={0}
-              sizes="(max-width: 640px) 120px, (max-width: 768px) 150px, 170px"
-              className="w-[120px] sm:w-[150px] md:w-[140px] h-auto cursor-pointer"
-              priority
-            /> */}
-            <h2 className="font-rowdies text-3xl text-amber-50 font-semibold">
-              Pranav Dwivedi
-            </h2>
-          </Link>
-        </div>
-
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center text-[#CACACA] px-6 lg:px-12 py-3 lg:py-4 space-x-6 lg:space-x-8">
-          <Link
-            href="/"
-            className="text-sm lg:text-base font-medium  hover:text-white"
-          >
-            Home
-          </Link>
-
-          {/* Dropdowns */}
-          {[
-            {
-              label: "About",
-              href: "/about",
-              links: [
-                // { label: "Diploma", href: "/diploma" },
-              ],
-            },
-            {
-              label: "Blogs",
-              href: "/blogs",
-              links: [
-                // { label: "Diploma", href: "/diploma" },
-              ],
-            },
-            {
-              label: "Portfolio",
-              href: "/portfolio",
-              links: [],
-            },
-            {
-              label: "Services",
-              href: "/services",
-              links: [],
-            },
-            {
-              label: "Contact",
-              href: "/contact",
-              links: [],
-            },
-          ].map((menu, index) => (
-            <div key={index} className="relative group">
-              <Link
-                href={menu.href}
-                className="flex items-center text-sm lg:text-base font-medium  hover:text-[white]"
+    <>
+      {/* Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      
+      <header
+        ref={headerRef}
+        className={`sticky top-0 left-0 mx-auto px-4 py-4 md:px-0 md:py-6 w-full z-50 transition-all duration-300 ease-[cubic-bezier(0.4, 0, 0.2, 1)] transform ${
+          showHeader
+            ? "translate-y-0 opacity-100 shadow-md"
+            : "-translate-y-full opacity-0"
+        }  backdrop-blur-md`}
+        role="banner"
+        itemScope
+        itemType="https://schema.org/WPHeader"
+      >
+        <div className="max-w-7xl mx-auto px-3 md:py-0 flex justify-between items-center rounded-full md:border-none">
+          {/* Logo with Schema.org markup */}
+          <div className="flex items-center gap-2">
+            <Link 
+              href="/" 
+              passHref
+              itemProp="url"
+              aria-label="Pranav Dwivedi - Home"
+              title="Navigate to Homepage"
+            >
+              {/* <Image
+                src={Logo}
+                alt="Pranav Dwivedi - Professional Portfolio Logo"
+                width={0}
+                height={0}
+                sizes="(max-width: 640px) 120px, (max-width: 768px) 150px, 170px"
+                className="w-[120px] sm:w-[150px] md:w-[140px] h-auto cursor-pointer"
+                priority
+                itemProp="logo"
+              /> */}
+              <h1 
+                className="font-rowdies text-3xl text-amber-50 font-semibold"
+                itemProp="name"
               >
-                {menu.label}
-                {menu.links?.length > 0 && (
-                  <svg
-                    className="ml-1 w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M19 9l-7 7-7-7" />
-                  </svg>
-                )}
-              </Link>
-              {menu.links?.length > 0 && (
-                <div className="absolute left-0 mt-2 w-48 z-50 bg-white shadow-lg rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
-                  {menu.links.map((link, i) => (
-                    <Link
-                      key={i}
-                      href={link.href}
-                      className="block px-4 py-2 text-sm  hover:bg-gray-100"
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
+                Pranav Dwivedi
+              </h1>
+            </Link>
+          </div>
 
-        {/* Desktop CTA */}
-        <div className="hidden md:block">
-          <button
-            onClick={() => setIsModalOpen(true)}
-            className="flex flex-row justify-center items-center px-12 py-3 gap-2 w-[194px] h-[52px] bg-white/[0.1] border border-[#D8D8D666] shadow-[inset_0px_-8px_21.6px_#FFFFFF26] rounded-full text-[#CACACA] text-[18px] leading-[22px] font-medium"
+          {/* Desktop Navigation with ARIA labels */}
+          <nav 
+            className="hidden md:flex items-center text-[#CACACA] px-6 lg:px-12 py-3 lg:py-4 space-x-6 lg:space-x-8"
+            role="navigation"
+            aria-label="Main Navigation"
+            itemScope
+            itemType="https://schema.org/SiteNavigationElement"
           >
-            Contact Us
+            {navigation.map((menu, index) => (
+              <div key={index} className="relative group">
+                <Link
+                  href={menu.href}
+                  className="flex items-center text-sm lg:text-base font-medium hover:text-[white] transition-colors duration-200"
+                  itemProp="url"
+                  aria-label={`Navigate to ${menu.label}`}
+                  title={`${menu.label} - Pranav Dwivedi`}
+                >
+                  <span itemProp="name">{menu.label}</span>
+                  {menu.links?.length > 0 && (
+                    <svg
+                      className="ml-1 w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path d="M19 9l-7 7-7-7" />
+                    </svg>
+                  )}
+                </Link>
+                {menu.links?.length > 0 && (
+                  <div 
+                    className="absolute left-0 mt-2 w-48 z-50 bg-white shadow-lg rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out"
+                    role="menu"
+                    aria-label={`${menu.label} submenu`}
+                  >
+                    {menu.links.map((link, i) => (
+                      <Link
+                        key={i}
+                        href={link.href}
+                        className="block px-4 py-2 text-sm hover:bg-gray-100 transition-colors"
+                        itemProp="url"
+                        title={link.label}
+                      >
+                        <span itemProp="name">{link.label}</span>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </nav>
+
+          {/* Desktop CTA Button */}
+          <div className="hidden md:block">
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="flex flex-row justify-center items-center px-12 py-3 gap-2 w-[194px] h-[52px] bg-white/[0.1] border border-[#D8D8D666] shadow-[inset_0px_-8px_21.6px_#FFFFFF26] rounded-full text-[#CACACA] text-[18px] leading-[22px] font-medium hover:bg-white/[0.2] transition-all duration-300"
+              aria-label="Open Contact Form"
+              title="Contact Pranav Dwivedi"
+            >
+              Contact Us
+            </button>
+          </div>
+
+          {/* Mobile Hamburger / Cross Button */}
+          <button
+            className="md:hidden p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={menuOpen ? "Close Menu" : "Open Menu"}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
+          >
+            {menuOpen ? (
+              <Image
+                src={cross}
+                alt="Close Navigation Menu"
+                width={35}
+                height={35}
+                className="w-10 h-10"
+                priority
+              />
+            ) : (
+              <Image
+                src={Hameburger}
+                alt="Open Navigation Menu"
+                width={35}
+                height={35}
+                className="w-9 h-9"
+                priority
+              />
+            )}
           </button>
         </div>
 
-        {/* Mobile Hamburger / Cross */}
-        <button
-          className="md:hidden p-2"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle Menu"
-        >
-          {menuOpen ? (
-            <Image
-              src={cross}
-              alt="Close"
-              width={35}
-              height={35}
-              className="w-10 h-10"
-            />
-          ) : (
-            <Image
-              src={Hameburger}
-              alt="Menu"
-              width={35}
-              height={35}
-              className="w-9 h-9"
-            />
-          )}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="md:hidden text-lg absolute top-full left-0 w-full bg-white z-50 shadow-lg rounded-b-xl border-t border-gray-300 px-4 pb-4 pt-4 space-y-2">
-          <Link
-            href="/"
-            onClick={() => setMenuOpen(false)}
-            className="block text-2xl font-medium text-gray-700 hover:text-blue-600"
+        {/* Mobile Navigation Menu */}
+        {menuOpen && (
+          <div 
+            id="mobile-menu"
+            className="md:hidden text-lg absolute top-full left-0 w-full bg-white z-50 shadow-lg rounded-b-xl border-t border-gray-300 px-4 pb-4 pt-4 space-y-2"
+            role="menu"
+            aria-label="Mobile Navigation"
           >
-            Home
-          </Link>
+            <Link
+              href="/"
+              onClick={() => setMenuOpen(false)}
+              className="block text-2xl font-medium text-gray-700 hover:text-blue-600 transition-colors"
+              role="menuitem"
+              title="Navigate to Home"
+            >
+              Home
+            </Link>
 
-          <Dropdown
-            label="About"
-            labelHref="/about"
-            closeMenu={() => setMenuOpen(false)}
-            links={[]}
-          />
+            <Dropdown
+              label="About"
+              labelHref="/about"
+              closeMenu={() => setMenuOpen(false)}
+              links={[]}
+            />
 
-          <Dropdown
-            label="Blogs"
-            labelHref="/blogs"
-            closeMenu={() => setMenuOpen(false)}
-            links={[]}
-          />
-          <Dropdown
-            label="Portfolio"
-            labelHref="/portfolio"
-            closeMenu={() => setMenuOpen(false)}
-            links={[]}
-          />
+            <Dropdown
+              label="Blogs"
+              labelHref="/blogs"
+              closeMenu={() => setMenuOpen(false)}
+              links={[]}
+            />
+            
+            <Dropdown
+              label="Portfolio"
+              labelHref="/portfolio"
+              closeMenu={() => setMenuOpen(false)}
+              links={[]}
+            />
 
-          <Dropdown
-            label="Services"
-            labelHref="/services"
-            closeMenu={() => setMenuOpen(false)}
-            links={[{ label: "Website Development", href: "/WebsiteDevelopment" }]}
-          />
-          <Dropdown
-            label="Contact"
-            labelHref="/contact"
-            closeMenu={() => setMenuOpen(false)}
-            links={[]}
-          />
+            <Dropdown
+              label="Services"
+              labelHref="/services"
+              closeMenu={() => setMenuOpen(false)}
+              links={[{ label: "Website Development", href: "/website-development" }]}
+            />
+            
+            <Dropdown
+              label="Contact"
+              labelHref="/contact"
+              closeMenu={() => setMenuOpen(false)}
+              links={[]}
+            />
 
-          {/* <Link
-            href="/blogs"
-            onClick={() => setMenuOpen(false)}
-            className="block text-sm font-medium text-gray-700 hover:text-blue-600"
-          >
-            Blogs
-          </Link> */}
+            {/* Mobile Contact Button */}
+            <ButtonOrange
+              text="Contact Us"
+              onClick={() => {
+                setIsModalOpen(true);
+                setMenuOpen(false);
+              }}
+              aria-label="Open Contact Form from Mobile Menu"
+              title="Contact Pranav Dwivedi"
+            />
+          </div>
+        )}
 
-          {/* Mobile Contact Us Button with Border and Gradient */}
-          <ButtonOrange
-            text="Contact Us"
-            onClick={() => setIsModalOpen(true)}
-          />
-        </div>
-      )}
-
-      {/* <ContactForm isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} /> */}
-    </header>
+        {/* <ContactForm isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} /> */}
+      </header>
+    </>
   );
 }
