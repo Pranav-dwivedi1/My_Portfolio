@@ -318,7 +318,7 @@ export default function Portfolio() {
                   <h3 className="text-xl font-semibold text-cyan-400 mb-4">Why Choose PranavDev?</h3>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="text-center p-4 bg-gray-800/20 rounded-lg">
-                      <div className="text-2xl font-bold text-cyan-300 mb-2">5+ Years</div>
+                      <div className="text-2xl font-bold text-cyan-300 mb-2">3+ Years</div>
                       <div className="text-gray-400 text-sm">Experience in Development</div>
                     </div>
                     <div className="text-center p-4 bg-gray-800/20 rounded-lg">

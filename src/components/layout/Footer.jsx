@@ -6,14 +6,13 @@ import ctabg from "../../assets/home/ctabg.webp";
 import left from "../../assets/footer/left.png";
 import right from "../../assets/footer/right.png";
 import {
-  FaTwitter,
   FaGithub,
-  FaLinkedin,
   FaEnvelope,
-  FaCodepen,
-  FaDribbble,
   FaPhone,
   FaUser,
+  FaLinkedin,
+  FaFacebook,
+  FaInstagram,
 } from "react-icons/fa";
 
 export default function Footer() {
@@ -262,61 +261,65 @@ export default function Footer() {
           </p>
 
           {/* Social Links */}
-          <div className="flex space-x-4 text-lg text-gray-300 order-1 md:order-2" 
-               aria-label="Social media links">
-            <a
-              href="https://twitter.com/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition"
-              aria-label="Follow on Twitter"
-            >
-              <FaTwitter />
-            </a>
-            <a
-              href="https://linkedin.com/in/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition"
-              aria-label="Connect on LinkedIn"
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              href="https://github.com/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition"
-              aria-label="View GitHub profile"
-            >
-              <FaGithub />
-            </a>
-            <a
-              href="https://dribbble.com/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition"
-              aria-label="View Dribbble portfolio"
-            >
-              <FaDribbble />
-            </a>
-            <a
-              href="https://codepen.io/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition"
-              aria-label="View CodePen experiments"
-            >
-              <FaCodepen />
-            </a>
-            <a
-              href="mailto:pranav01dev@gmail.com"
-              className="hover:text-white transition"
-              aria-label="Send email"
-            >
-              <FaEnvelope />
-            </a>
-          </div>
+         
+<div
+  className="flex space-x-4 text-lg text-gray-300 order-1 md:order-2"
+  aria-label="Social media links"
+>
+  {/* GitHub */}
+  <a
+    href="https://github.com/Pranav-dwivedi1/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-white transition"
+    aria-label="View GitHub profile"
+  >
+    <FaGithub />
+  </a>
+
+  {/* LinkedIn */}
+  <a
+    href="https://www.linkedin.com/in/pranavdwivedi07/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-white transition"
+    aria-label="Connect on LinkedIn"
+  >
+    <FaLinkedin />
+  </a>
+
+  {/* Facebook */}
+  <a
+    href="https://www.facebook.com/pranav.dwivedi.777"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-white transition"
+    aria-label="Visit Facebook profile"
+  >
+    <FaFacebook />
+  </a>
+
+  {/* Instagram */}
+  <a
+    href="https://www.instagram.com/ll_pranav_dwivedi_ll/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-white transition"
+    aria-label="Visit Instagram profile"
+  >
+    <FaInstagram />
+  </a>
+
+  {/* Email */}
+  <a
+    href="mailto:pranav01dev@gmail.com"
+    className="hover:text-white transition"
+    aria-label="Send email"
+  >
+    <FaEnvelope />
+  </a>
+</div>
+
         </motion.div>
       </div>
     </footer>

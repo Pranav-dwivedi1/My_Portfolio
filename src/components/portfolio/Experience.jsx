@@ -364,7 +364,7 @@ const Experience = () => {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { label: "Positions Held", value: data.items.length, icon: "👤" },
-              { label: "Years Experience", value: "4+", icon: "📅" },
+              { label: "Years Experience", value: "2+", icon: "📅" },
               { label: "Projects Delivered", value: "40+", icon: "📁" },
               { label: "Technologies Used", value: "22+", icon: "🛠️" }
             ].map((stat, index) => (
