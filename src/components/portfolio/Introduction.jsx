@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Briefcase, Download, Mail } from "lucide-react";
+import { MapPin, Briefcase, Download, Mail, Github, Linkedin, Facebook, Instagram } from "lucide-react";
 import { dummyData } from "@/data/portfolioData";
 import Link from "next/link";
 import Image from "next/image";
@@ -19,6 +19,38 @@ const Introduction = () => {
     link.click();
     document.body.removeChild(link);
   };
+
+  // Social media links
+  const socialLinks = [
+    {
+      name: "GitHub",
+      url: "https://github.com/Pranav-dwivedi1/",
+      icon: Github,
+      color: "hover:text-white hover:bg-gray-800",
+      iconColor: "text-gray-400"
+    },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/pranavdwivedi07/",
+      icon: Linkedin,
+      color: "hover:text-blue-500 hover:bg-blue-500/10",
+      iconColor: "text-gray-400"
+    },
+    {
+      name: "Facebook",
+      url: "https://www.facebook.com/pranav.dwivedi.777",
+      icon: Facebook,
+      color: "hover:text-blue-600 hover:bg-blue-600/10",
+      iconColor: "text-gray-400"
+    },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/ll_pranav_dwivedi_ll/",
+      icon: Instagram,
+      color: "hover:text-pink-600 hover:bg-pink-600/10",
+      iconColor: "text-gray-400"
+    }
+  ];
 
   // SEO data
   const seoTitle = "Pranav Dwivedi - Full Stack Developer & AI Engineer";
@@ -164,7 +196,7 @@ const Introduction = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-3 w-full max-w-sm mx-auto"
+              className="flex flex-col sm:flex-row gap-3 w-full max-w-sm mx-auto mb-8"
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -187,6 +219,36 @@ const Introduction = () => {
                 </motion.button>
               </Link>
             </motion.div>
+
+            {/* Social Media Icons for Mobile - Added after buttons */}
+          <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.5 }}
+  className="flex flex-col items-center w-full lg:hidden"
+>
+  <p className="text-gray-400 text-sm mb-4">Connect with me</p>
+
+  <div className="flex gap-4">
+    {socialLinks.map((social, index) => (
+      <motion.a
+        key={social.name}
+        href={social.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.6 + index * 0.1 }}
+        whileHover={{ scale: 1.15, y: -3 }}
+        whileTap={{ scale: 0.95 }}
+        className={`p-3 rounded-full bg-gray-900/50 border border-gray-800/50 transition-all duration-300 ${social.color} ${social.iconColor}`}
+        aria-label={`Visit my ${social.name} profile`}
+      >
+        <social.icon className="w-5 h-5" />
+      </motion.a>
+    ))}
+  </div>
+</motion.div>
           </div>
 
           {/* Desktop Layout - Original Design */}
@@ -249,7 +311,7 @@ const Introduction = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4"
+                className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 mb-8"
               >
                 {/* Resume Download Button */}
                 <motion.button
@@ -300,6 +362,9 @@ const Introduction = () => {
                   </motion.button>
                 </Link>
               </motion.div>
+
+              {/* Social Media Icons for Desktop - Added after buttons */}
+           
             </div>
             
             {/* Right Side - Profile Image/Icon - Takes 40% width */}
@@ -413,8 +478,10 @@ const Introduction = () => {
                 },
                 "workLocation": "Remote",
                 "sameAs": [
-                  "https://www.linkedin.com/in/pranavdev",
-                  "https://github.com/pranavdev"
+                  "https://github.com/Pranav-dwivedi1/",
+                  "https://www.linkedin.com/in/pranavdwivedi07/",
+                  "https://www.facebook.com/pranav.dwivedi.777",
+                  "https://www.instagram.com/ll_pranav_dwivedi_ll/"
                 ]
               })
             }}
