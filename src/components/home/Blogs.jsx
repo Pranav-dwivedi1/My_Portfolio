@@ -1,50 +1,42 @@
-"use client";
-import React from "react";
-import Image from "next/image";
+'use client';
+import React from 'react';
+import Image from 'next/image';
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { Swiper, SwiperSlide } from "swiper/react";
-import BlogImg from "../../assets/home/blog.png";
-import "swiper/css";
-import "swiper/css/pagination";
+import { motion } from 'framer-motion';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import BlogImg from '../../assets/home/blog.png';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const blogs = [
   {
-    id: 1,
-    title: "How I Built My Portfolio With Next.js & Framer Motion",
-    date: "April 28, 2026",
-    description:
-      "A deep dive into my portfolio stack, animation tricks, routing structure, and performance optimization tips.",
-    image: BlogImg,
-    link: "/blogs/portfolio-nextjs",
-  },
-  {
-    id: 2,
-    title: "Top 5 Mistakes Beginners Make in React Projects",
-    date: "April 12, 2026",
-    description:
-      "Avoid these common pitfalls when starting out with React and learn better state and component practices.",
-    image: BlogImg,
-    link: "/blogs/react-mistakes",
-  },
-  {
-    id: 3,
-    title: "Deploying Full-Stack Apps on Vercel + PlanetScale",
-    date: "March 25, 2026",
-    description:
-      "Here’s how I set up my backend on PlanetScale, front-end on Vercel, and handled authentication & schema.",
-    image: BlogImg,
-    link: "/blogs/fullstack-deployment",
-  },
-  {
-    id: 4,
-    title: "How to Become a Prompt Engineer in AI (2026 Guide)",
-    date: "June 10, 2026",
-    description:
-      "A complete guide to becoming a Prompt Engineer in AI, covering essential skills, tools, learning roadmap, and career opportunities.",
-    image: BlogImg,
-    link: "/blogs/prompt-engineering-guide",
-  },
+      id: 1,
+      title: "How I Built My Portfolio With Next.js & Framer Motion",
+      date: "April 28, 2026",
+      description:
+        "A deep dive into my portfolio stack, animation tricks, routing structure, and performance optimization tips.",
+      image: BlogImg,
+      link: "/blogs/portfolio-nextjs",
+    },
+    {
+      id: 2,
+      title: "Top 5 Mistakes Beginners Make in React Projects",
+      date: "April 12, 2026",
+      description:
+        "Avoid these common pitfalls when starting out with React and learn better state and component practices.",
+      image: BlogImg,
+      link: "/blogs/react-mistakes",
+    },
+    
+    {
+      id: 4,
+      title: "How to Become a Prompt Engineer in AI (2026 Guide)",
+      date: "June 10, 2026",
+      description:
+        "A complete guide to becoming a Prompt Engineer in AI, covering essential skills, tools, learning roadmap, and career opportunities.",
+      image: BlogImg,
+      link: "/blogs/prompt-engineering-guide",
+    },
 ];
 
 export default function Blogs() {
@@ -53,6 +45,7 @@ export default function Blogs() {
       className="px-6 md:px-12 py-16 text-white"
       aria-labelledby="blogs-heading"
     >
+
       {/* Section Heading */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -62,7 +55,10 @@ export default function Blogs() {
         className="text-center mb-12"
       >
         {/* ✅ H2 = section topic (NO name repetition) */}
-        <h2 id="blogs-heading" className="text-4xl font-bold mb-2">
+        <h2
+          id="blogs-heading"
+          className="text-4xl font-bold mb-2"
+        >
           Tech Insights & Articles
         </h2>
 
@@ -107,7 +103,9 @@ export default function Blogs() {
                     <p className="text-sm text-gray-400">{blog.date}</p>
 
                     {/* H3 = article title */}
-                    <h3 className="text-xl font-bold mt-2">{blog.title}</h3>
+                    <h3 className="text-xl font-bold mt-2">
+                      {blog.title}
+                    </h3>
 
                     <p className="mt-3 text-gray-300 text-sm">
                       {blog.description}
@@ -137,11 +135,12 @@ export default function Blogs() {
 
       {/* 🔍 Invisible SEO reinforcement (NO UI impact) */}
       <p className="sr-only">
-        This section contains technical blog articles focused on React, Next.js,
-        JavaScript, full stack development, deployment, performance
-        optimization, and AI-related topics. Articles are written by the website
-        owner and published on pranavdev.online.
+        This section contains technical blog articles focused on React,
+        Next.js, JavaScript, full stack development, deployment, performance
+        optimization, and AI-related topics. Articles are written by the
+        website owner and published on pranavdev.online.
       </p>
+
     </section>
   );
 }
