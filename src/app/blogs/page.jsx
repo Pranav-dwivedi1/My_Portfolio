@@ -20,7 +20,8 @@ export default function Blogs() {
   const blogData = [
     {
       id: 1,
-      title: "Sensex Zomato: What's Driving Zomato's Performance on the BSE Sensex?",
+      title:
+        "Sensex Zomato: What's Driving Zomato's Performance on the BSE Sensex?",
       desc: "Explore Zomato's impact on the BSE Sensex and business growth insights.",
       date: "December 25, 2024",
       tags: [{ tagTitle: "News" }, { tagTitle: "Finance" }],
@@ -31,13 +32,13 @@ export default function Blogs() {
     },
     {
       id: 2,
-      title: "How ChatGPT is Transforming Business in 2025",
+      title: "How ChatGPT is Transforming Business in 2026",
       desc: "How AI and ChatGPT are revolutionizing MSMEs and startups.",
-      date: "May 25, 2025",
+      date: "May 25, 2026",
       tags: [{ tagTitle: "AI" }, { tagTitle: "Business Growth" }],
       category: ["ai", "business"],
       readTime: "8 min read",
-      link: "/blogs/chatgpt-business-2025",
+      link: "/blogs/chatgpt-business-2026",
       featured: true,
     },
     {
@@ -57,9 +58,9 @@ export default function Blogs() {
     },
     {
       id: 4,
-      title: "Digital Marketing Strategies for Startups in 2025",
+      title: "Digital Marketing Strategies for Startups in 2026",
       desc: "Learn cost-effective digital marketing tactics for early-stage startups.",
-      date: "April 15, 2025",
+      date: "April 15, 2026",
       tags: [{ tagTitle: "Marketing" }, { tagTitle: "Startups" }],
       category: ["marketing", "business"],
       readTime: "6 min read",
@@ -70,7 +71,7 @@ export default function Blogs() {
       id: 5,
       title: "Blockchain Technology: Future of Secure Transactions",
       desc: "Understanding blockchain's impact on finance and data security.",
-      date: "March 20, 2025",
+      date: "March 20, 2026",
       tags: [{ tagTitle: "Technology" }, { tagTitle: "Finance" }],
       category: ["technology", "finance"],
       readTime: "10 min read",
@@ -82,17 +83,43 @@ export default function Blogs() {
   // Filter categories
   const categories = [
     { id: "all", name: "All Articles", count: blogData.length },
-    { id: "ai", name: "Artificial Intelligence", count: blogData.filter(b => b.category.includes("ai")).length },
-    { id: "finance", name: "Finance & Markets", count: blogData.filter(b => b.category.includes("finance")).length },
-    { id: "business", name: "Business Growth", count: blogData.filter(b => b.category.includes("business")).length },
-    { id: "career", name: "Career Development", count: blogData.filter(b => b.category.includes("career")).length },
-    { id: "technology", name: "Technology", count: blogData.filter(b => b.category.includes("technology")).length },
-    { id: "marketing", name: "Marketing", count: blogData.filter(b => b.category.includes("marketing")).length },
+    {
+      id: "ai",
+      name: "Artificial Intelligence",
+      count: blogData.filter((b) => b.category.includes("ai")).length,
+    },
+    {
+      id: "finance",
+      name: "Finance & Markets",
+      count: blogData.filter((b) => b.category.includes("finance")).length,
+    },
+    {
+      id: "business",
+      name: "Business Growth",
+      count: blogData.filter((b) => b.category.includes("business")).length,
+    },
+    {
+      id: "career",
+      name: "Career Development",
+      count: blogData.filter((b) => b.category.includes("career")).length,
+    },
+    {
+      id: "technology",
+      name: "Technology",
+      count: blogData.filter((b) => b.category.includes("technology")).length,
+    },
+    {
+      id: "marketing",
+      name: "Marketing",
+      count: blogData.filter((b) => b.category.includes("marketing")).length,
+    },
   ];
 
   // Filter and sort blogs
   const filteredBlogs = blogData
-    .filter(blog => activeFilter === "all" || blog.category.includes(activeFilter))
+    .filter(
+      (blog) => activeFilter === "all" || blog.category.includes(activeFilter),
+    )
     .sort((a, b) => {
       if (sortOrder === "newest") {
         return new Date(b.date) - new Date(a.date);
@@ -102,8 +129,10 @@ export default function Blogs() {
       return 0;
     });
 
-  const pageTitle = "Blog Articles on AI, Business Growth, Finance & Technology | PranavDev";
-  const pageDescription = "Explore expert insights on Artificial Intelligence, Prompt Engineering, Business Growth, Finance, and Digital Strategy. Stay updated with latest trends.";
+  const pageTitle =
+    "Blog Articles on AI, Business Growth, Finance & Technology | PranavDev";
+  const pageDescription =
+    "Explore expert insights on Artificial Intelligence, Prompt Engineering, Business Growth, Finance, and Digital Strategy. Stay updated with latest trends.";
   const pageUrl = "https://www.pranavdev.online/blogs";
 
   return (
@@ -111,7 +140,10 @@ export default function Blogs() {
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="AI, Artificial Intelligence, Business Growth, Finance, Technology, Prompt Engineering, Digital Marketing, Career Development" />
+        <meta
+          name="keywords"
+          content="AI, Artificial Intelligence, Business Growth, Finance, Technology, Prompt Engineering, Digital Marketing, Career Development"
+        />
         <meta name="author" content="PranavDev" />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
@@ -130,33 +162,33 @@ export default function Blogs() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            "name": pageTitle,
-            "description": pageDescription,
-            "url": pageUrl,
-            "publisher": {
+            name: pageTitle,
+            description: pageDescription,
+            url: pageUrl,
+            publisher: {
               "@type": "Organization",
-              "name": "PranavDev",
-              "logo": {
+              name: "PranavDev",
+              logo: {
                 "@type": "ImageObject",
-                "url": "https://www.pranavdev.online/logo.png"
-              }
+                url: "https://www.pranavdev.online/logo.png",
+              },
             },
-            "mainEntity": {
+            mainEntity: {
               "@type": "ItemList",
-              "itemListElement": filteredBlogs.map((b, i) => ({
+              itemListElement: filteredBlogs.map((b, i) => ({
                 "@type": "ListItem",
-                "position": i + 1,
-                "item": {
+                position: i + 1,
+                item: {
                   "@type": "BlogPosting",
-                  "headline": b.title,
-                  "description": b.desc,
-                  "datePublished": b.date,
-                  "url": `https://www.pranavdev.online${b.link}`,
-                  "keywords": b.tags.map(tag => tag.tagTitle).join(", "),
-                  "timeRequired": b.readTime
-                }
-              }))
-            }
+                  headline: b.title,
+                  description: b.desc,
+                  datePublished: b.date,
+                  url: `https://www.pranavdev.online${b.link}`,
+                  keywords: b.tags.map((tag) => tag.tagTitle).join(", "),
+                  timeRequired: b.readTime,
+                },
+              })),
+            },
           })}
         </Script>
 
@@ -165,20 +197,20 @@ export default function Blogs() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
-            "itemListElement": [
+            itemListElement: [
               {
                 "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://www.pranavdev.online"
+                position: 1,
+                name: "Home",
+                item: "https://www.pranavdev.online",
               },
               {
                 "@type": "ListItem",
-                "position": 2,
-                "name": "Blog",
-                "item": pageUrl
-              }
-            ]
+                position: 2,
+                name: "Blog",
+                item: pageUrl,
+              },
+            ],
           })}
         </Script>
 
@@ -214,20 +246,28 @@ export default function Blogs() {
                   className="bg-blue-700/20 hover:bg-blue-700/30 border border-blue-700/30"
                 />
                 <SocialShareButton
-                  href={`https://api.whatsapp.com/send?text=${encodeURIComponent(pageTitle + ' ' + pageUrl)}`}
+                  href={`https://api.whatsapp.com/send?text=${encodeURIComponent(pageTitle + " " + pageUrl)}`}
                   label="Share on WhatsApp"
                   icon={<RiWhatsappFill className="text-2xl" />}
                   className="bg-green-600/20 hover:bg-green-600/30 border border-green-500/30"
                 />
                 <div className="hidden md:flex items-center gap-4 pl-4 border-l border-gray-700">
-                  <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" 
-                     className="text-gray-400 hover:text-red-500 transition-colors"
-                     aria-label="Subscribe on YouTube">
+                  <a
+                    href="https://www.youtube.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-red-500 transition-colors"
+                    aria-label="Subscribe on YouTube"
+                  >
                     <FaYoutube className="text-2xl" />
                   </a>
-                  <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
-                     className="text-gray-400 hover:text-pink-500 transition-colors"
-                     aria-label="Follow on Instagram">
+                  <a
+                    href="https://www.instagram.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-pink-500 transition-colors"
+                    aria-label="Follow on Instagram"
+                  >
                     <FaInstagram className="text-2xl" />
                   </a>
                 </div>
@@ -249,15 +289,25 @@ export default function Blogs() {
                     onChange={(e) => setActiveFilter(e.target.value)}
                     className="px-4 py-3 bg-gray-800/70 border border-gray-600 rounded-lg appearance-none pr-10 cursor-pointer hover:border-blue-500 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
-                    {categories.map(cat => (
+                    {categories.map((cat) => (
                       <option key={cat.id} value={cat.id}>
                         {cat.name} ({cat.count})
                       </option>
                     ))}
                   </select>
                   <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                    <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    <svg
+                      className="w-4 h-4 text-gray-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -274,8 +324,18 @@ export default function Blogs() {
                     <option value="oldest">Oldest First</option>
                   </select>
                   <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                    <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    <svg
+                      className="w-4 h-4 text-gray-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -287,12 +347,14 @@ export default function Blogs() {
           {activeFilter !== "all" && (
             <div className="mb-8 p-4 bg-blue-900/20 border border-blue-700/30 rounded-lg">
               <p className="text-gray-300">
-                Showing <span className="font-semibold text-blue-300">
-                  {categories.find(c => c.id === activeFilter)?.name}
-                </span> 
+                Showing{" "}
+                <span className="font-semibold text-blue-300">
+                  {categories.find((c) => c.id === activeFilter)?.name}
+                </span>
                 <span className="mx-2">•</span>
                 <span className="text-gray-400">
-                  {filteredBlogs.length} article{filteredBlogs.length !== 1 ? 's' : ''} found
+                  {filteredBlogs.length} article
+                  {filteredBlogs.length !== 1 ? "s" : ""} found
                 </span>
                 <button
                   onClick={() => setActiveFilter("all")}
@@ -308,7 +370,9 @@ export default function Blogs() {
           <section ref={latestBlogsRef} id="latest-blogs" className="mb-16">
             <h2 className="text-3xl font-bold mb-8 pb-4 border-b border-gray-700 flex items-center justify-between">
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                {activeFilter === "all" ? "Latest Articles" : `${categories.find(c => c.id === activeFilter)?.name} Articles`}
+                {activeFilter === "all"
+                  ? "Latest Articles"
+                  : `${categories.find((c) => c.id === activeFilter)?.name} Articles`}
               </span>
               <span className="text-sm font-normal text-gray-400">
                 {filteredBlogs.length} articles
@@ -340,7 +404,9 @@ export default function Blogs() {
               </div>
             ) : (
               <div className="text-center py-12">
-                <p className="text-gray-400 text-lg">No articles found for this filter.</p>
+                <p className="text-gray-400 text-lg">
+                  No articles found for this filter.
+                </p>
                 <button
                   onClick={() => setActiveFilter("all")}
                   className="mt-4 px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
@@ -353,36 +419,47 @@ export default function Blogs() {
 
           {/* CATEGORY TAGS for SEO */}
           <div className="mb-12 p-6 bg-gray-800/30 rounded-xl">
-            <h3 className="text-xl font-semibold mb-4 text-gray-300">Browse by Topic</h3>
+            <h3 className="text-xl font-semibold mb-4 text-gray-300">
+              Browse by Topic
+            </h3>
             <div className="flex flex-wrap gap-3">
-              {categories.filter(c => c.id !== "all").map(cat => (
-                <button
-                  key={cat.id}
-                  onClick={() => setActiveFilter(cat.id)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                    activeFilter === cat.id
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-gray-700/50 text-gray-300 hover:bg-gray-700'
-                  }`}
-                >
-                  {cat.name} ({cat.count})
-                </button>
-              ))}
+              {categories
+                .filter((c) => c.id !== "all")
+                .map((cat) => (
+                  <button
+                    key={cat.id}
+                    onClick={() => setActiveFilter(cat.id)}
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                      activeFilter === cat.id
+                        ? "bg-blue-600 text-white"
+                        : "bg-gray-700/50 text-gray-300 hover:bg-gray-700"
+                    }`}
+                  >
+                    {cat.name} ({cat.count})
+                  </button>
+                ))}
             </div>
           </div>
 
           {/* SEO CONTENT SECTION */}
           <div className="prose prose-invert max-w-none p-8 bg-gray-800/20 rounded-2xl border border-gray-700/30">
-            <h2 className="text-2xl font-bold text-gray-100 mb-6">Technology & Business Insights</h2>
+            <h2 className="text-2xl font-bold text-gray-100 mb-6">
+              Technology & Business Insights
+            </h2>
             <p className="text-gray-300 mb-4">
-              Welcome to the PranavDev Blog, your premier destination for expert analysis on 
-              <strong> Artificial Intelligence</strong>, <strong>Business Growth Strategies</strong>, 
-              <strong> Financial Markets</strong>, and <strong>Digital Transformation</strong>.
+              Welcome to the PranavDev Blog, your premier destination for expert
+              analysis on
+              <strong> Artificial Intelligence</strong>,{" "}
+              <strong>Business Growth Strategies</strong>,
+              <strong> Financial Markets</strong>, and{" "}
+              <strong>Digital Transformation</strong>.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
               <div>
-                <h3 className="text-xl font-semibold text-blue-300 mb-3">Popular Topics</h3>
+                <h3 className="text-xl font-semibold text-blue-300 mb-3">
+                  Popular Topics
+                </h3>
                 <ul className="space-y-2 text-gray-300">
                   <li>• Artificial Intelligence & Machine Learning</li>
                   <li>• Prompt Engineering & AI Tools</li>
@@ -392,7 +469,9 @@ export default function Blogs() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-purple-300 mb-3">Why Read Our Blog?</h3>
+                <h3 className="text-xl font-semibold text-purple-300 mb-3">
+                  Why Read Our Blog?
+                </h3>
                 <ul className="space-y-2 text-gray-300">
                   <li>• Expert-written technical content</li>
                   <li>• Practical business insights</li>

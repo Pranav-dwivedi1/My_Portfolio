@@ -27,38 +27,65 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  metadataBase: new URL('http://localhost:3000'),
-  title: "Pranav's Portfolio",
-  icons: {
-    icon: [
-      { url: '/favicon.ico', sizes: 'any' }
-    ],
-    apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180' }
-    ]
+  metadataBase: new URL("https://pranavdev.online"),
+
+  title: {
+    default: "Pranav Dwivedi – Full Stack Developer | PranavDev",
+    template: "%s | PranavDev",
   },
-  description: "A portfolio website showcasing my projects and skills.",
-  keywords: "portfolio, web developer, projects, skills",
-  authors: [{ name: "Pranav" }],
-  creator: "Pranav",
-  publisher: "Pranav",
+
+  description:
+    "Pranav Dwivedi is a Full Stack Developer specializing in React, Next.js, Node.js, and modern web applications. View portfolio, blogs, and contact for projects.",
+
+  keywords: [
+    "Pranav Dwivedi",
+    "Full Stack Developer",
+    "React Developer",
+    "Next.js Developer",
+    "Node.js Developer",
+    "Web Developer India",
+    "PranavDev",
+  ],
+
+  alternates: {
+    canonical: "https://pranavdev.online",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+
   openGraph: {
-    title: "Pranav's Portfolio",
-    description: "A portfolio website showcasing my projects and skills.",
-    url: "https://pranav-portfolio.com",
-    siteName: "Pranav's Portfolio",
+    title: "Pranav Dwivedi – Full Stack Developer",
+    description:
+      "Portfolio and professional services by Pranav Dwivedi – React, Next.js, Node.js, and full stack development.",
+    url: "https://pranavdev.online",
+    siteName: "PranavDev",
+    locale: "en_IN",
+    type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.png", // must exist in /public
         width: 1200,
         height: 630,
+        alt: "Pranav Dwivedi – Full Stack Developer",
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Pranav's Portfolio",
-    description: "A portfolio website showcasing my projects and skills.",
+    title: "Pranav Dwivedi – Full Stack Developer",
+    description:
+      "Full Stack Developer specializing in React, Next.js, Node.js and scalable web applications.",
     images: ["/og-image.png"],
   }
 };

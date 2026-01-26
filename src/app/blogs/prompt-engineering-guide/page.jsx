@@ -5,7 +5,6 @@ import SideBar from "@/components/blog/SideBar";
 import RelatedBlogs from "../../../components/blog/RelatedBlogs";
 import ContactForm from "../../../components/contact/ContactForm";
 
-
 export const metadata = {
   title: "How to Become a Prompt Engineer in AI (2026 Guide)",
   description:
@@ -30,13 +29,11 @@ export const metadata = {
   },
 };
 
-
 const PromptEngineeringBlog = () => {
   return (
     <>
-
-     <Script type="application/ld+json" id="blog-schema">
-{`
+      <Script type="application/ld+json" id="blog-schema">
+        {`
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
@@ -72,12 +69,9 @@ const PromptEngineeringBlog = () => {
   }
 }
 `}
-</Script>
-
-
-
-<Script type="application/ld+json" id="breadcrumb-schema">
-{`
+      </Script>
+      <Script type="application/ld+json" id="breadcrumb-schema">
+        {`
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -103,13 +97,9 @@ const PromptEngineeringBlog = () => {
   ]
 }
 `}
-</Script>
-
-
-
-
-   <Script type="application/ld+json" id="faq-schema">
-{`
+      </Script>
+      <Script type="application/ld+json" id="faq-schema">
+        {`
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -133,11 +123,8 @@ const PromptEngineeringBlog = () => {
   ]
 }
 `}
-</Script>
-
-`,
-    
-
+      </Script>
+      `,
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
         <header className="gradient-header text-white relative">
           <div className="absolute inset-0 opacity-10"></div>
@@ -169,7 +156,7 @@ const PromptEngineeringBlog = () => {
                   },
                   {
                     id: "why-it-matters",
-                    title: "Why Prompt Engineering Matters in 2025",
+                    title: "Why Prompt Engineering Matters in 2026",
                   },
                   {
                     id: "essential-skills",
@@ -219,7 +206,7 @@ const PromptEngineeringBlog = () => {
                   has emerged — <b>Prompt Engineering</b>.
                 </p>
                 <p className="text-gray-700 text-lg leading-relaxed">
-                  In 2025, companies across industries are actively hiring
+                  In 2026, companies across industries are actively hiring
                   professionals who can communicate effectively with AI models
                   to extract accurate, high-quality outputs.
                 </p>
@@ -253,7 +240,7 @@ const PromptEngineeringBlog = () => {
                   about marketing," a prompt engineer would ask: "Act as a
                   senior digital marketing strategist. Write a 500-word blog
                   post about AI-driven SEO strategies for e-commerce businesses
-                  in 2025, focusing on practical implementation steps."
+                  in 2026, focusing on practical implementation steps."
                 </p>
               </div>
             </section>
@@ -541,7 +528,7 @@ const PromptEngineeringBlog = () => {
                     What is the salary of a Prompt Engineer in India?
                   </strong>
                   <p className="text-gray-700 text-lg mt-2">
-                    In 2025, prompt engineers earn between ₹6–25 LPA in India
+                    In 2026, prompt engineers earn between ₹6–25 LPA in India
                     and $80k–200k globally, depending on expertise, industry,
                     and location. Senior roles with specialized domain knowledge
                     command higher compensation.
@@ -613,17 +600,16 @@ const PromptEngineeringBlog = () => {
                 </p>
                 <p className="text-gray-700 text-lg leading-relaxed py-4 mt-6 border-t border-gray-200">
                   <strong>Disclaimer: </strong> Salary figures are estimates
-                  based on 2024-2025 market trends. Actual compensation may vary
+                  based on 2024-2026 market trends. Actual compensation may vary
                   based on individual skills, experience, and employer.
                 </p>
               </div>
             </section>
           </main>
 
-         <aside className="w-full lg:w-1/4 bg-gradient-to-br from-gray-50 to-blue-50 shadow-lg">
-  <SideBar />
-</aside>
-
+          <aside className="w-full lg:w-1/4 bg-gradient-to-br from-gray-50 to-blue-50 shadow-lg">
+            <SideBar />
+          </aside>
         </div>
 
         <RelatedBlogs />

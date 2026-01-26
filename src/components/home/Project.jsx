@@ -156,7 +156,7 @@ const ProjectCard = ({ project, index }) => {
 export default function Project() {
   return (
     <section
-      className="relative min-h-screen pt-0 md:pt-0 mb-10 text-white px-4 md:px-20 lg:px-28 bg-dark-vignette"
+      className="relative min-h-fit pt-0 md:pt-0 text-white px-4 md:px-20 lg:px-28 bg-dark-vignette"
       aria-labelledby="projects-heading"
     >
       {/* Background effects (unchanged) */}

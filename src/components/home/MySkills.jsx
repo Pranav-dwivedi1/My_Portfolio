@@ -63,7 +63,7 @@ const skills = [
 export default function MySkills() {
   return (
     <section
-      className="relative py-16 text-white px-4 md:px-20 lg:px-28"
+      className="relative pt-16 text-white px-4 md:px-20 lg:px-28"
       aria-labelledby="skills-heading"
     >
       {/* Background glows (unchanged) */}

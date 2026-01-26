@@ -20,7 +20,6 @@ export default function HomeClient() {
       <Skill />
       <Blogs />
       <Cta />
-
       <WhatsAppWidget />
     </main>
   );
