@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-  "dev": "next dev --turbopack",
-  "build": "next build",
-  "postbuild": "next-sitemap",
-  "start": "next start",
-  "lint": "next lint"
-},
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "postbuild": "next-sitemap",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "dependencies": {
     "@next/font": "^14.2.15",
     "@react-icons/all-files": "^4.1.0",

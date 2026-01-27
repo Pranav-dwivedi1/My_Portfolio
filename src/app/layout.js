@@ -1,31 +1,31 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Rowdies } from "next/font/google";
+import Script from "next/script";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
-import { Rowdies } from 'next/font/google';
+
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import MouseLight from "@/components/shared/MouseLight";
 
-
+/* Fonts */
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
-
-
-
-const rowdies = Rowdies({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-rowdies',
-});
-
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
+const rowdies = Rowdies({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-rowdies",
+});
+
+/* SEO Metadata */
 export const metadata = {
   metadataBase: new URL("https://pranavdev.online"),
 
@@ -73,7 +73,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png", // must exist in /public
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Pranav Dwivedi – Full Stack Developer",
@@ -87,7 +87,7 @@ export const metadata = {
     description:
       "Full Stack Developer specializing in React, Next.js, Node.js and scalable web applications.",
     images: ["/og-image.png"],
-  }
+  },
 };
 
 export const viewport = {
@@ -97,18 +97,32 @@ export const viewport = {
   minimumScale: 1,
 };
 
+/* Root Layout */
 export default function RootLayout({ children }) {
   return (
-    
     <html lang="en">
-   <body className={`${rowdies.variable} font-sans bg-gradient-to-br from-[#0a0a0f] via-[#0f172a] to-[#020617]`}>
-  <Header />
-  <MouseLight />
-  {children}
-  <SpeedInsights/>
-  <Footer />
-</body>
+      <body
+        className={`${rowdies.variable} font-sans bg-gradient-to-br from-[#0a0a0f] via-[#0f172a] to-[#020617]`}
+      >
+        <Header />
+        <MouseLight />
 
+        {children}
+
+        {/* Microsoft Clarity */}
+        <Script id="microsoft-clarity" strategy="afterInteractive">
+          {`
+            (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "v7u9mvm13r");
+          `}
+        </Script>
+
+        <SpeedInsights />
+        <Footer />
+      </body>
     </html>
   );
 }
