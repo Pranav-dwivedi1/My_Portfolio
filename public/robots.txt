@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://pranavdev.online
+
+# Sitemaps
+Sitemap: https://pranavdev.online/sitemap.xml
