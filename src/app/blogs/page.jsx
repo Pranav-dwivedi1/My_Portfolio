@@ -124,8 +124,9 @@ export default function Blogs() {
                   headline: b.title,
                   description: b.desc,
                   datePublished: b.date,
-                  url: `https://www.pranavdev.online${b.link}`,
-                  keywords: b.tags.map((tag) => tag.tagTitle).join(", "),
+                  keywords: b.tags.join(", "),
+url: `https://www.pranavdev.online/blogs/${b.slug}`,
+
                   timeRequired: b.readTime,
                 },
               })),
@@ -334,7 +335,7 @@ export default function Blogs() {
                     <meta itemProp="datePublished" content={blog.date} />
                     <meta itemProp="timeRequired" content={blog.readTime} />
                     <meta itemProp="author" content="PranavDev" />
-                    
+
                     <link
                       itemProp="url"
                       href={`https://www.pranavdev.online/blogs/${blog.slug}`}
