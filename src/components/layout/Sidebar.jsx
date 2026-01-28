@@ -2,20 +2,13 @@
 
 import { motion } from "framer-motion";
 import { sections } from "@/data/portfolioData";
-import {
-  Github,
-  Linkedin,
-  Facebook,
-  Instagram,
-  Mail
-} from "lucide-react";
+import { Github, Linkedin, Facebook, Instagram, Mail } from "lucide-react";
 import Image from "next/image";
 import profilePic from "../../assets/portfolio/profile.png";
 
 const Sidebar = ({ active, scrollToSection }) => {
   return (
     <div className="fixed left-0 top-0 z-40 flex h-screen w-[320px] flex-col border-r border-[#1e293b]/50 bg-gradient-to-br from-[#0a0a0f] via-[#0f172a] to-[#020617] backdrop-blur-lg">
-      
       {/* ===== Profile Section ===== */}
       <div className="p-8 pt-12">
         <div className="flex flex-col items-center text-center">
@@ -37,14 +30,12 @@ const Sidebar = ({ active, scrollToSection }) => {
           </motion.div>
 
           <h1 className="mt-4 text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
-          Full Stack Developer
+            Full Stack Developer
           </h1>
 
-          
-
           <p className="mt-2 text-sm leading-relaxed text-gray-300">
-            Building the future of web applications with modern technologies
-            and clean architecture.
+            Building the future of web applications with modern technologies and
+            clean architecture.
           </p>
         </div>
       </div>
@@ -75,7 +66,6 @@ const Sidebar = ({ active, scrollToSection }) => {
       {/* ===== Sidebar Footer (Social Media) ===== */}
       <div className="border-t border-[#1e293b]/50 p-6">
         <div className="mb-4 flex justify-center gap-4">
-          
           {/* GitHub */}
           <motion.a
             href="https://github.com/Pranav-dwivedi1/"
@@ -114,7 +104,7 @@ const Sidebar = ({ active, scrollToSection }) => {
 
           {/* Instagram */}
           <motion.a
-            href="https://www.instagram.com/ll_pranav_dwivedi_ll/"
+            href="https://www.instagram.com/pranavdwivedi.dev/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram Profile"

@@ -21,7 +21,7 @@ export default function Footer() {
   return (
     <footer className="relative text-white px-4 sm:px-6 py-12 md:px-8 lg:px-20 overflow-hidden z-50">
       {/* ✅ Semantic Footer Element - Already present */}
-      
+
       {/* ✅ Left Side Decorative Image */}
       <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 z-30 hidden md:block p-2">
         <Image
@@ -63,14 +63,17 @@ export default function Footer() {
               Subscribe for Tech Insights
             </h2>
             <p className="text-gray-400 max-w-lg mx-auto lg:mx-0">
-              Get weekly updates on web development, freelancing tips, and tools 
+              Get weekly updates on web development, freelancing tips, and tools
               used by industry professionals. No spam, just valuable content.
             </p>
           </div>
 
           {/* ✅ Email Form with Accessibility */}
           <div className="w-full max-w-xl mx-auto lg:mx-0">
-            <form className="flex flex-col sm:flex-row gap-3 w-full" onSubmit={(e) => e.preventDefault()}>
+            <form
+              className="flex flex-col sm:flex-row gap-3 w-full"
+              onSubmit={(e) => e.preventDefault()}
+            >
               <label htmlFor="newsletter-email" className="sr-only">
                 Email address for newsletter subscription
               </label>
@@ -83,7 +86,7 @@ export default function Footer() {
                 aria-required="true"
                 required
               />
-              <button 
+              <button
                 type="submit"
                 className="
                   bg-gradient-to-br from-[#2222a0] via-[#3e64ba] to-[#0d1e6a]
@@ -99,7 +102,8 @@ export default function Footer() {
               </button>
             </form>
             <p className="text-gray-500 text-xs mt-2">
-              By subscribing, you agree to our Privacy Policy. Unsubscribe anytime.
+              By subscribing, you agree to our Privacy Policy. Unsubscribe
+              anytime.
             </p>
           </div>
         </motion.div>
@@ -116,15 +120,17 @@ export default function Footer() {
           <div className="lg:w-1/5 mb-8 lg:mb-0">
             <div className="mb-3 text-xl font-bold">👨‍💻 Pranav Dwivedi</div>
             <p className="text-sm text-gray-100">
-              Full Stack Developer specializing in React, Next.js, and modern web technologies. 
-              Building clean, fast & scalable solutions for startups and businesses.
+              Full Stack Developer specializing in React, Next.js, and modern
+              web technologies. Building clean, fast & scalable solutions for
+              startups and businesses.
             </p>
           </div>
 
           {/* ✅ Navigation Links with Semantic Structure */}
-          <nav className="grid grid-cols-2 sm:grid-cols-3 lg:flex lg:gap-28 lg:justify-center" 
-               aria-label="Footer navigation">
-            
+          <nav
+            className="grid grid-cols-2 sm:grid-cols-3 lg:flex lg:gap-28 lg:justify-center"
+            aria-label="Footer navigation"
+          >
             {/* Services Section */}
             <div>
               <h3 className="font-semibold mb-3 text-base sm:text-sm">
@@ -132,22 +138,34 @@ export default function Footer() {
               </h3>
               <ul className="space-y-2 text-sm text-gray-300">
                 <li>
-                  <Link href="/services/web-development" className="hover:text-white transition">
+                  <Link
+                    href="/services/web-development"
+                    className="hover:text-white transition"
+                  >
                     Web Development
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/frontend-development" className="hover:text-white transition">
+                  <Link
+                    href="/services/frontend-development"
+                    className="hover:text-white transition"
+                  >
                     Frontend Development
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/backend-development" className="hover:text-white transition">
+                  <Link
+                    href="/services/backend-development"
+                    className="hover:text-white transition"
+                  >
                     Backend Development
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/technical-seo" className="hover:text-white transition">
+                  <Link
+                    href="/services/technical-seo"
+                    className="hover:text-white transition"
+                  >
                     Technical SEO
                   </Link>
                 </li>
@@ -161,22 +179,38 @@ export default function Footer() {
               </h3>
               <ul className="space-y-2 text-sm text-gray-300">
                 <li>
-                  <Link href="/portfolio" className="hover:text-white transition">
+                  <Link
+                    href="/portfolio"
+                    className="hover:text-white transition"
+                  >
                     Portfolio
                   </Link>
                 </li>
                 <li>
-                  <Link href="/case-studies" className="hover:text-white transition">
+                  <Link
+                    href="/case-studies"
+                    className="hover:text-white transition"
+                  >
                     Case Studies
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
+                  <Link
+                    href="https://github.com/yourusername"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white transition"
+                  >
                     GitHub Repos
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://codepen.io/yourusername" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
+                  <Link
+                    href="https://codepen.io/yourusername"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white transition"
+                  >
                     CodePen Experiments
                   </Link>
                 </li>
@@ -200,7 +234,10 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/privacy-policy" className="hover:text-white transition">
+                  <Link
+                    href="/privacy-policy"
+                    className="hover:text-white transition"
+                  >
                     Privacy Policy
                   </Link>
                 </li>
@@ -257,69 +294,69 @@ export default function Footer() {
         >
           {/* Copyright */}
           <p className="text-gray-200 text-sm order-2 md:order-1">
-            &copy; {currentYear} pranavdev.online | Built with Next.js, React & Tailwind CSS
+            &copy; {currentYear} pranavdev.online | Built with Next.js, React &
+            Tailwind CSS
           </p>
 
           {/* Social Links */}
-         
-<div
-  className="flex space-x-4 text-lg text-gray-300 order-1 md:order-2"
-  aria-label="Social media links"
->
-  {/* GitHub */}
-  <a
-    href="https://github.com/Pranav-dwivedi1/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hover:text-white transition"
-    aria-label="View GitHub profile"
-  >
-    <FaGithub />
-  </a>
 
-  {/* LinkedIn */}
-  <a
-    href="https://www.linkedin.com/in/pranavdwivedi07/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hover:text-white transition"
-    aria-label="Connect on LinkedIn"
-  >
-    <FaLinkedin />
-  </a>
+          <div
+            className="flex space-x-4 text-lg text-gray-300 order-1 md:order-2"
+            aria-label="Social media links"
+          >
+            {/* GitHub */}
+            <a
+              href="https://github.com/Pranav-dwivedi1/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition"
+              aria-label="View GitHub profile"
+            >
+              <FaGithub />
+            </a>
 
-  {/* Facebook */}
-  <a
-    href="https://www.facebook.com/pranav.dwivedi.777"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hover:text-white transition"
-    aria-label="Visit Facebook profile"
-  >
-    <FaFacebook />
-  </a>
+            {/* LinkedIn */}
+            <a
+              href="https://www.linkedin.com/in/pranavdwivedi07/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition"
+              aria-label="Connect on LinkedIn"
+            >
+              <FaLinkedin />
+            </a>
 
-  {/* Instagram */}
-  <a
-    href="https://www.instagram.com/ll_pranav_dwivedi_ll/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hover:text-white transition"
-    aria-label="Visit Instagram profile"
-  >
-    <FaInstagram />
-  </a>
+            {/* Facebook */}
+            <a
+              href="https://www.facebook.com/pranav.dwivedi.777"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition"
+              aria-label="Visit Facebook profile"
+            >
+              <FaFacebook />
+            </a>
 
-  {/* Email */}
-  <a
-    href="mailto:pranav01dev@gmail.com"
-    className="hover:text-white transition"
-    aria-label="Send email"
-  >
-    <FaEnvelope />
-  </a>
-</div>
+            {/* Instagram */}
+            <a
+              href="https://www.instagram.com/pranavdwivedi.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition"
+              aria-label="Visit Instagram profile"
+            >
+              <FaInstagram />
+            </a>
 
+            {/* Email */}
+            <a
+              href="mailto:pranav01dev@gmail.com"
+              className="hover:text-white transition"
+              aria-label="Send email"
+            >
+              <FaEnvelope />
+            </a>
+          </div>
         </motion.div>
       </div>
     </footer>

@@ -522,9 +522,10 @@ const ZomatoSensex = () => {
           </aside>
         </div>
       </div>
-      {/* Keep footer components */}
-      <RelatedBlogs />
-      <ContactForm />
+      <div className="border-t mt-12 pt-8 bg-gradient-to-br from-[#0a0a0f] via-[#0f172a] to-[#020617]">
+            <RelatedBlogs />
+            <ContactForm />
+          </div>
       {/* <SubscribeFormBlog /> */}
     </>
   );

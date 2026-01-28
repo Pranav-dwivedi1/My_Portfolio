@@ -266,7 +266,6 @@ export default function ChatGPTBusinessBlog() {
               ))}
             </main>
 
-            {/* Sidebar - यह भी normal flow में scroll होगा */}
             <div className="w-full lg:w-1/4">
               <SideBar />
             </div>

@@ -47,10 +47,7 @@ export const metadata = {
     "PranavDev",
   ],
 
-  alternates: {
-    canonical: "https://pranavdev.online",
-  },
-
+  
   robots: {
     index: true,
     follow: true,

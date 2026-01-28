@@ -1,7 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Briefcase, Download, Mail, Github, Linkedin, Facebook, Instagram } from "lucide-react";
+import {
+  MapPin,
+  Briefcase,
+  Download,
+  Mail,
+  Github,
+  Linkedin,
+  Facebook,
+  Instagram,
+} from "lucide-react";
 import { dummyData } from "@/data/portfolioData";
 import Link from "next/link";
 import Image from "next/image";
@@ -27,34 +36,35 @@ const Introduction = () => {
       url: "https://github.com/Pranav-dwivedi1/",
       icon: Github,
       color: "hover:text-white hover:bg-gray-800",
-      iconColor: "text-gray-400"
+      iconColor: "text-gray-400",
     },
     {
       name: "LinkedIn",
       url: "https://www.linkedin.com/in/pranavdwivedi07/",
       icon: Linkedin,
       color: "hover:text-blue-500 hover:bg-blue-500/10",
-      iconColor: "text-gray-400"
+      iconColor: "text-gray-400",
     },
     {
       name: "Facebook",
       url: "https://www.facebook.com/pranav.dwivedi.777",
       icon: Facebook,
       color: "hover:text-blue-600 hover:bg-blue-600/10",
-      iconColor: "text-gray-400"
+      iconColor: "text-gray-400",
     },
     {
       name: "Instagram",
-      url: "https://www.instagram.com/ll_pranav_dwivedi_ll/",
+      url: "https://www.instagram.com/pranavdwivedi.dev/",
       icon: Instagram,
       color: "hover:text-pink-600 hover:bg-pink-600/10",
-      iconColor: "text-gray-400"
-    }
+      iconColor: "text-gray-400",
+    },
   ];
 
   // SEO data
   const seoTitle = "Pranav Dwivedi - Full Stack Developer & AI Engineer";
-  const seoDescription = "Expert Full Stack Developer specializing in React, Next.js, Python, AI Development, and Business Automation. 5+ years of experience in web development and AI solutions.";
+  const seoDescription =
+    "Expert Full Stack Developer specializing in React, Next.js, Python, AI Development, and Business Automation. 5+ years of experience in web development and AI solutions.";
   const pageUrl = "https://www.pranavdev.online/portfolio";
 
   return (
@@ -62,23 +72,29 @@ const Introduction = () => {
       <Head>
         <title>{seoTitle}</title>
         <meta name="description" content={seoDescription} />
-        <meta name="keywords" content="Full Stack Developer, AI Engineer, React Developer, Next.js Developer, Python Developer, Prompt Engineering" />
+        <meta
+          name="keywords"
+          content="Full Stack Developer, AI Engineer, React Developer, Next.js Developer, Python Developer, Prompt Engineering"
+        />
         <meta name="author" content="Pranav Dwivedi" />
-        
+
         {/* Open Graph */}
         <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={seoDescription} />
         <meta property="og:url" content={pageUrl} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.pranavdev.online/images/profile-photo.jpg" />
-        
+        <meta
+          property="og:image"
+          content="https://www.pranavdev.online/images/profile-photo.jpg"
+        />
+
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoTitle} />
         <meta name="twitter:description" content={seoDescription} />
       </Head>
 
-      <div className="w-full min-h-screen flex items-center justify-center px-4 md:px-6 lg:px-6 pb-0 sm:pb-6 md:pb-12 lg:pb-24">   
+      <div className="w-full min-h-screen flex items-center justify-center px-4 md:px-6 lg:px-6 pb-0 sm:pb-6 md:pb-12 lg:pb-24">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -98,12 +114,12 @@ const Introduction = () => {
                 {data.title}
               </span>
             </motion.h1>
-            
+
             {/* Photo After Name (Mobile Only) */}
             <div className="relative w-56 h-56 sm:w-64 sm:h-64 mb-6">
               {/* Background Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-cyan-500/20 to-purple-500/20 rounded-full blur-2xl" />
-              
+
               {/* Animated Ring */}
               <motion.div
                 initial={{ scale: 0.8, opacity: 0 }}
@@ -113,16 +129,25 @@ const Introduction = () => {
               >
                 <motion.div
                   animate={{ rotate: 360 }}
-                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  transition={{
+                    duration: 20,
+                    repeat: Infinity,
+                    ease: "linear",
+                  }}
                   className="absolute -top-1 -left-1 w-3 h-3 sm:w-4 sm:h-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"
                 />
               </motion.div>
-              
+
               {/* Main Profile Container */}
               <motion.div
                 initial={{ scale: 0.9, rotate: -5 }}
                 animate={{ scale: 1, rotate: 0 }}
-                transition={{ delay: 0.4, type: "spring", stiffness: 200, damping: 20 }}
+                transition={{
+                  delay: 0.4,
+                  type: "spring",
+                  stiffness: 200,
+                  damping: 20,
+                }}
                 whileHover={{ scale: 1.05, rotate: 5 }}
                 className="relative w-full h-full rounded-full overflow-hidden border-4 border-gray-800/50 bg-gradient-to-br from-gray-900/50 to-gray-900/20 backdrop-blur-sm"
               >
@@ -140,7 +165,7 @@ const Introduction = () => {
                     sizes="(max-width: 640px) 224px, 256px"
                   />
                 </motion.div>
-                
+
                 {/* Floating Badge */}
                 <motion.div
                   initial={{ y: 20, opacity: 0 }}
@@ -148,11 +173,13 @@ const Introduction = () => {
                   transition={{ delay: 0.6 }}
                   className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-3 py-1.5 bg-gradient-to-r from-blue-600/80 to-cyan-600/80 backdrop-blur-sm rounded-full"
                 >
-                  <span className="text-white text-xs font-medium">Available for Work</span>
+                  <span className="text-white text-xs font-medium">
+                    Available for Work
+                  </span>
                 </motion.div>
               </motion.div>
             </div>
-            
+
             {/* Description for Mobile */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -162,7 +189,7 @@ const Introduction = () => {
             >
               {data.description}
             </motion.p>
-            
+
             {/* Stats Cards for Mobile */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -176,17 +203,21 @@ const Introduction = () => {
                 </div>
                 <div className="flex-grow">
                   <p className="text-xs text-gray-400">Based In</p>
-                  <p className="text-white font-medium text-base">{data.location}</p>
+                  <p className="text-white font-medium text-base">
+                    {data.location}
+                  </p>
                 </div>
               </div>
-              
+
               <div className="flex-1 flex items-center gap-3 p-3 bg-gray-900/40 rounded-xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
                 <div className="p-2 rounded-lg bg-cyan-500/10 flex-shrink-0">
                   <Briefcase className="text-cyan-400 w-5 h-5" />
                 </div>
                 <div className="flex-grow">
                   <p className="text-xs text-gray-400">Experience</p>
-                  <p className="text-white font-medium text-base">{data.experience}</p>
+                  <p className="text-white font-medium text-base">
+                    {data.experience}
+                  </p>
                 </div>
               </div>
             </motion.div>
@@ -221,39 +252,38 @@ const Introduction = () => {
             </motion.div>
 
             {/* Social Media Icons for Mobile - Added after buttons */}
-          <motion.div
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 0.5 }}
-  className="flex flex-col items-center w-full lg:hidden"
->
-  <p className="text-gray-400 text-sm mb-4">Connect with me</p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className="flex flex-col items-center w-full lg:hidden"
+            >
+              <p className="text-gray-400 text-sm mb-4">Connect with me</p>
 
-  <div className="flex gap-4">
-    {socialLinks.map((social, index) => (
-      <motion.a
-        key={social.name}
-        href={social.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.6 + index * 0.1 }}
-        whileHover={{ scale: 1.15, y: -3 }}
-        whileTap={{ scale: 0.95 }}
-        className={`p-3 rounded-full bg-gray-900/50 border border-gray-800/50 transition-all duration-300 ${social.color} ${social.iconColor}`}
-        aria-label={`Visit my ${social.name} profile`}
-      >
-        <social.icon className="w-5 h-5" />
-      </motion.a>
-    ))}
-  </div>
-</motion.div>
+              <div className="flex gap-4">
+                {socialLinks.map((social, index) => (
+                  <motion.a
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.6 + index * 0.1 }}
+                    whileHover={{ scale: 1.15, y: -3 }}
+                    whileTap={{ scale: 0.95 }}
+                    className={`p-3 rounded-full bg-gray-900/50 border border-gray-800/50 transition-all duration-300 ${social.color} ${social.iconColor}`}
+                    aria-label={`Visit my ${social.name} profile`}
+                  >
+                    <social.icon className="w-5 h-5" />
+                  </motion.a>
+                ))}
+              </div>
+            </motion.div>
           </div>
 
           {/* Desktop Layout - Original Design */}
           <div className="hidden lg:flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-12 xl:gap-16 px-4 md:px-6 lg:px-12">
-            
             {/* Left Content - Takes 60% width */}
             <div className="lg:w-[60%] w-full">
               {/* Title */}
@@ -267,7 +297,7 @@ const Introduction = () => {
                   {data.title}
                 </span>
               </motion.h1>
-              
+
               {/* Description */}
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -277,7 +307,7 @@ const Introduction = () => {
               >
                 {data.description}
               </motion.p>
-              
+
               {/* Stats Cards - Horizontal layout */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -291,17 +321,23 @@ const Introduction = () => {
                   </div>
                   <div className="flex-grow">
                     <p className="text-xs md:text-sm text-gray-400">Based In</p>
-                    <p className="text-white font-medium text-base md:text-lg">{data.location}</p>
+                    <p className="text-white font-medium text-base md:text-lg">
+                      {data.location}
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex-1 flex items-center gap-3 md:gap-4 p-3 md:p-4 bg-gray-900/40 rounded-xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
                   <div className="p-2 md:p-3 rounded-lg bg-cyan-500/10 flex-shrink-0">
                     <Briefcase className="text-cyan-400 w-5 h-5 md:w-6 md:h-6" />
                   </div>
                   <div className="flex-grow">
-                    <p className="text-xs md:text-sm text-gray-400">Experience</p>
-                    <p className="text-white font-medium text-base md:text-lg">{data.experience}</p>
+                    <p className="text-xs md:text-sm text-gray-400">
+                      Experience
+                    </p>
+                    <p className="text-white font-medium text-base md:text-lg">
+                      {data.experience}
+                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -364,15 +400,14 @@ const Introduction = () => {
               </motion.div>
 
               {/* Social Media Icons for Desktop - Added after buttons */}
-           
             </div>
-            
+
             {/* Right Side - Profile Image/Icon - Takes 40% width */}
             <div className="lg:w-[40%] w-full flex justify-center lg:justify-end mt-8 lg:mt-0">
               <div className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96">
                 {/* Background Glow Effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-cyan-500/20 to-purple-500/20 rounded-full blur-2xl md:blur-3xl" />
-                
+
                 {/* Animated Ring */}
                 <motion.div
                   initial={{ scale: 0.8, opacity: 0 }}
@@ -382,16 +417,25 @@ const Introduction = () => {
                 >
                   <motion.div
                     animate={{ rotate: 360 }}
-                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                    transition={{
+                      duration: 20,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
                     className="absolute -top-1 -left-1 w-3 h-3 md:w-4 md:h-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"
                   />
                 </motion.div>
-                
+
                 {/* Main Profile Container - FIXED IMAGE ISSUE */}
                 <motion.div
                   initial={{ scale: 0.9, rotate: -5 }}
                   animate={{ scale: 1, rotate: 0 }}
-                  transition={{ delay: 0.6, type: "spring", stiffness: 200, damping: 20 }}
+                  transition={{
+                    delay: 0.6,
+                    type: "spring",
+                    stiffness: 200,
+                    damping: 20,
+                  }}
                   whileHover={{ scale: 1.05, rotate: 5 }}
                   className="relative w-full h-full rounded-full overflow-hidden border-4 border-gray-800/50 bg-gradient-to-br from-gray-900/50 to-gray-900/20 backdrop-blur-sm"
                 >
@@ -415,7 +459,7 @@ const Introduction = () => {
                       />
                     </div>
                   </motion.div>
-                  
+
                   {/* Floating Badge */}
                   <motion.div
                     initial={{ y: 20, opacity: 0 }}
@@ -423,10 +467,12 @@ const Introduction = () => {
                     transition={{ delay: 0.8 }}
                     className="absolute bottom-4 md:bottom-6 left-1/2 transform -translate-x-1/2 px-3 md:px-4 py-1.5 md:py-2 bg-gradient-to-r from-blue-600/80 to-cyan-600/80 backdrop-blur-sm rounded-full"
                   >
-                    <span className="text-white text-xs md:text-sm font-medium">Available for Work</span>
+                    <span className="text-white text-xs md:text-sm font-medium">
+                      Available for Work
+                    </span>
                   </motion.div>
                 </motion.div>
-                
+
                 {/* Floating Tech Icons */}
                 <motion.div
                   initial={{ scale: 0 }}
@@ -436,7 +482,7 @@ const Introduction = () => {
                 >
                   <span className="text-xl md:text-2xl">⚛️</span>
                 </motion.div>
-                
+
                 <motion.div
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
@@ -456,13 +502,13 @@ const Introduction = () => {
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "Person",
-                "name": "Pranav Dwivedi",
-                "alternateName": "PranavDev",
-                "url": pageUrl,
-                "image": "https://www.pranavdev.online/images/profile-photo.jpg",
-                "jobTitle": "Full Stack Developer & AI Engineer",
-                "description": seoDescription,
-                "knowsAbout": [
+                name: "Pranav Dwivedi",
+                alternateName: "PranavDev",
+                url: pageUrl,
+                image: "https://www.pranavdev.online/images/profile-photo.jpg",
+                jobTitle: "Full Stack Developer & AI Engineer",
+                description: seoDescription,
+                knowsAbout: [
                   "Full Stack Development",
                   "React.js",
                   "Next.js",
@@ -470,20 +516,20 @@ const Introduction = () => {
                   "Artificial Intelligence",
                   "Machine Learning",
                   "Prompt Engineering",
-                  "Web Development"
+                  "Web Development",
                 ],
-                "address": {
+                address: {
                   "@type": "PostalAddress",
-                  "addressLocality": data.location
+                  addressLocality: data.location,
                 },
-                "workLocation": "Remote",
-                "sameAs": [
+                workLocation: "Remote",
+                sameAs: [
                   "https://github.com/Pranav-dwivedi1/",
                   "https://www.linkedin.com/in/pranavdwivedi07/",
                   "https://www.facebook.com/pranav.dwivedi.777",
-                  "https://www.instagram.com/ll_pranav_dwivedi_ll/"
-                ]
-              })
+                  "https://www.instagram.com/pranavdwivedi.dev/",
+                ],
+              }),
             }}
           />
         </motion.div>

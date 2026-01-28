@@ -10,75 +10,16 @@ import { FaLinkedin, FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
 import { ImFacebook2 } from "react-icons/im";
 import { RiWhatsappFill } from "react-icons/ri";
 import { FiFilter } from "react-icons/fi";
+import { blogData } from "@/lib/blogData";
+
 
 export default function Blogs() {
   const latestBlogsRef = useRef(null);
   const [activeFilter, setActiveFilter] = useState("all");
   const [sortOrder, setSortOrder] = useState("newest");
 
-  // Complete blog data with more attributes for filtering
-  const blogData = [
-    {
-      id: 1,
-      title:
-        "Sensex Zomato: What's Driving Zomato's Performance on the BSE Sensex?",
-      desc: "Explore Zomato's impact on the BSE Sensex and business growth insights.",
-      date: "December 25, 2024",
-      tags: [{ tagTitle: "News" }, { tagTitle: "Finance" }],
-      category: ["finance", "news"],
-      readTime: "5 min read",
-      link: "/blogs/zomato-makes-history",
-      featured: true,
-    },
-    {
-      id: 2,
-      title: "How ChatGPT is Transforming Business in 2026",
-      desc: "How AI and ChatGPT are revolutionizing MSMEs and startups.",
-      date: "May 25, 2026",
-      tags: [{ tagTitle: "AI" }, { tagTitle: "Business Growth" }],
-      category: ["ai", "business"],
-      readTime: "8 min read",
-      link: "/blogs/chatgpt-business-2026",
-      featured: true,
-    },
-    {
-      id: 3,
-      title: "How to Become a Prompt Engineer in AI (2026 Guide)",
-      desc: "Complete roadmap, skills, salary, and career guide for prompt engineers.",
-      date: "June 10, 2026",
-      tags: [
-        { tagTitle: "AI" },
-        { tagTitle: "Career" },
-        { tagTitle: "Prompt Engineering" },
-      ],
-      category: ["ai", "career"],
-      readTime: "12 min read",
-      link: "/blogs/prompt-engineering-guide",
-      featured: true,
-    },
-    {
-      id: 4,
-      title: "Digital Marketing Strategies for Startups in 2026",
-      desc: "Learn cost-effective digital marketing tactics for early-stage startups.",
-      date: "April 15, 2026",
-      tags: [{ tagTitle: "Marketing" }, { tagTitle: "Startups" }],
-      category: ["marketing", "business"],
-      readTime: "6 min read",
-      link: "/blogs/digital-marketing-startups",
-      featured: false,
-    },
-    {
-      id: 5,
-      title: "Blockchain Technology: Future of Secure Transactions",
-      desc: "Understanding blockchain's impact on finance and data security.",
-      date: "March 20, 2026",
-      tags: [{ tagTitle: "Technology" }, { tagTitle: "Finance" }],
-      category: ["technology", "finance"],
-      readTime: "10 min read",
-      link: "/blogs/blockchain-future",
-      featured: false,
-    },
-  ];
+
+
 
   // Filter categories
   const categories = [
@@ -393,9 +334,10 @@ export default function Blogs() {
                     <meta itemProp="datePublished" content={blog.date} />
                     <meta itemProp="timeRequired" content={blog.readTime} />
                     <meta itemProp="author" content="PranavDev" />
+                    
                     <link
                       itemProp="url"
-                      href={`https://www.pranavdev.online${blog.link}`}
+                      href={`https://www.pranavdev.online/blogs/${blog.slug}`}
                     />
 
                     <BlogCard blog={blog} />
